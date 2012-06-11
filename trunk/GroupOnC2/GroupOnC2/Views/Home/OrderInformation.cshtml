@@ -1,0 +1,373 @@
+﻿@using GroupOnC2.Models
+@model OrderInformation
+
+@{
+    ViewBag.Title = "ReceiverInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ReceiverInformation</h2>
+
+<script type="text/javascript">
+    var PayByCash = 1;
+    var PayByCreditCard = 5;
+    var PayByLocalCard = 4;
+    var PayByCashAtCompany = 2;
+    isShippingFree = true;
+        
+</script>
+
+<div class="col_left_main">
+    <center>
+        <form action="" id="PaymentForm" method="post" name="PaymentForm">        
+            <div class="index">
+                <div class="index_middle">
+                    <div class="col_left_main">
+                        <div class="col_left" id="contentHolder">
+                            <div class="col_left_T">
+                            </div>
+                            <div class="col_left_M">
+                                <div class="buy">
+                                   <!-- <p class="step_panel">
+                                        <img src="../../Content/themes/images/steps_01.png" width="666" height="38">
+                                    </p>-->
+
+                                    <input id="DeliveryMethod" data-val="true" data-val-required="The DeliveryMethod field is required." name="DeliveryMethod" type="hidden" value="AtHome">
+                                    <input id="dealAlias" name="dealAlias" type="hidden" value="can-cam-tay-mini">
+                                    <input type="hidden" id="ToCityId" value="1">
+                                    <input type="hidden" id="TotalWeight" value="0">
+                                    <div id="VoucherMode-Error" style="display:none;background:#FDE9F1 url(images/buy/icon_alert.png) no-repeat left center; border:1px solid #f45555; height:21px; margin:2px;margin-bottom: 10px; margin-left:14px; width:636px;font-size:12px; color:#F00; padding-top:6px; padding-left:28px; text-align:left;font-weight:bold;" class="Enternet-Field-Validation">
+                                    </div>
+
+                                    <table class="buy_list" width="100%" border="0" cellspacing="0" cellpadding="0" id="VoucherMode" name="VoucherMode">
+                                        <tbody><tr>
+                                            <th width="40%" scope="col" style="text-align:center;">
+                                                Phiếu/Sản phẩm
+                                            </th>
+                                            <th width="24%" scope="col">
+                                                Đơn giá
+                                            </th>
+                                            <th width="15%" scope="col">
+                                                Số lượng
+                                            </th>
+                                            <th width="21%" scope="col">
+                                                Thành tiền
+                                            </th>
+                                        </tr>
+
+                                        <input data-val="true" data-val-number="The field DealId must be a number." data-val-required="The DealId field is required." id="DealId" name="DealId" type="hidden" value="6559">
+                                        <input type="hidden" name="dealAlias" id="dealAlias" value="can-cam-tay-mini">
+
+                                        <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Vouchers_0__Id" name="Vouchers[0].Id" type="hidden" value="7432">
+                                        <input data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="Vouchers_0__Price" name="Vouchers[0].Price" type="hidden" value="49000">
+                                        <tr id="7432" price="49000" weight="0">
+                                            <td style="text-align: left;">
+                                                Cân mini trọng lượng tối đa 5kg - Trị giá 98.000đ
+                                            </td>
+                                            <td style="text-align: center;">
+                                                49.000đ
+                                            </td>
+                                            <td align="center">
+                                                <select class="vSelect" id="Vouchers_0__SelectedQuantity" name="Vouchers[0].SelectedQuantity">
+                                                    @for(int i = 1; i <= 10; i++)
+                                                    {
+                                                        <option value=@i>@i</option>
+                                                    }
+                                                </select>                         
+                                            </td>
+                                            <td align="right" holder="voucherAmount">
+                                                <b>49.000đ</b>
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="3" align="right">
+                                                Phí giao hàng
+                                            </td>
+                                            <td align="right">
+                                                <b id="CurrentShippingCost">0đ</b>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="3" align="right">
+                                                Số tiền phải trả
+                                            </td>
+                                            <td align="right" id="OrderAmount" name="OrderAmount"><b>49.000đ</b></td>
+                                        </tr> </tbody>
+                                    </table>
+
+                                    <div style="height: 50px; position: relative;">
+                                        <h3 class="title_page">
+                                            <p class="title_left">
+                                                Thông tin người nhận</p>
+                                            <p class="title_right">
+                                            </p>
+                                        </h3>
+                                        <br class="clean">
+                                    </div>
+
+                                    <div id="BuyAtCompanyHolder" style="display: none; "></div>
+                                    <ul class="choose_buy" style="margin-bottom: 10px;">
+                                        <li id="AtHome" class="chooseDeliveryType active" onclick="DoChooseDeliveryMethod($(this))">
+                                            <div class="choose_buy_info">
+                                                    <h4>Giao hàng tận nơi</h4>
+                                                    <p>Vui lòng cho biết địa chỉ giao phiếu/sản phẩm.</p> 
+                                            </div>
+                                            <br class="clean">
+                                        </li>
+                                    </ul>
+
+                                    <div id="BuyAtHomeHolder">
+                                        <div class="form_buy" style="border: 1px solid rgb(137, 181, 84); width: 590px; padding: 10px 0px; margin-left: 8px; ">
+                                            <div class="form_buy_item">
+                                                <p class="form_buy_left">
+                                                    Họ tên (<span class="other_color">*</span>)</p>
+                                                <p class="form_buy_right">
+                                                    <input id="HFullName" name="HFullName" type="text" value="Nguyễn Phú Mai Trang" class="valid">
+                                                </p>
+                                                <br class="clean">
+                                            </div>
+
+                                            <div id="HFullName-Error" style="display:none;" class="Enternet-Field-Validation">
+                                            </div>
+
+                                            <div class="form_buy_item">
+                                                <p class="form_buy_left">
+                                                    Email (<span class="other_color">*</span>)</p>
+                                                <p class="form_buy_right">
+                                                    <input id="HEmail" name="HEmail" type="text" value="nhoc_heo_way@yahoo.com">
+                                                </p>
+                                                <br class="clean">
+                                            </div>
+
+                                            <div id="HEmail-Error" style="display:none;" class="Enternet-Field-Validation">
+                                            </div>
+                                            <div class="form_buy_item">
+                                                <p class="form_buy_left">
+                                                    Điện thoại di động (<span class="other_color">*</span>)</p>
+                                                <p class="form_buy_right">
+                                                    <input id="HMobile" name="HMobile" type="text" value="0978676712">
+                                                </p>
+                                                <br class="clean">
+                                            </div>
+
+                                            <div id="AdditionInfoDiv" style="">
+                                                <div class="form_buy_item">
+                                                    <p class="form_buy_left">
+                                                            Địa chỉ   
+                                                        (<span class="other_color">*</span>)</p>
+                                                    <p class="form_buy_right">
+                                                        <input id="HAddress" name="HAddress" type="text" value=""></p>
+                                                </div>
+
+                                                <div id="HAddress-Error" style="display:none;" class="Enternet-Field-Validation">
+                                                </div>
+
+                                                <div class="form_buy_item">
+                                                    <p class="form_buy_left">
+                                                        Tỉnh/Thành phố (<span class="other_color">*</span>)</p>
+                                                    <p class="form_buy_right">
+                                                        <select data-val="true" data-val-number="The field HCityId must be a number." data-val-required="The HCityId field is required." id="HCityId" name="HCityId" style="width:147px;float:left;margin-right:5px">
+                                                            <option selected="selected" value="1">TP. HỒ CHÍ MINH</option>
+                                                        </select>
+
+                                                        <select data-val="true" data-val-number="The field HDistrictId must be a number." data-val-required="The HDistrictId field is required." id="HDistrictId" name="HDistrictId" style="width:164px;">
+                                                            <option selected="selected" value="-1">-- Chọn quận/huyện --</option>
+                                                            <option value="1">Quận 1</option>
+                                                            <option value="2">Quận 2</option>
+                                                            <option value="3">Quận 3</option>
+                                                            <option value="4">Quận 4</option>
+                                                            <option value="5">Quận 5</option>
+                                                            <option value="6">Quận 6</option>
+                                                            <option value="7">Quận 7</option>
+                                                            <option value="8">Quận 8</option>
+                                                            <option value="10">Quận 10</option>
+                                                            <option value="11">Quận 11</option>
+                                                            <option value="13">Quận Gò Vấp</option>
+                                                            <option value="14">Quận Tân Bình</option>
+                                                            <option value="15">Quận Tân Phú</option>
+                                                            <option value="16">Quận Bình Thạnh</option>
+                                                            <option value="17">Quận Phú Nhuận</option>
+                                                        </select>
+
+                                                        <select data-val="true" data-val-number="The field HWardId must be a number." data-val-required="The HWardId field is required." id="HWardId" name="HWardId" style="width:164px;">
+                                                            <option value="-1">--Chọn phường--</option>
+                                                            <option value="24">Phường 1</option>
+                                                            <option value="25">Phường 2</option>
+                                                            <option value="26">Phường 3</option>
+                                                            <option value="27">Phường 4</option>
+                                                            <option value="28">Phường 5</option>
+                                                            <option value="29">Phường 6</option>
+                                                            <option value="30">Phường 7</option>
+                                                            <option value="31">Phường 8</option>
+                                                            <option value="32">Phường 9</option>
+                                                            <option value="33">Phường 10</option>
+                                                            <option value="34">Phường 11</option>
+                                                            <option value="35">Phường 12</option>
+                                                            <option value="36">Phường 13</option>
+                                                            <option value="37">Phường 14</option>
+                                                            <option value="38">Phường khác</option>
+                                                        </select>
+
+                                                        <span id="ShippingCostAnnounceText" class="ship"></span>
+                                                    </p>
+
+                                                    <br class="clean">
+                                                    <input id="CacheCurrentCityId" name="CacheCurrentCityId" type="hidden" value="1">
+                                                    <input id="CurrentCityName" name="CurrentCityName" type="hidden" value="TP. HỒ CHÍ MINH">
+                                                    <input id="CurrentDistrictName" name="CurrentDistrictName" type="hidden" value="-- Chọn quận/huyện --">
+                                                    <input id="CurrentWardName" name="CurrentWardName" type="hidden" value="--Chọn phường--">
+
+                                                </div>
+
+                                                <div id="HDistrictId-Error" style="display:none;" class="Enternet-Field-Validation">
+                                                </div>
+
+                                                <div class="form_buy_item" style="display:none;">
+                                                    <p class="form_buy_left">
+                                                    </p>
+
+                                                    <p class="form_buy_right">
+                                                        <select data-val="true" data-val-number="The field HWardId must be a number." data-val-required="The HWardId field is required." id="HWardId" name="HWardId" style="width:164px;display:none;"><option selected="selected" value="-1">--Chọn phường--</option>
+                                                        </select>
+                                                    </p>
+
+                                                    <br class="clean">
+                                                </div>
+                                                <div id="HWardId-Error" style="display:none;" class="Enternet-Field-Validation">
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form_buy_item">
+                                                <p class="form_buy_left">
+                                                    Ghi chú</p>
+                                                <p class="form_buy_right">
+                                                    <textarea cols="20" id="HDescription" name="HDescription" rows="2"></textarea>
+                                                    <br>
+                                                </p>
+                                            </div>
+
+                                            <br class="clean">
+                                            
+
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    <!--Hình thức thanh toán-->
+                                    <div style="height: 50px; position: relative;">
+                                        <h3 class="title_page">
+                                            <p class="title_left">
+                                                Hình thức thanh toán</p>
+                                            <p class="title_right">
+                                            </p>
+                                        </h3>
+                                        <br class="clean">
+                                    </div>
+
+                                    <ul class="choose_buy">
+                                        <li class="choosePaymentType active" id="PayByCash">
+                                            <div class="choose_buy_info">
+                                                <h4>
+                                                    Thanh toán bằng tiền mặt
+                                                </h4>
+                                                     <p>
+                                                    Cùng Mua sẽ đến tận nơi thu tiền</p>     
+                                            </div>  
+                                        </li>
+
+                                        <li class="choosePaymentType" id="PayByATM">
+                                            <div class="choose_buy_info">
+                                                <h4>
+                                                    Thanh toán bằng Paypal
+                                                </h4>
+                                                <p>
+                                                    Thông qua cổng thanh toán: hẻm bik</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br class="clean">
+
+                                    <div class="form_buy_item" style="margin-top: 5px; *margin-top: 20px;">
+                                                <input class="buttonDM" type="submit" value=" " id="buttonDoBuy">
+                                    </div>
+
+                                    <div class="form_buy_note">
+                                        <span>Lưu ý</span>
+                                        <p>
+                                            Hiện nay Cùng Mua chưa giao hàng các địa điểm sau tại<strong> TP. HỒ CHÍ MINH</strong>: Quận 9, Quận 12, Quận Thủ Đức, Quận Bình Tân, Huyện Bình Chánh, Huyện Củ Chi, Huyện Hóc Môn, Huyện Nhà Bè, Huyện Cần Giờ.</p>
+                                    </div>
+
+
+                                </div>
+                                <br class="clean">
+
+                            </div>
+                            <div class="col_left_B">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </center>
+</div>
+
+<div class="col_right">
+    <div class="col_right_T2"><h3>Giao hàng mất bao lâu?</h3></div>
+
+    <div class="col_right_M">
+       <p class="question">Cùng Mua sẽ giao phiếu/sản phẩm đến cho bạn trong vòng từ 3 đến 10 ngày làm việc. Bạn vui lòng điền thông tin chính xác và ghi chú rõ ràng để đảm bảo nhận được hàng.</p>
+    </div>
+
+    <div class="col_right_T4"><h3>Có trả lại được không?</h3></div>
+
+    <div class="col_right_M">
+        <p class="question">Nếu bạn không hài lòng với chất lượng sản phẩm hoặc không sử dụng được phiếu do lỗi của Cùng Mua hoặc đối tác của Cùng Mua, bạn có thể trả phiếu/sản phẩm và nhận lại tiền. <a target="_blank" href="http://www.cungmua.com/tra-hang-va-hoan-tien">Xem chi tiết chính sách hoàn tiền</a></p>
+    </div>
+
+    <div class="col_right_M">
+        <p class="question">Tìm hiểu về chính sách giao nhận của Cùng Mua. Vui lòng xem <a href="http://www.cungmua.com/giao-nhan-hang" style="padding-left:0px;">tại đây</a></p>
+    </div>
+
+    <div class="col_right_T6"><h3>Chính sách giao nhận</h3></div>
+
+    <div class="col_right_T3">
+        <h3>
+            Hỗ trợ mua hàng</h3>
+    </div>
+
+    <div class="col_right_M">
+        <div class="hotline">
+            <p>
+                <span>
+                    <img src="../../Content/Images/icon_phone.png" width="24" height="24" style="vertical-align: middle;
+                        margin-top: -5px; *margin-top: 0px;"></span> 1900 6637</p>
+            <p>
+                <span>
+                    <img src="../../Content/Images/icon_email.png" width="24" height="24" style="vertical-align: middle;
+                        margin-top: -5px; *margin-top: 0px;"></span><span style="display: block;font-weight: normal;"><a href="mailto:hotro@cungmua.com">hotro@cungmua.com</a></span></p>
+      
+            <br class="clean">
+        </div>
+   
+    </div>
+
+    <div class="col_right_T5">
+        <h3>Mua hàng số lượng lớn</h3></div>
+
+    <div class="col_right_M">
+        <div class="hotline">
+        <p><span><img src="../../Content/Images/icon_fone.png" width="24" height="24"></span> 0938 529 588 - Ms Mai</p>
+        </div>
+    </div>
+
+    <div class="col_right_B">
+    </div>
+
+</div>

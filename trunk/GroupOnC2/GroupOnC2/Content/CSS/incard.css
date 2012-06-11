@@ -1,0 +1,39 @@
+@charset "utf-8";
+span.color { color:#F00; font-weight:bold;}
+div.nondisplay{ display: none;}
+
+/* CSS incard */
+div.incard { width:740px; height:auto; background-color:#85b561;font-family:Verdana, Geneva, sans-serif; font-size:14px; padding-bottom:5px;}
+ div.incard p.incard_title{ color:#FFF; font-size:16px;padding:20px 0 10px 20px; text-align:left;font-family:Verdana, Geneva, sans-serif;  }
+div.incard_content{ background-color:#fff; margin-left:5px;margin-right:5px;padding-top:15px; padding-bottom:17px;*padding-bottom: 5px;}
+ div.incard_content div.incard_left{ width:420px; float:left; margin-top:15px;}
+  div.incard_left p.row{ padding-left:20px; margin-bottom:20px; text-align:left; font-size:16px;line-height: 30px;}
+   p.row input.year{ background: url("../images/incard/btn_12_month.png") no-repeat scroll 0 0 transparent;cursor: pointer;display: block; width:173px; height:57px; border:0px; float:left; margin-right:15px;}
+   p.row input.year:hover{ background: url("../images/incard/btn_12_month.png") no-repeat scroll 0 -57px transparent;cursor: pointer;display: block; width:173px; height:57px; border:0px;}
+   p.row input.month{ background: url("../images/incard/btn_1_month.png") no-repeat scroll 0 0 transparent;cursor: pointer;display: block; width:173px; height:57px; border:0px; float:left;}
+   p.row input.month:hover{ background: url("../images/incard/btn_1_month.png") no-repeat scroll 0 -57px transparent;cursor: pointer;display: block; width:173px; height:57px; border:0px;}
+ div.incard_content div.incard_right{ width:300px; float:right; margin-right:10px;}
+	
+div.form_incard_item{ color:#58595B ; font-size:14px; width:685px; padding-top:5px;}
+p.form_incard_left{float:left; text-align:right; padding-right:10px; padding-top:12px;width:185px; }	
+p.form_incard_right{ float:left;text-align:left;}
+p.form_incard_right input{ border: 1px solid #D5D5D5; border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset;  color: #000; font: 12px/25px "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; height:28px ;padding: 0px  8px;  word-spacing: 0.1em; width:300px;  margin:5px 0px;}
+p.form_incard_right select{ border: 1px solid #D5D5D5;
+    border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset; color: #000; word-spacing: 0.1em; margin:5px 0px; height:28px; padding:4px 5px 4px 5px; width:101px; margin-right:3px;*margin-top:9px; margin-top:9px\0/; }
+p.form_incard_right input.user{ background: url("../images/incard/icon_user.png") no-repeat left center; padding-left:30px;}
+p.form_incard_right input.pass{ background: url("../images/incard/icon_pass.png") no-repeat left center; padding-left:30px; }
+div.form_incard_err {color:#F00; font-size:11px; text-align:left; margin:0px; padding:0px;padding-left:194px; width:300px; *padding-left:20px; *width:350px; }
+input.buy_incard{background: url("../images/incard/btn_buy_incard.png") no-repeat scroll 0 0 transparent;cursor: pointer;display: block; width:114px; height:47px; border:0px;margin-left: 12px;}
+input.buy_incard:hover{background: url("../images/incard/btn_buy_incard.png") no-repeat scroll 0 -46px transparent;cursor: pointer;display: block; width:114px; height:47px; border:0px;}
+input.see_incard{background: url("../images/incard/btn_see_incard.png") no-repeat scroll 0 0 transparent;cursor: pointer;display: block; width:190px; height:36px; border:0px;}
+input.see_incard:hover{background: url("../images/incard/btn_see_incard.png") no-repeat scroll 0 -36px transparent;cursor: pointer;display: block; width:190px; height:36px; border:0px;}
+input.see_incard2{background: url("../images/incard/btn_see_incard2.png") no-repeat scroll 0 0 transparent;cursor: pointer;display: block; width:120px; height:36px; border:0px;}
+input.see_incard2:hover{background: url("../images/incard/btn_see_incard2.png") no-repeat scroll 0 -36px transparent;cursor: pointer;display: block; width:120px; height:36px; border:0px;}
+
+/*cung mua incard */
+div.banner_top{ background:url(../images/incard/bg_hotdeal.png) no-repeat center top; width:950px; height:438px;margin-top: -9px;}
+h3.title_incard{ background:url(../images/incard/title_incard.png) no-repeat left top; width:100%; height:33px; text-align:left; color:#000; font-size:17px; padding-top:8px; padding-left:17px;}
+
+
+
+

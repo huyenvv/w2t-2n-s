@@ -1,0 +1,18 @@
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\bin\GroupOnC2.dll
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\bin\GroupOnC2.pdb
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\bin\PagedList.dll
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\bin\PagedList.Mvc.dll
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\bin\PagedList.xml
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\bin\PagedList.Mvc.xml
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\obj\Debug\ResolveAssemblyReference.cache
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\obj\Debug\GroupOnC2.dll
+D:\HOC TAP\Ki 2- nam 3\PHÁT TRIỂN ỨNG DỤNG WEB\BAI TAP\DO AN\GroupOnC2\GroupOnC2\obj\Debug\GroupOnC2.pdb
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\bin\GroupOnC2.dll
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\bin\GroupOnC2.pdb
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\bin\PagedList.dll
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\bin\PagedList.Mvc.dll
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\bin\PagedList.xml
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\bin\PagedList.Mvc.xml
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\obj\Debug\GroupOnC2.csprojResolveAssemblyReference.cache
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\obj\Debug\GroupOnC2.dll
+C:\Users\peHeo\Desktop\GroupOnC2\GroupOnC2\obj\Debug\GroupOnC2.pdb

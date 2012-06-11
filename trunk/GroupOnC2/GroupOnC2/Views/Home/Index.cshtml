@@ -1,0 +1,174 @@
+﻿
+@model PagedList.IPagedList<GroupOnC2.Models.SANPHAM>
+@using GroupOnC2.Models;
+@using System.Data.Entity;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+   <link rel="stylesheet" href="../../Content/CSS/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../../Content/CSS/nivo-style.css" type="text/css" />
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+     <script  type="text/javascript" src="../../Content/scripts/jquery.nivo.slider.pack.js"></script>
+
+     <script type="text/javascript">
+        $(document).ready(function() {
+            $('#slider').nivoSlider({
+        effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
+        slices: 8,
+        directionNav:true, //Next & Prev
+        directionNavHide:true, //Only show on hover
+        controlNav:true, //1,2,3...
+        keyboardNav:true, //Use left & right arrows
+   
+            });
+        });
+     </script>
+
+<h2>Index</h2>
+
+    <div class="bg">
+        <div class="bg_T">
+        </div>
+        <div class="bg_M">
+            <ul class="product_hot">
+			@*@functions {
+				public static GROUPONEntities1 db = new GROUPONEntities1();
+				List<SANPHAM> lstHot = db.SANPHAMs
+				.OrderByDescending(a => a.CHITIETDONHANGs.Count()).Take(5).ToList();
+	   }*@
+                @functions {int i = 0;}
+                @foreach (var item in Model)
+                {
+                    i++;
+				@*	<li>
+					SANPHAM sp = item;
+					<img src = "@sp.HinhAnh" alt= "@sp.HinhAnh" title= "@sp.HinhAnh" width="496px" height="300px" style="position: absolute; opacity: 1; top: 0px; z-index: 5; left: -496px; display: none; "/>
+					i++;*@
+					
+                    if (i < 3)
+                    {
+                        <li>         
+                            <h3>
+                                @Html.ActionLink(item.TenSP, "Details", new { id = item.MaSP })   
+                            </h3>
+                            <div class="percent">
+                                    
+                            </div>
+                            <img title= @item.TenSP class="product_hot_img tooltipJs" src="../../Content/themes/images/d_6318_b.jpg"> 
+                            <div class="product_hot_info">
+                                <p class="product_hot_price">
+                                </p>
+                                <p class="product_hot_btn">
+                                    <input type="image" src="../../Content/themes/images/btn_buy1.png">
+                                </p>
+                            </div>
+
+                            <div class="product_hot_info1">
+                                <p class="product_hot_price_true">
+                                    Trị giá: <span>184.000d</span></p>
+                                <p class="product_hot_infobuy">
+                                    Có<span> 47 </span>người cùng mua</p>
+                            </div>
+
+                            <div class="index_tooltip">
+                                <span>
+                                    <img src="../../Content/themes/images/icon_moto2.png" width="45" height="45" align="absmiddle" style="margin-top: -7px">
+                                    Giao sản phẩm miễn phí
+                                </span>
+                            </div>
+                        </li>
+				} else
+                    {
+                        break;
+                    }    
+                }
+            </ul>
+
+            <ul class="product">
+                @foreach (var item in Model)
+				{
+                    <li>
+                        <h3>
+                            @Html.ActionLink(item.TenSP, "Details", new { id = item.MaSP })
+                        </h3>
+                        <div class="percent1">
+                            
+                        </div>
+
+                        <img title = "@item.TenSP" class="product_img loading1" src= "@item.HinhAnh"/>
+                        <div class="product_info">
+                            <p class="product_price">
+                                        
+                            </p>
+
+                            <p class="product_btn">
+                                <input type="image" src="../../Content/themes/images/btn_buy1.png">
+                            </p>
+
+                            <div class="index_tooltip">
+                                <span>
+                                    <img src="../../Content/themes/images/icon_moto2.png" width="30" height="30" align="absmiddle">
+                                    Giao sản phẩm miễn phí
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="product_info1">
+                            <p class="product_price_true">
+                                Trị giá: <span> @Html.DisplayFor(modelItem => item.GiaGoc)</span></p>
+                            <p class="product_infobuy">
+                                Có<span> 19 </span>người cùng mua</p>
+                        </div>
+                    </li>
+				}
+            </ul>
+            <script type="text/javascript">
+            	//alert(heightLoad);
+            	$(function () {
+            		heightLoad = heightLoad + 9570;
+            	});
+        
+            </script>
+
+            <br class="clean">
+            <div class="see_more" style="display: none">
+                <div href="" id="moreLink">
+                    Đang tải</div>
+            </div>
+                  
+        </div>
+
+        <div class="bg_B">
+        </div>
+    </div>
+<div>
+	Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+	of @Model.PageCount
+	&nbsp;
+	@if (Model.HasPreviousPage)
+ {
+		@Html.ActionLink("<<", "Index", new { page = 1 })
+		@Html.Raw("&nbsp;");
+		@Html.ActionLink("< Prev", "Index", new { page = Model.PageNumber - 1 })
+ }
+ else
+ {
+	@:<<
+	@Html.Raw("&nbsp;");
+	@:< Prev
+ }
+ &nbsp;
+ @if (Model.HasNextPage)
+ {
+	 @Html.ActionLink("Next >", "Index", new { page = Model.PageNumber + 1 })
+	 @Html.Raw("&nbsp;");
+	 @Html.ActionLink(">>", "Index", new { page = Model.PageCount })
+ }
+ else
+ {
+	 @:Next >
+	 @Html.Raw("&nbsp;");
+	 @:>>
+ }
+</div>

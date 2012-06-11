@@ -1,0 +1,20 @@
+<MULTIMEDIA>
+	<VIDEOS/>
+	<IMAGES>
+		<!--Anh bia-->
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ab01.jpg"  type = "1"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ab02.jpg"  type = "1"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ab03.jpg"  type = "1"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ab04.jpg"  type = "1"/>
+		<!--Anh chi tiet-->
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct01.jpg"  type = "0"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct02.jpg"  type = "0"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct03.jpg"  type = "0"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct04.jpg"  type = "0"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct05.jpg"  type = "0"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct06.jpg"  type = "0"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct07.jpg"  type = "0"/>
+		<IMAGE src = "../../Content/Images/SanPham/ThoiTrang/TT002/ct08.jpg"  type = "0"/>
+	</IMAGES>
+	<MAP/>
+</MULTIMEDIA>

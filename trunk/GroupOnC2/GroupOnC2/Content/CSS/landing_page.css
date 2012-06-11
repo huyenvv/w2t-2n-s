@@ -1,0 +1,45 @@
+/* CSS Document */
+.clean {clear:  both;line-height: 0;font-size: 0;
+}
+div.landing_page{ width:894px; text-align:left; font-family:Arial, Helvetica, sans-serif; margin-top:17px;}
+div.landing_page div.landing_page_T{background: url("../images/landing/landing_page.png") no-repeat center top; height:20px;}
+div.landing_page div.landing_page_M{background: url("../images/landing/bg_lang_page_M.png") repeat-y center center;padding:10px 5px 0px 28px;}	
+	div.landing_page_TT{ color: #0891BE; font-size: 30px; font-weight: bold;  line-height: 43px; }
+	div.landing_page_note{ font-size: 22px;  margin-top: 4px; }
+	div.landing_page_M_L{ width:331px; float:left; padding-top:10px;  }
+		div.bg_green_lp{ width:331px;}
+			div.bg_green_lp div.bg_green_lp_T {background: url("../images/landing/bg_green.png") no-repeat left top; height:7px;}
+			div.bg_green_lp div.bg_green_lp_M {background: url("../images/landing/bg_green_M.png") repeat-y left center}
+			div.bg_green_lp div.bg_green_lp_M  div.bg_green_lp_TT{ text-align:center; font-size:18px; font-weight:bolder; padding:10px 0px;} 
+			div.lang_content_lp{height:7em; position:relative;}
+			div.form_landing_lp {background: url("../images/landing/bg_landing_input.png") no-repeat scroll 0 0 transparent;
+    width: 381px;   height: 100px;    left: -50px; position: absolute; top: -15px; padding-top:28px; padding-left:10px;}
+	div.form_landing_lp p{ padding-top:11px ; padding-right:45px; * padding-right:35px;}
+	p.form_landing_lp_city{ padding-top:11px !important ; *padding-top:13px !important ;}
+				div.form_landing_lp p label{ width:135px; text-align:right; font-size: 14px; float:right;    font-weight: bold; margin-right: 10px; padding-top: 5px;}  	
+				div.form_landing_lp input{text-align:left; height:1.90em; padding: 0px 0px 0px 3px;width: 13.4em;float:right;border: 1px solid #CCCCCC;}
+				div.form_landing_lp select{text-align:left; height: 25px; padding: 3px 2px 2px !important; width: 13.8em!important;float:right;border: 1px solid #CCCCCC;}
+				div.form_landing_lp select option{ padding-left:3px;}
+							div.bg_green_lp div.bg_green_lp_B {background: url("../images/landing/bg_green.png") no-repeat left bottom; height:7px;}
+	div.landing_page_M_R{float:left; width:450px; margin-left:10px; padding-top:13px;}
+		div.landing_page_item{ width:894px; margin-top:30px;}
+		div.landing_page_img{position:relative; float:left; width:172px; height:114px; vertical-align:bottom; padding-bottom:8px; margin:0px 3px; }
+		div.landing_page_img img{ position:relative; z-index:0;}
+		div.landing_page_img span.landing_page_txt{position:absolute; font-size:13px; color:#FFF; z-index:2;width:172px; top:0; left:5;text-align:center;  font-weight:bolder; padding-top:120px;}
+	div.landing_page div.landing_page_B{background: url("../images/landing/landing_page.png") no-repeat center bottom; height:26px;}
+a.btn_lang{ cursor:pointer;}
+a.btn_lang:hover, a.btn_lang:active,a.btn_lang:link{ text-decoration:none; color:#fff; }
+div.btn_lang_1{ height:45px; background-color: transparent !important; background: url(../images/landing/button_green_bg_sprite.png) no-repeat left top  ;     float:left; padding:10px 15px 10px 25px ; font-size:28px;  color:#FFF; float:left;height:57px; }
+div.btn_lang_2{background-color: transparent !important; background: url(../images/landing/button_green_bg_sprite.png) no-repeat right -59px;  height:57px; width:42px; float:left; }
+ div.have_acc {padding-top:5
+               px;}
+div.have_acc a{ color:#1C4C7C; font-size:13px; cursor:pointer;}
+div.have_acc a:hover{ color:#1C4C7C; font-size:13px; text-decoration:underline;}
+div.box_land_lp_err{ height:30px; border-bottom:#d01e5e 2px solid; border-top:#d01e5e 2px solid; background:#ffdcd7; color:#d01e5e;  font-size:20px; font-weight:bolder; padding:10px 10px 10px 10px; margin-top:10px; width:825px;display: none;*width:770px; }
+/*style error*/
+.input-validation-error
+{
+    border: 1px solid #ff0000 !important;
+    background-color: #ffeeee !important;
+    sbackground-image: none !important;
+}

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<GroupOnC2.Models.LOAISANPHAM>
+
+<ul id = "categories">
+	@foreach (var loaiSp in Model)
+ {
+	 <li>
+	 @Html.ActionLink(loaiSp.TenLoaiSP, "Browse", "Home", 
+  new {loai = loaiSp.TenLoaiSP}, null)
+	 </li>
+ }
+</ul>

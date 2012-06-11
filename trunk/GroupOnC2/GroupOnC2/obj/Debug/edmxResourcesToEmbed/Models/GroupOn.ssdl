@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GROUPONModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="GROUPONModelStoreContainer">
+    <EntitySet Name="CHITIETDONHANG" EntityType="GROUPONModel.Store.CHITIETDONHANG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CHITIETSANPHAM" EntityType="GROUPONModel.Store.CHITIETSANPHAM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMMENT" EntityType="GROUPONModel.Store.COMMENT" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DONHANG" EntityType="GROUPONModel.Store.DONHANG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HINHTHUCTHANHTOAN" EntityType="GROUPONModel.Store.HINHTHUCTHANHTOAN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LOAISANPHAM" EntityType="GROUPONModel.Store.LOAISANPHAM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MULTIMEDIA" EntityType="GROUPONModel.Store.MULTIMEDIA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PAYPAL" EntityType="GROUPONModel.Store.PAYPAL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SANPHAM" EntityType="GROUPONModel.Store.SANPHAM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="GROUPONModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TAIKHOAN" EntityType="GROUPONModel.Store.TAIKHOAN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THANHTOANTRUCTIEP" EntityType="GROUPONModel.Store.THANHTOANTRUCTIEP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THONGTINADMIN" EntityType="GROUPONModel.Store.THONGTINADMIN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THONGTINDOANHNGHIEP" EntityType="GROUPONModel.Store.THONGTINDOANHNGHIEP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="THONGTINMEMBER" EntityType="GROUPONModel.Store.THONGTINMEMBER" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TINHTRANGDONHANG" EntityType="GROUPONModel.Store.TINHTRANGDONHANG" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TRANGTHAITAIKHOAN" EntityType="GROUPONModel.Store.TRANGTHAITAIKHOAN" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CHITIETSANPHAM_MULTIMEDIA_FK1" Association="GROUPONModel.Store.CHITIETSANPHAM_MULTIMEDIA_FK1">
+      <End Role="CHITIETSANPHAM" EntitySet="CHITIETSANPHAM" />
+      <End Role="MULTIMEDIA" EntitySet="MULTIMEDIA" />
+    </AssociationSet>
+    <AssociationSet Name="DONHANG_CHITIETDONHANG_FK1" Association="GROUPONModel.Store.DONHANG_CHITIETDONHANG_FK1">
+      <End Role="DONHANG" EntitySet="DONHANG" />
+      <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANG" />
+    </AssociationSet>
+    <AssociationSet Name="HINHTHUCTHANHTOAN_DONHANG_FK1" Association="GROUPONModel.Store.HINHTHUCTHANHTOAN_DONHANG_FK1">
+      <End Role="HINHTHUCTHANHTOAN" EntitySet="HINHTHUCTHANHTOAN" />
+      <End Role="DONHANG" EntitySet="DONHANG" />
+    </AssociationSet>
+    <AssociationSet Name="HINHTHUCTHANHTOAN_PAYPAL_FK1" Association="GROUPONModel.Store.HINHTHUCTHANHTOAN_PAYPAL_FK1">
+      <End Role="HINHTHUCTHANHTOAN" EntitySet="HINHTHUCTHANHTOAN" />
+      <End Role="PAYPAL" EntitySet="PAYPAL" />
+    </AssociationSet>
+    <AssociationSet Name="HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1" Association="GROUPONModel.Store.HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1">
+      <End Role="HINHTHUCTHANHTOAN" EntitySet="HINHTHUCTHANHTOAN" />
+      <End Role="THANHTOANTRUCTIEP" EntitySet="THANHTOANTRUCTIEP" />
+    </AssociationSet>
+    <AssociationSet Name="LOAISANPHAM_SANPHAM_FK1" Association="GROUPONModel.Store.LOAISANPHAM_SANPHAM_FK1">
+      <End Role="LOAISANPHAM" EntitySet="LOAISANPHAM" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="SANPHAM_CHITIETDONHANG_FK1" Association="GROUPONModel.Store.SANPHAM_CHITIETDONHANG_FK1">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANG" />
+    </AssociationSet>
+    <AssociationSet Name="SANPHAM_CHITIETSANPHAM_FK1" Association="GROUPONModel.Store.SANPHAM_CHITIETSANPHAM_FK1">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CHITIETSANPHAM" EntitySet="CHITIETSANPHAM" />
+    </AssociationSet>
+    <AssociationSet Name="SANPHAM_COMMENT_FK1" Association="GROUPONModel.Store.SANPHAM_COMMENT_FK1">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="COMMENT" EntitySet="COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_COMMENT_FK1" Association="GROUPONModel.Store.TAIKHOAN_COMMENT_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="COMMENT" EntitySet="COMMENT" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_DONHANG_FK1" Association="GROUPONModel.Store.TAIKHOAN_DONHANG_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="DONHANG" EntitySet="DONHANG" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_THONGTINADMIN_FK1" Association="GROUPONModel.Store.TAIKHOAN_THONGTINADMIN_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="THONGTINADMIN" EntitySet="THONGTINADMIN" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_THONGTINDOANHNGHIEP_FK1" Association="GROUPONModel.Store.TAIKHOAN_THONGTINDOANHNGHIEP_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="THONGTINDOANHNGHIEP" EntitySet="THONGTINDOANHNGHIEP" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_THONGTINMEMBER_FK1" Association="GROUPONModel.Store.TAIKHOAN_THONGTINMEMBER_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="THONGTINMEMBER" EntitySet="THONGTINMEMBER" />
+    </AssociationSet>
+    <AssociationSet Name="TINHTRANGDONHANG_DONHANG_FK1" Association="GROUPONModel.Store.TINHTRANGDONHANG_DONHANG_FK1">
+      <End Role="TINHTRANGDONHANG" EntitySet="TINHTRANGDONHANG" />
+      <End Role="DONHANG" EntitySet="DONHANG" />
+    </AssociationSet>
+    <AssociationSet Name="TRANGTHAITAIKHOAN_TAIKHOAN_FK1" Association="GROUPONModel.Store.TRANGTHAITAIKHOAN_TAIKHOAN_FK1">
+      <End Role="TRANGTHAITAIKHOAN" EntitySet="TRANGTHAITAIKHOAN" />
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CHITIETDONHANG">
+    <Key>
+      <PropertyRef Name="MaDH" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaDH" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MaSP" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="DonGia" Type="money" />
+  </EntityType>
+  <EntityType Name="CHITIETSANPHAM">
+    <Key>
+      <PropertyRef Name="MaCTSP" />
+    </Key>
+    <Property Name="MaCTSP" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MaSP" Type="varchar" MaxLength="10" />
+    <Property Name="SoLuong" Type="int" />
+    <Property Name="GioiThieu" Type="nvarchar(max)" />
+    <Property Name="GiaGoc" Type="money" />
+    <Property Name="GiaBan" Type="money" />
+  </EntityType>
+  <EntityType Name="COMMENT">
+    <Key>
+      <PropertyRef Name="MaCM" />
+    </Key>
+    <Property Name="MaCM" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Ngay" Type="datetime" />
+    <Property Name="MaSP" Type="varchar" MaxLength="10" />
+    <Property Name="MaTK" Type="varchar" MaxLength="10" />
+    <Property Name="Noidung" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DONHANG">
+    <Key>
+      <PropertyRef Name="MaDH" />
+    </Key>
+    <Property Name="MaDH" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MaTK" Type="varchar" MaxLength="10" />
+    <Property Name="NgayDatHang" Type="datetime" />
+    <Property Name="MaHTTT" Type="varchar" MaxLength="10" />
+    <Property Name="MaTT" Type="nvarchar" MaxLength="20" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDT" Type="nchar" MaxLength="10" />
+    <Property Name="TenNguoiNhan" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="HINHTHUCTHANHTOAN">
+    <Key>
+      <PropertyRef Name="MaHTTT" />
+    </Key>
+    <Property Name="MaHTTT" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="TenHTTT" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LOAISANPHAM">
+    <Key>
+      <PropertyRef Name="MaLoaiSP" />
+    </Key>
+    <Property Name="MaLoaiSP" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="TenLoaiSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="SoLuongSP" Type="int" />
+  </EntityType>
+  <EntityType Name="MULTIMEDIA">
+    <Key>
+      <PropertyRef Name="MaMD" />
+    </Key>
+    <Property Name="MaMD" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MaCTSP" Type="varchar" MaxLength="10" />
+    <Property Name="Multimedia" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PAYPAL">
+    <Key>
+      <PropertyRef Name="MaHTTT" />
+    </Key>
+    <Property Name="MaHTTT" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MaSoThe" Type="varchar" MaxLength="10" />
+    <Property Name="TenChuThe" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="MaLoaiSP" Type="varchar" MaxLength="10" />
+    <Property Name="TenSP" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Avatar" Type="varchar" MaxLength="50" />
+    <Property Name="MaTT" Type="nvarchar" MaxLength="20" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
+    <Property Name="SDT" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="THANHTOANTRUCTIEP">
+    <Key>
+      <PropertyRef Name="MaHTTT" />
+    </Key>
+    <Property Name="MaHTTT" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="TenNN" Type="nvarchar" MaxLength="50" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="200" />
+    <Property Name="SDT" Type="varchar" MaxLength="11" />
+  </EntityType>
+  <EntityType Name="THONGTINADMIN">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+  </EntityType>
+  <EntityType Name="THONGTINDOANHNGHIEP">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Website" Type="nvarchar" MaxLength="100" />
+    <Property Name="TenDN" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="THONGTINMEMBER">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Ten" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="GioiTinh" Type="bit" />
+  </EntityType>
+  <EntityType Name="TINHTRANGDONHANG">
+    <Key>
+      <PropertyRef Name="MaTT" />
+    </Key>
+    <Property Name="MaTT" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="TenTT" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TRANGTHAITAIKHOAN">
+    <Key>
+      <PropertyRef Name="MaTT" />
+    </Key>
+    <Property Name="MaTT" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="TenTT" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="CHITIETSANPHAM_MULTIMEDIA_FK1">
+    <End Role="CHITIETSANPHAM" Type="GROUPONModel.Store.CHITIETSANPHAM" Multiplicity="0..1" />
+    <End Role="MULTIMEDIA" Type="GROUPONModel.Store.MULTIMEDIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHITIETSANPHAM">
+        <PropertyRef Name="MaCTSP" />
+      </Principal>
+      <Dependent Role="MULTIMEDIA">
+        <PropertyRef Name="MaCTSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DONHANG_CHITIETDONHANG_FK1">
+    <End Role="DONHANG" Type="GROUPONModel.Store.DONHANG" Multiplicity="1" />
+    <End Role="CHITIETDONHANG" Type="GROUPONModel.Store.CHITIETDONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONHANG">
+        <PropertyRef Name="MaDH" />
+      </Principal>
+      <Dependent Role="CHITIETDONHANG">
+        <PropertyRef Name="MaDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HINHTHUCTHANHTOAN_DONHANG_FK1">
+    <End Role="HINHTHUCTHANHTOAN" Type="GROUPONModel.Store.HINHTHUCTHANHTOAN" Multiplicity="0..1" />
+    <End Role="DONHANG" Type="GROUPONModel.Store.DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HINHTHUCTHANHTOAN">
+        <PropertyRef Name="MaHTTT" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="MaHTTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HINHTHUCTHANHTOAN_PAYPAL_FK1">
+    <End Role="HINHTHUCTHANHTOAN" Type="GROUPONModel.Store.HINHTHUCTHANHTOAN" Multiplicity="1" />
+    <End Role="PAYPAL" Type="GROUPONModel.Store.PAYPAL" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HINHTHUCTHANHTOAN">
+        <PropertyRef Name="MaHTTT" />
+      </Principal>
+      <Dependent Role="PAYPAL">
+        <PropertyRef Name="MaHTTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1">
+    <End Role="HINHTHUCTHANHTOAN" Type="GROUPONModel.Store.HINHTHUCTHANHTOAN" Multiplicity="1" />
+    <End Role="THANHTOANTRUCTIEP" Type="GROUPONModel.Store.THANHTOANTRUCTIEP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HINHTHUCTHANHTOAN">
+        <PropertyRef Name="MaHTTT" />
+      </Principal>
+      <Dependent Role="THANHTOANTRUCTIEP">
+        <PropertyRef Name="MaHTTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LOAISANPHAM_SANPHAM_FK1">
+    <End Role="LOAISANPHAM" Type="GROUPONModel.Store.LOAISANPHAM" Multiplicity="0..1" />
+    <End Role="SANPHAM" Type="GROUPONModel.Store.SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAISANPHAM">
+        <PropertyRef Name="MaLoaiSP" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MaLoaiSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SANPHAM_CHITIETDONHANG_FK1">
+    <End Role="SANPHAM" Type="GROUPONModel.Store.SANPHAM" Multiplicity="1" />
+    <End Role="CHITIETDONHANG" Type="GROUPONModel.Store.CHITIETDONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETDONHANG">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SANPHAM_CHITIETSANPHAM_FK1">
+    <End Role="SANPHAM" Type="GROUPONModel.Store.SANPHAM" Multiplicity="0..1" />
+    <End Role="CHITIETSANPHAM" Type="GROUPONModel.Store.CHITIETSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETSANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SANPHAM_COMMENT_FK1">
+    <End Role="SANPHAM" Type="GROUPONModel.Store.SANPHAM" Multiplicity="0..1" />
+    <End Role="COMMENT" Type="GROUPONModel.Store.COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="COMMENT">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_COMMENT_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.Store.TAIKHOAN" Multiplicity="0..1" />
+    <End Role="COMMENT" Type="GROUPONModel.Store.COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="COMMENT">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_DONHANG_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.Store.TAIKHOAN" Multiplicity="0..1" />
+    <End Role="DONHANG" Type="GROUPONModel.Store.DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_THONGTINADMIN_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.Store.TAIKHOAN" Multiplicity="1" />
+    <End Role="THONGTINADMIN" Type="GROUPONModel.Store.THONGTINADMIN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="THONGTINADMIN">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_THONGTINDOANHNGHIEP_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.Store.TAIKHOAN" Multiplicity="1" />
+    <End Role="THONGTINDOANHNGHIEP" Type="GROUPONModel.Store.THONGTINDOANHNGHIEP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="THONGTINDOANHNGHIEP">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_THONGTINMEMBER_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.Store.TAIKHOAN" Multiplicity="1" />
+    <End Role="THONGTINMEMBER" Type="GROUPONModel.Store.THONGTINMEMBER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="THONGTINMEMBER">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TINHTRANGDONHANG_DONHANG_FK1">
+    <End Role="TINHTRANGDONHANG" Type="GROUPONModel.Store.TINHTRANGDONHANG" Multiplicity="0..1" />
+    <End Role="DONHANG" Type="GROUPONModel.Store.DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TINHTRANGDONHANG">
+        <PropertyRef Name="MaTT" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="MaTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TRANGTHAITAIKHOAN_TAIKHOAN_FK1">
+    <End Role="TRANGTHAITAIKHOAN" Type="GROUPONModel.Store.TRANGTHAITAIKHOAN" Multiplicity="0..1" />
+    <End Role="TAIKHOAN" Type="GROUPONModel.Store.TAIKHOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANGTHAITAIKHOAN">
+        <PropertyRef Name="MaTT" />
+      </Principal>
+      <Dependent Role="TAIKHOAN">
+        <PropertyRef Name="MaTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

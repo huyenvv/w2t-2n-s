@@ -1,0 +1,663 @@
+﻿.box-white{	
+	clear:left;
+	width: 963px;
+	background-color: #fff;		
+	border-radius:9px;
+	-moz-border-radius:9px;	
+	padding: 0 0 18px 17px;	
+	margin: 20px auto 0 auto;
+	position: relative;
+	height: auto;
+	float:left;			
+	box-shadow:0 2px 8px #656565;
+	-moz-box-shadow:0 2px 8px #656565;
+	-webkit-box-shadow:0 2px 8px #656565;
+}
+.box-white h3{color: #0f5f92;}
+.box-white-image {
+	float: left;
+	width: 306px;	
+	height:196px;
+	position:relative;
+	margin-top:20px;
+	position:relative;
+	z-index:12;
+}
+.box-white-image a{
+	padding:0;
+	margin:0;	
+	overflow:hidden;
+	height:192px;
+	display:block;	
+}
+.box-white-image img{
+	border:1px solid #dfdfdf;
+	padding:3px;	
+	overflow:hidden;
+}
+.box-white-image i {
+	background: url(http://www.mjgroup.com.vn/images_v2/shadow-bg.png) no-repeat scroll 0 0 transparent;
+	width: 302px;
+	height: 4px;
+	margin: 0 auto;
+	display: block;
+	padding: 0px;
+	font-size: 0;
+}
+.box-white-content {
+	width: 500px;
+	float: left;
+	position:relative;
+	margin-top:17px;
+}
+.box-white-content h3,.box-white-content h1{
+	font-size: 23px;
+	padding: 0 0 12px 0;
+}
+.box-white-btn { float:right; position:relative; margin-top:-82px; width:250px; }
+.box-white-btn .box-white-info-big{ border-top:0 none;}
+.box-white-btn .remain{ margin-top:-43px;}
+.box-white-btn .remain em{ font-size:10px;}
+.box-white-btn .box-white-info-sale{ padding:16px 0 0 0;}
+.box-white-content .box-white-info-links{ width:auto; margin-top:42px;}
+.box-white-subcr{
+	overflow:hidden;
+	height:207px;
+}
+.box-white-subcr .box-white-slogan{width:228px; height:auto;} 
+.box-white-content h2,.box-white-content h1{
+	font-size: 21px;
+	margin: 0 0 3px 0;
+	font-weight:400;
+	overflow: hidden;
+	height:24px;
+}
+.box-white-content h2 a,.box-white-content h1 a{color:#0099FF;}
+.box-white-content .box-white-subcr p {
+	overflow: hidden;
+	height:43px;
+}
+.box-white-content .box-white-subcr .box-white-detail{
+	height:auto;
+	text-align:right;
+	margin-right:4px;
+	font-size:13px;
+}
+.box-white-content .box-white-subcr .box-white-detail a{ color:#0099FF;}
+.box-white-content p{
+	font-size: 15px;
+	color: #333333;
+	line-height:21px;
+}
+.box-white-content p.box-white-time-remain{
+	font-size: 13px;
+	color: #333333;
+	padding: 15px 0 6px 0;
+}
+.box-white-time-remain span{
+	font-size: 22px;
+	color: #333;
+	font-weight: 700;
+	vertical-align: bottom;
+	display:inline-block;
+	width:130px;
+	position:relative;
+	top:-4px;
+}
+.box-white-info-big {
+	border-top: 1px solid #000000;
+	zoom:1;
+	height:1%;
+	width:100%;
+}
+.box-white-info-big span {
+	display: block;
+	font-size: 13px;
+	font-weight: normal;
+	margin:0;
+}
+.box-white-info-big .value {
+	float: left;
+	width: 117px;
+	border-right: 1px solid #999999;
+	margin-top:24px;
+	text-align:center;	
+}
+.box-white-info-big .value span.style-font {
+	font-weight: 700;
+	font-size: 20px;
+	text-decoration: line-through;
+}
+.remain {
+	float: left;
+	width:100%;
+	text-align: center;
+	margin-top:-53px;
+	position:relative;
+}
+.box-white-info-big .remain span.style-font{
+	font-weight: 700;
+	font-size: 24px;
+	color: #ff6600;
+}
+.box-white-info-big .buyer {
+	float: left;
+	width: 126px;
+	text-align: center;
+	margin-top:24px;
+	border-right:1px solid #999;
+}
+.box-white-info-big .buyer span.style-font {
+	font-weight: 700;
+	font-size: 20px;	
+}
+.box-white-info-big .view-price {
+	width: 171px;
+	float:right;
+	margin-top:18px;
+	padding-right:35px;
+	position:relative;
+	z-index:2;
+}
+.box-white-text {
+	float: left;
+	width: 354px;
+	padding: 0 15px;
+	border-right: 1px solid #bababa;
+	height:197px;
+	margin-top:20px;
+	position:relative;
+	z-index:12;
+}
+.box-white-text h3{			
+	font-size: 21px;
+	height: 25px;
+	overflow: hidden;
+	margin-top:-5px;	
+}
+.box-white-text h3 a{
+	font-style:400;
+	font-size: 18px;	
+}
+.box-white-text p {
+	font-size: 16px;
+	color: #2a2a2a;  
+	text-align:left; 
+	line-height: 24px;
+	height:72px;
+	overflow:hidden;
+	font-size:15px;
+}
+.box-white-text div{
+	height:70px;
+	overflow:hidden;
+}
+.box-white-text p.box-white-detail {
+	text-align:right;
+	padding: 10px 10px 10px 0;
+	height:auto;
+	font-size:12px;
+}
+.box-white-text span{	
+	color: #555555;
+	font-weight: 400;	
+	font-size: 13px;
+	text-align: left;
+	vertical-align: top;
+	line-height: 20px;	
+}
+span.box-white-quote {	
+	width: 31px;	
+	padding: 0 12px;
+}
+.box-white-slogan {	
+	width: 278px;
+	display: inline-block;
+	height:62px;
+	overflow: hidden;
+	color: #555555;
+	font-weight: 400;	
+	font-size: 15px;
+	text-align: left;
+	vertical-align: top;
+	line-height: 20px;		
+}
+a.box-white-slogan:hover{text-decoration:underline;} 
+.box-white-info {
+	float: left;
+	width: 270px;
+	margin-top:7px;
+	position:relative;
+	z-index:12;
+}
+.box-white-info p {
+	text-align: center;	
+	font-size: 24px;
+	color: #ff6600;
+	font-weight: 700;
+	line-height: 48px;
+}
+.box-white-info p.price{margin: -5px 0 15px 0;}
+.box-white-info p strong{font-size:10px;}
+.box-white-info-sale span {
+	font-size: 11px;
+	display: block;
+	color: #555555;
+	line-height:16px;
+}
+.box-white-info-sale span.number {
+	font-size: 16px;
+	font-weight: 700;
+}
+.box-white-info .margin-negative strong{
+	font-size: 9px;	
+	font-weight: 400;
+}
+.view-button {	
+	display: block;
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-xem-large.png) no-repeat scroll 0 0 transparent;
+	width: 157px;
+	height: 52px;
+	margin: 0 auto;
+}
+.view-button-en {	
+	display: block;
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-xem-large-en.png) no-repeat scroll 0 0 transparent;
+	width: 157px;
+	height: 52px;
+	margin: 0 auto;
+}
+.box-white-info-sale {
+	padding: 25px 0 28px;
+}
+.box-white-info-save {
+	width: 73px;
+	float: left;	
+	text-align: center;
+	border-right: 1px solid #bababa;	
+	height:30px;
+}
+.box-white-info-buyer {
+	width: 84px;
+	float: left;	
+	text-align: center;
+	border-right: 1px solid #bababa;	
+	height:30px;
+}
+.box-white-info-time {
+	width: 91px;
+	float: left;	
+	text-align: center;	
+	height:30px;
+}
+.box-white-info-price {
+	float: left;
+	width: 160px;
+	text-align: center;
+	padding: 5px 0 0 0;
+}
+.box-white-info-price p {
+	font-size: 12px;
+	color: #555555;
+	font-weight: 400;
+	line-height: 20px;
+}
+.box-white-info-price span {
+	text-decoration: line-through;
+	display: inline;
+	font-size: 14px;
+	color: #555555;
+	line-height: 20px;
+}
+.box-white-info-links {
+	float: left;
+	width: 110px;
+	text-align: center;
+}
+.box-white-info-links a {
+	padding: 0 6px;
+	float:left;
+}
+.box-white-save {
+	display:block;
+	position: absolute !important;
+	top: -14px;
+	left: -14px;
+	background: url(http://www.mjgroup.com.vn/images_v2/img_tietkiem.png) no-repeat;
+	width: 76px;
+	height: 55px;
+	padding-top: 20px;
+	clear: both;
+	z-index: 9;
+}
+.box-white-save p {
+	text-align: center;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform:capitalize;
+}
+.box-white-save p.percent {
+	font-size: 20px;
+}
+.box-white-image-big {	
+	z-index: 1;
+	padding:0 20px 0 0;
+	float:left;
+	margin: 20px 0 0 0;
+	position: relative;
+}
+.one-img-slideshow img{
+	border: 1px solid #DFDFDF;
+    overflow: hidden;
+    padding: 3px;
+}
+.one-img-slideshow .box-white-save{
+	top:4px;
+	left:4px;
+}
+.btn-slide {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	z-index: 50;
+	text-align: center;
+	width: 422px;
+}
+.one-img-slideshow {
+	width: 426px;
+	overflow: hidden;
+	height: 267px;
+	background-color: #fff;
+	position: relative;
+	z-index:2;
+}
+.slideshow-inner{
+	width: 2130px;
+	position: relative;
+	z-index: 1;	
+}
+.slideshow-inner a{float: left;}
+ul#thumbs{
+	display: inline-block;
+	overflow:hidden;
+}
+ul#thumbs li{
+	display: inline-block;
+	margin-left: 0;
+	float:left;
+}
+ul#thumbs li a{
+	background: url(http://www.mjgroup.com.vn/images_v2/circle.png) no-repeat scroll 0 0 transparent;
+	width: 9px;
+	height: 9px;
+	text-decoration: none;	
+	float:left;
+	margin:0 3px; 
+	cursor: pointer;
+	float:left;
+	font-size:0;
+}
+#thumbs li a:hover, #thumbs li.activeSlide a { 
+	background-position: 0 -9px ;	
+}
+.box-transparent {
+	width: 978px;
+	height: 208px;
+	margin: 20px auto 0 auto;
+	position: relative;
+	z-index: 2;			
+	background: url(http://www.mjgroup.com.vn/images_v2/bg-white-trans-high.png) no-repeat;		
+	border-radius:9px;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	box-shadow: 1px 1px 5px #333;
+	-webkit-box-shadow: 1px 1px 5px #333;
+	-moz-box-shadow: 1px 1px 5px #333;
+	clear:left;
+	float:left;	
+}
+.box-tran-slideshow{
+	background: url(http://www.mjgroup.com.vn/images_v2/bg-white-trans-short.png) no-repeat;
+	height: 169px;
+}
+.ie6 .box-transparent { 
+	position: relative !important;
+	height: auto !important;
+}
+.box-transparent-content {
+	margin: 13px 25px 10px 25px;
+	background-color: #ffffff;
+	height:183px;
+}
+.container{background: none !important;}
+.contentBox {
+	 float: left;
+	 text-align: center;
+	 padding:0 7px;
+}
+.contentBox a{
+	display:block;
+	width:298px;
+	height:138px;
+	background:#fff;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+}
+.contentBox img{
+	border-radius:14px;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+}
+.contentSeparation {
+	background: url(http://www.mjgroup.com.vn/images_v2/line.png) no-repeat scroll 0 -105px;
+	width: 2px;
+	height: 141px;
+	float: left; 
+}
+#three-img-slideshow {	
+	padding:15px 0 15px 20px;
+	overflow:hidden;
+}
+.prev {
+	position: absolute;	
+	top:64px;
+	left: 0;
+	z-index: 10;
+}
+.next {
+	position: absolute;	
+	top:64px;
+	right: 0;
+	z-index: 10;
+}
+.box-transparent a{
+	display: block;	
+	outline: none;
+}
+.prev a, .next a{
+	text-indent: -9999px;	
+	width:20px;
+	height:40px;
+	background-image:url(http://www.mjgroup.com.vn/images_v2/circle.png);
+	background-repeat:no-repeat;
+	position:static;
+}
+#prev-button{background-position:0 -50px;}
+#next-button {background-position:0 -90px;}
+.list-deals{
+	width:980px;
+	clear:left;
+}
+.all-content {
+	width: 1005px;
+	margin: 0 auto;
+	overflow:hidden;
+	padding-bottom:8px;
+	margin-bottom:-8px;
+	margin-left:0px;
+	clear:left;
+	padding-left:6px;
+}
+.small-box-white {
+	width: 278px;
+	float:left;
+	margin: 20px 21px 0 0;
+	background-color: #fff;		
+	border-radius:9px;
+	-moz-border-radius:9px;	
+	-webkit-border-radius:9px;
+	padding: 18px 16px 20px 16px;
+	border:1px solid #c4c4c4;
+	box-shadow:0 2px 8px #656565;
+	-moz-box-shadow:0 2px 8px #656565;
+	-webkit-box-shadow:0 2px 8px #656565;
+	position:relative;
+}
+.small-box-white h3,.small-box-white h1{	
+	font-size: 19px;	
+	color: #0f5f92;
+	height: 22px;
+	overflow: hidden;
+	position:relative;
+	z-index:12;
+}
+.small-box-white h3 a,.small-box-white h1 a{	
+	font-size: 18px;	
+	color: #0095DA;	
+}
+.small-box-white p{
+	line-height: 20px;
+	font-size:13px;
+	color: #555555;	
+}
+.small-box-img {	
+	height:177px;
+	width: 276px;
+	font-size:0;
+	padding: 5px 0;
+	position:relative;
+		z-index:12;/*17.11*/
+}
+.small-box-img img {	
+	border: 1px solid #dfdfdf;
+	padding: 3px;
+}
+.small-box-img i {	
+	display:block;
+	background: url(http://www.mjgroup.com.vn/images_v2/shadow-bg.png) no-repeat scroll 0 -6px transparent;
+	width: 272px;
+	height: 4px;
+	font-size:0;
+	margin: 0 auto;
+}
+.small-box-text {
+	height: 60px;
+	overflow: hidden;
+	margin-bottom: 19px;
+}
+.small-box-button {
+	float: left;
+	width: 117px;
+	position:relative;
+	z-index:12;
+}
+.small-box-button .view-button {	
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-xem-small.png) no-repeat 0 0;
+	width: 117px;
+	height: 52px;
+}
+.small-box-button .view-button-en {	
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-xem-small-en.png) no-repeat 0 0;
+	width: 117px;
+	height: 52px;
+	display:block;
+}
+.small-box-sale {
+	width: 160px;
+	float: left;
+	margin-top:-3px;
+}
+.small-box-sale span{	
+	display: block;
+	color: #555555;
+	font-size: 11px;
+	line-height:13px;	
+}
+.small-box-sale span.number{	
+	font-size: 16px;
+	font-weight:700;	
+}
+.small-box-sale p{
+	color: #ff6600;
+	font-size: 23px;
+	font-weight: 700;
+	text-align: center;
+	padding-bottom: 7px;
+	line-height:23px;
+}
+.small-box-sale p span{	
+	font-size: 9px;	
+	color: #ff6600;
+	display: inline;
+}
+.small-box-save {
+	float: left;
+	width: 68px;
+	text-align: center;
+	border-right: 1px solid #bababa;
+}
+.small-box-price {
+	float: left;
+	width: 91px;
+	text-align: center;
+}
+.golden-time,.golden-time-chomua{
+    display:none;
+    width:142px;
+    height:171px;
+    background:url(http://www.mjgroup.com.vn/images_v2/golden_time.png) no-repeat;
+    position:absolute;
+    top:-42px;
+    left:-44px;
+	z-index:10;
+}
+.freeship{
+	display:block;
+    width:97px;
+    height:70px;
+    background:url(http://www.mjgroup.com.vn/images_v2/freeship_new.png) no-repeat;
+    position:absolute;
+    bottom:10px;
+    left:7px;
+    z-index:2;
+}
+/* 14.3.12 */
+.giaovoucher{
+	display:block;
+    width:63px;
+    height:49px;
+    background:url(http://www.mjgroup.com.vn/images_v2/icon-giao-voucher.png) no-repeat;
+    position:absolute;
+    bottom:5px;
+    left:7px;
+    z-index:2;
+}
+/* 14.3.12 */
+.box-red .golden-time-fireof{ display:block;background:url(http://www.mjgroup.com.vn/images_v2/golden-time-fireof.png) no-repeat;}/*16.11*/
+.box-red .golden-time{ display:block;background:url(http://www.mjgroup.com.vn/images_v2/golden_time_chayhang.png) no-repeat;}
+.box-red .golden-time-chomua{ display:block;background:url(http://www.mjgroup.com.vn/images_v2/golden_time_chomua.png) no-repeat;}
+.box-yellow{background-color:#ffffbf; position:relative}
+.bg-box-yellow{ background:url(http://www.mjgroup.com.vn/images_v2/bg-deal-golden.png) no-repeat; width:1031px; height:299px; position:absolute; top:-43px; left:-16px;}/*16.11*/
+.box-yellow .golden-time{display:block;}
+.box-yellow .box-white-save{display:none;}
+.small-box-img .golden-time,.small-box-img .golden-time-chomua{
+	left:-44px;
+	top:-37px;
+}
+.small-box-white .bg-box-yellow{background:url(http://www.mjgroup.com.vn/images_v2/bg-deal-golden-small.png) no-repeat; width:357px; height:465px; position:absolute; top:-54px; left:-23px; z-index:10;}
+.small-box-button{ width:116px; margin-top:19px;}
+.small-box-sale{ margin-top:17px;}
+.small-box-text{ margin-bottom:0;}
+.box-big{ background:#fff url(http://www.mjgroup.com.vn/images_v2/bottom-bg-deal.gif) right bottom no-repeat;margin-left:6px;}
