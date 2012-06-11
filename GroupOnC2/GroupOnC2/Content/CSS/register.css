@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Register */
+a { color:#000;}
+a:hover{ color::#333;}
+div.form_res{ margin-top:10px; margin-bottom:10px; }
+div.form_res_item{ height:40px; color:#58595B ; font-size:14px; width:650px; padding-top:5px;}
+p.form_res_left{float:left; text-align:right; padding-right:10px; padding-top:12px;width:165px; }	
+p.form_res_right{ float:left;text-align:left;width:300px;}
+p.form_res_right input{ border: 1px solid #D5D5D5; border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset;  color: #000; font: 12px/25px "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; height:28px ;padding: 0px  8px;  word-spacing: 0.1em; width:300px;  margin:5px 0px;}
+div.register { width:610px; height:auto; background-color:#85b561;font-family:Verdana, Geneva, sans-serif; font-size:14px; display:block; padding-bottom:5px; }
+div.register p.title{ color:#FFF; font-size:16px;padding:20px 0 10px 20px; text-align:left;font-family:Verdana, Geneva, sans-serif; }
+div.content{ background-color:#fff;  margin-left:5px; margin-right:5px;font-family:Arial, Helvetica, sans-serif; height:auto; padding-top:10px; padding-left:10px; *padding-left:5px;*width: 595px;} 
+	div.content div.row{ width:600px; padding-top:25px; padding-left:40px; float:left; }
+		div.row p { padding-right:20px; width:132px; float:left; text-align:right;padding-top:4px;}
+		div.row span.start{color:#ED1C24;}
+		div.row input{ border: 1px solid #D5D5D5; border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset;  color: #000; font: 12px/25px "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; height:28px ;padding: 0px  8px;  word-spacing: 0.1em; width:300px;  margin:5px 0px; margin-top:12px;}
+		div.row 
+		/*div.row input.err{ margin-top:12px; height:32px; width:320px;border: 1px solid #F00;
+    border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset; font-size:14px; padding-left:3px;}*/
+		div.row div.errtext {	color:#F00; font-size:11px; text-align:left; margin:0px; padding-top:4px; padding-left:155px;  }
+		div.content div.row2{ width:300px; padding-left:175px;*padding-left:175px;height:40px; margin-top:15px;*margin-left: -160px;}
+		div.row3 .button{ font-size:16px;}
+	div.content div.lostpass_res{ width:500px; padding-left:137px; float:left; height:auto;}
+		div.lostpass_res a { color:#000; font-weight:bold;}
+		div.lostpass_res a:hover { color:#666; font-weight:bold;}
+		div.lostpass_res span { float:left; text-align:left; font-size:12px; margin-top:15px; padding-right:5px; color:#58595B; width:420px;margin-left:37px; *margin-left:35px;}
+		div.form_res_err{color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 172px;}
+		div.lostpass_res span input[type=text]{border: 1px solid #D5D5D5; border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset;  color: #000; font: 12px/25px "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; height:28px ;padding: 0px  8px;  word-spacing: 0.1em; width:300px;  margin:0px 0px 5px;}

@@ -1,0 +1,403 @@
+.body-left{
+	float:left;
+	width:705px;
+	overflow:hidden;
+}
+.right-menu {
+	float: right;
+	width: 275px;	
+}
+.middle-box-white {
+	width: 617px;
+	background-color: #ffffff;
+	border-radius:9px;
+	-moz-border-radius:9px;	
+	padding: 23px 44px;
+	margin-top: 20px;
+}
+.no-padding {
+	padding: 0;
+	width: 705px;
+}
+.middle-box-title {
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 5px;
+	height: 32px;
+}
+.middle-box-title .left {
+	float: left;
+	width:628px;
+}
+.middle-box-title .right {
+	float: right;
+	width: 177px;
+}
+.middle-box-white h3{
+	font-size: 16px;
+	color: #002c46;		
+}
+.middle-box-white h3 span.title{
+	font-size: 27px;
+	color: #002c46;	
+	font-weight: 700;	
+}
+.middle-box-white h3 a,.middle-box-white h3 span.middle-size{
+	font-size: 27px;
+	color: #002c46;
+	font-weight: 700;
+	margin-right:8px;
+}
+.middle-box-white h3 a.middle-size{	
+	color: #1495e3;
+	font-weight: normal;
+	margin-left:8px;
+}
+.middle-box-white p {
+	font-size: 16px;
+	color: #002C46;
+}
+.middle-box-white p.agree {	
+	font-size: 16px;
+	padding-bottom: 15px;
+}
+.middle-box-white p.agree label{
+	margin-left: 5px;
+	color: #002C46;
+}
+.middle-box-content {
+	padding: 28px 0 7px 0;
+}
+.middle-box-content p {
+	font-size: 16px;
+	color: #002c46;	
+}
+.middle-box-content p.middle-box-checkbox {
+	padding: 6px 0 21px 0;
+}
+.middle-box-content p.middle-box-checkbox-miss {
+	padding: 23px 0 16px 0;
+}
+.middle-box-content span {
+	color: #3c3c3c;
+	font-size: 16px;	
+}
+.middle-box-content span.red {	
+	font-size: 13px;	
+	color: #ff0000;
+}
+.middle-box-content span.lost-pass {	
+	color: #0f5f92;
+	font-style: italic;
+	font-size: 13px;
+}
+.middle-box-content span.middle-box-text {	
+	padding: 0 0 0 7px;
+}
+.middle-box-content span a{
+	color: #0f5f92;
+	font-size: 16px;
+	font-weight:400;
+}
+.middle-box-content span a.lostpass{
+	font-size: 11px;
+	margin-left:4px;	
+}
+.content-left {
+	width: auto;
+	float: left;
+}
+.content-right {
+	width: 220px;
+	float: right;
+	padding: 15px 10px;
+	text-align: center;
+	margin-top: 54px;
+}
+.content-right a{
+	margin: 10px auto 0px auto;
+}
+.content-right h2{
+	font-size: 21px;
+	color: #002C46;
+	text-align: center;
+}
+.content-right .submit-button{
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-dn.png) no-repeat;
+	width: 206px;
+}
+.content-right .submit-button-en{
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-dn-en.png) no-repeat;
+	width: 206px;
+	height:52px;
+	display:block;
+}
+.middle-box-style {	
+	width: 342px;
+	height: 22px;
+	border: none;	
+	font-size: 20px;
+	color: #303030;
+	background: none;
+	margin: 12px 11px 0 9px;		
+}
+.middle-box-content p.middle-box-button {
+	margin: 23px 0 0 0;
+	padding: 12px 0 0 0;
+	border-top: 1px solid #cccccc;	
+}
+.middle-box-content p.middle-box-button-sign {
+	padding: 20px 0 3px 0;
+}
+.middle-box-content p.middle-box-require {
+	padding: 4px 0 0 0;	
+}
+.middle-box-content p.middle-box-lostpass {
+	margin: -11px 0 0 0;	
+}
+.submit-button {	
+	display: block;
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-submit.png) no-repeat;
+	width: 187px;
+	height: 52px;
+}
+.submit-button-en {	
+	display: block;
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-submit-en.png) no-repeat;
+	width: 187px;
+	height: 52px;
+	float:left;
+}
+p.middle-box-button-sign .submit-button {	
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-signin.png) no-repeat;	
+}
+p.middle-box-button-sign .submit-button-en {	
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-signin-en.png) no-repeat;
+	width:157px;
+	height:52px;
+	display:block;
+}
+span.middle-box-button-reset .submit-button{
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-reset.png) no-repeat;
+	width: 297px;
+}
+span.middle-box-button-reset .submit-button-en{
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-reset-en.png) no-repeat;
+	width: 297px;
+	height:52px;
+	display:block;
+}
+span.middle-box-button-cancel .submit-button{
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-cancel.png) no-repeat;
+}
+span.middle-box-button-cancel .submit-button-en{
+	background: url(http://www.mjgroup.com.vn/images_v2/btn-cancel-en.png) no-repeat;
+	width:157px;
+	height:52px;
+	display:block;
+}
+.middle-box-sex {
+	margin: -4px 0 16px 24px;
+}
+.middle-box-sex label {
+	background: url(http://www.mjgroup.com.vn/images_v2/sex.gif) no-repeat;
+	float: left;
+	height: 36px;
+}
+.middle-box-sex label.iGTDK {
+    background-position: 0 -36px;
+    width: 30px;	
+}
+.middle-box-sex label.iGTFMaleDK {
+    background-position: 0 0;
+    width: 34px;
+}
+.checkDK {
+    background: url(http://www.mjgroup.com.vn/images_v2/sex.gif) no-repeat scroll 0 -76px transparent;
+    cursor: pointer;
+    float: left;
+    height: 13px;   
+    width: 13px;
+	margin: 21px 0 0 11px;
+}
+.checkedDK {
+    background-position: 0 -89px;   
+}
+.iNoneDK {
+	display: block;
+    float: left;
+    height: 5px;
+    width: 65px;
+}
+.middle-box-date {
+	margin: 6px 0 17px 0;
+}
+.div_txtDayDK {
+	float: left;
+	margin: 0 14px 0 0;	
+}
+.div_txtDayDK select{
+	text-align:center;
+	color:#545454;
+	font-size:18px;
+	border:1px solid #bbb;
+	background:url(http://www.mjgroup.com.vn/images_v2/input.gif) repeat-x  0 -89px;
+	padding:3px 1px;
+}
+.iLDLL {
+    background: url(http://www.mjgroup.com.vn/images_v2/select.gif) no-repeat;
+    float: left;
+    height: 27px;
+    width: 3px;
+}
+.iBDLL {
+	background: url(http://www.mjgroup.com.vn/images_v2/select-repeat.gif) repeat-x;
+    float: left;
+    height: 24px;
+	padding: 3px 16px 0 6px;    
+}
+.iRDLL {
+	background: url(http://www.mjgroup.com.vn/images_v2/select-btn.gif) no-repeat;
+    float: left;
+    height: 27px;
+    width: 21px;
+}
+.div_txtDayDK span {
+	font-size: 18px;
+	color: #545454;
+}
+.div_maXN {
+	margin: 4px 0 22px 0;
+}
+.middle-box-style-small {	
+	width: 200px;
+	height: 22px;
+	border: none;	
+	font-size: 20px;
+	color: #303030;
+	background: none;	
+}
+.div_txtDK {	
+	margin: 4px 0 17px 0;
+}
+.div_txtDK input{
+	background: url(http://www.mjgroup.com.vn/images_v2/input.gif) repeat-x 0 -89px;
+	border:1px solid #bbbbbb;
+	font-size: 19px;
+	color: #303030;
+	height: 42px;
+	padding: 0 13px;
+	line-height: 44px;
+	margin: 0;
+}
+.txt-focus input {
+	background-position: 0 -221px;
+}
+.no-margin{
+	margin: 0;
+}
+.no-margin .middle-box-style {	
+	width: 192px;
+}
+.txt-wide .middle-box-style {
+	width: 403px;
+}
+p.middle-box-button-pass {
+	padding-top: 5px;
+}
+p.middle-box-button-pass span {
+	display: inline-block;
+}
+span.middle-box-button-reset {
+	margin-right: 16px;
+}
+.pop-up {
+	width: 980px;
+	height: 67px;
+	border-radius: 9px;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	box-shadow: 0 0 5px #012b54;
+	margin-top: 20px;
+	background-image: -moz-linear-gradient(top ,#e5e5e5,  #ffffff);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e5e5e5), to(#ffffff));
+	background: -webkit-linear-gradient(top, #e5e5e5, #ffffff);
+	background: -o-linear-gradient(top, #e5e5e5, #ffffff);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#e5e5e5, endColorstr=#ffffff);	
+	overflow:hidden;
+}
+.pop-up p{
+	padding: 20px 0 0 22px;
+}
+.pop-up span{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 21px;
+	color: #ff6600;
+	font-weight: 700;
+}
+.pop-up .success span.pop-up-img{ width:20px; background:url(http://www.mjgroup.com.vn/images_v2/pop-up-success.png) no-repeat;}
+.pop-up .success span{ color:#006699}
+.pop-up span.pop-up-img{
+	margin: 3px 16px 0 0;
+	display:inline-block;
+	width:19px;
+	height:20px;
+	background:url(http://www.mjgroup.com.vn/images_v2/pop-up.png) no-repeat;
+}
+.outer-border {
+	border: 1px solid #9bb1b6;
+	border-radius:10px;
+	-moz-border-radius:10px;
+}
+.middle-white-thank {
+	padding-bottom: 40px;
+}
+.middle-white-thank i {
+	background:url(http://www.mjgroup.com.vn/images_v2/thank-you.png) no-repeat;
+	width: 705px;
+	height: 160px;
+	display: block;
+	position:relative;
+	left:-44px;
+}
+.middle-white-order {
+	padding: 32px 0 0 0;
+	text-align: center;	
+}
+.middle-white-order span{
+	display: inline-block;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	text-align: left;
+	margin: 0 auto;
+	font-size: 15px;
+	color: #002c46;
+	line-height: 20px;
+}
+.middle-white-order span.title {
+	font-size: 14px;
+	color: #002c46;
+	line-height: 20px;	
+}
+span.outer-border {
+	border: 1px solid #9bb1b6;	
+	height: 96px;	
+}
+span.inner {
+	border-top: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;	
+	height: 95px;
+	background-image: -moz-linear-gradient(top ,#d5e6ea,  #fefefe);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d5e6ea), to(#fefefe));
+	background: -webkit-linear-gradient(top, #d5e6ea, #fefefe);
+	background: -o-linear-gradient(top, #d5e6ea, #fefefe);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#d5e6ea, endColorstr=#fefefe);
+}
+span.inner-content{
+	margin: 16px 20px 0 20px;
+	font-size: 66px;
+	color: #f16d2c;
+	font-weight: 700;
+	line-height: 66px;	
+}

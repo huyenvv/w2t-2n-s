@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+div.buy{ padding:5px 5px 15px 0px;color:#58595B; }
+p.step_panel{ margin:7px 10px 13px 14px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+p.step_panel{ margin:7px 10px 13px 6px; }}
+table.buy_list { border:1px solid #939598; font-size:13px; border-collapse:collapse; margin-left:14px; width:666px; color:#58595B;}
+table.buy_list a { text-decoration:none; color:#58595B;}
+table.buy_list a:hover { text-decoration:none; color:#000;}
+table.buy_list th{ background:#656565; color:#FFF;padding: 3px 10px 3px 10px ;border:1px solid #939598; }
+table.buy_list td{ border:1px solid #939598; padding:3px 10px 3px 10px ; }
+h3.title_page{	font-size:17px;	font-weight:normal;		position:absolute;top:0;left:0; margin:15px 0px;
+	width: 386px;
+}
+h2.title_page{ color:#000; float:right; padding-top:25px; font-size:19px; padding-right:10px;
+}
+div.form_buy{ margin-top:10px; margin-bottom:10px; }
+p.title_left{background:url(../images/buy/title_left.png) repeat-x top; float:left; height:31px; padding:5px 10px 5px 10px; color:#FFF; text-align:right; }
+p.title_right{ background:url(../images/buy/title_right.png)  no-repeat top; float:left; width:20px; height:31px; text-align:left;}
+div.form_buy_item{ height:40px; color:#58595B ; font-size:14px; width:650px; padding-top:5px;}
+p.form_buy_left{float:left; text-align:right; padding-right:10px; padding-top:12px;width:200px; }	
+p.form_buy_right{ float:left;text-align:left;width:400px;}
+p.form_buy_right input{ border: 1px solid #D5D5D5; border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset;  color: #000; font: 12px/25px "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; height:28px ;padding: 0px  8px;  word-spacing: 0.1em; width:300px;  margin:5px 0px;}
+p.form_buy_right input.user{ background: url("../images/login/icon_user.png") no-repeat left center; padding-left:30px;}
+p.form_buy_right input.pass{ background: url("../images/login/icon_pass.png") no-repeat left center; padding-left:30px; }
+div.form_buy_item textarea{ border: 1px solid #D5D5D5;
+    border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset;  color: #000; font: 12px/25px "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;    word-spacing: 0.1em; margin:5px 0px;width:305px; padding:5px; line-height:20px;}
+div.form_buy_item select { border: 1px solid #D5D5D5;
+    border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset; color: #000; word-spacing: 0.1em; width:300px; margin:5px 0px; height:28px; padding:4px 5px 4px 5px; }
+div.form_buy_err{color:#F00; font-size:11px; text-align:left; margin:0px; padding:0px; padding-left:226px;  }
+span.other_color{ color:#F00;}
+ul.choose_buy{ margin:5px 5px 10px 15px;}
+div.choose_buy_info{width:500px; float:left; text-align:left; margin-left:70px; margin-top:7px;}
+ul.choose_buy li{background: url(../images/buy/bg_option_buy.png) no-repeat center top; width:596px; height:76px; list-style:none; margin:7px; cursor:pointer;}
+ul.choose_buy li:hover{background: url(../images/buy/bg_option_buy_hover.png) no-repeat center top; width:596px; height:76px; list-style:none; margin:7px; cursor:pointer;}
+ul.choose_buy li.active{background: url(../images/buy/bg_option_buy_active.png) no-repeat center top; width:596px; height:76px; list-style:none; margin:7px; cursor:pointer;}
+ul.choose_buy li img{ float:right; margin-top:2px; border-left: 1px solid #999;}
+ul.choose_buy li:hover img{ float:right; margin-top:2px;border-left: 1px solid #fff;}
+ul.choose_buy li.active img{ float:right; margin-top:2px;border-left: 1px solid #fff;}
+ul.choose_buy li h4{ font-size:16px; color:#000; padding-top:10px;text-shadow:0px 1px 1px #999; font-weight:normal;}
+ul.choose_buy li:hover h4,ul.choose_buy li.active h4{ font-size:16px; color:#fff; padding-top:10px;text-shadow:0px 1px 1px #999; font-weight:normal;text-shadow:0px 1px 1px #000;}
+ul.choose_buy li p{ font-size:13px; color:#89B554; margin-top:3px;}
+ul.choose_buy li:hover p,ul.choose_buy li.active p{ font-size:13px; color:#fff; margin-top:3px;}
+div.buy_info{ background:#EDEDEE; border:1px solid #939598; padding:7px 10px; font-size:13px;width:644px; margin:10px 0 10px 14px; color:#58595B; }
+div.buy_info p{ text-align:left; margin:7px;}
+div.buy_info label{ width:150px; text-align:right; float:left; margin-left:-50px;}  
+div.buy_info span{ padding-left:10px;}
+div.buy_info a, div.choose_info a{ font-size:12px; color:black;text-decoration: underline;}
+div.buy_info a:hover, div.choose_info a:hover{ font-size:12px; color:red;text-decoration: underline;}
+div.choose_info{ background:#EDEDEE; border:1px solid #939598; padding:7px 10px; font-size:14px;width:644px; margin:10px 0 10px 14px; color:#58595B; text-align:left; }
+div.note_info{ margin:10px 0px 10px 10px;  padding:7px 10px; text-align:left; background:#FFFABE;border:1px solid #89B554;}
+div.note_info span{ color:#ED1C24; font-size:14px; line-height:18px; font-weight:bolder;}
+div.note_info p{ color:#000; font-size:12px; line-height:20px;}
+div.note_info a{ color:#000; font-size:12px; text-decoration:underline;}
+ul.surport_block{ list-style-image:url(../images/buy/dot.png); margin:0px; }
+ul.surport_block h3{ font-size:12px; font-weight:normal;  color:#1f3603; padding-top:5px;}
+ul.surport_block li{ border-bottom:1px dotted #D1D3D4; font-size:12px; cursor:pointer; margin:7px 12px 7px 17px; padding-bottom:3px; *margin:7px 12px 7px 10px; padding:0;}
+ul.surport_block a{ color:#58595B;text-decoration:none;}
+ul.surport_block a:hover{ color:#000; text-decoration:none;}
+ul.surport_block a.active{ color:#000;text-decoration:none; font-weight:bold; }
+ul.surport_block div{ font-size:12px; color:#58595B; margin:5px 0px 5px 0px;line-height:18px; text-align:justify;}
+span.ship{margin-left:10px; font-weight:bold;color: #F00; *vertical-align:super; margin-top:50px; *height:30px;}
+
+a.giaoNhanLink{ font-size: 13px;color: Black; text-decoration: underline}
+a.giaoNhanLink:hover{ font-size: 13px;color: red;text-decoration: underline;}
+
+div.form_buy_note{border:1px solid #ccc; padding:7px 0px 10px 7px ; width:585px; text-align:left; background:#FFFABE; font-size:13px; line-height:18px;margin-left: 7px; }
+div.form_buy_note span{color:#ED1C24; font-size:14px; line-height:18px; font-weight:bolder;}
+
+div.form_buy_note a{ color:#000; text-decoration:underline; }
+div.form_buy_note a:hover{ color:#F00; text-decoration:underline; }
+
+p.form_buy_right input.sex{ height:15px ;padding: 0px  8px;  width:15px; margin-top:13px; float:left;border: 0px;}
+p.form_buy_right span.gender{display: block;float: left;height: 20px;margin-left: 5px;margin-top: 12px;width: 47px;}
+

@@ -1,0 +1,195 @@
+/* jLightBox (using jQuery library).
+*--------------------------------------------*
+*  @author : ukhome ( ukhome@gmail.com | ntkhoa_friends@yahoo.com )
+*--------------------------------------------*
+*  @released : 24-Mar-2009 : version 1.0
+*--------------------------------------------*
+*  @revision history : ( latest version : 1.0 )
+*--------------------------------------------*
+*      + 24-Mar-2009 : version 1.0
+*          - released
+*--------------------------------------------*
+*/
+
+div.Theme_Human_Wrapper {/*Wrap all*/
+    width: 175px;
+	
+    height:auto;
+    background: url(../images/general/bg-select-home01.png) left top no-repeat; z-index:1111111;position: relative;
+	
+}
+
+/* Theme_Human_Modified */
+div.Theme_Human_Modified_Wrapper {
+    margin: 100px 0 0 500px;
+}
+/* end. Theme_Human_Modified */
+
+    div.Theme_Human_List {
+		margin-top: -11px; position:absolute; z-index:10000;
+    }
+    div.Theme_Human_Wrapper p {
+        width: 168px;
+        color: #fff;
+        font-size: 15px;
+		font-family: Arial, Helvetica, sans-serif;
+        padding: 9px 0px 0px 12px;
+        cursor: pointer;
+        overflow: hidden !important;
+        height: 29px;
+		text-align:left;
+    }
+
+    /* UL */
+    div.Theme_Human_List ul.Theme_Human {
+	width: 168px;
+	overflow: hidden;
+	padding: 7px 0px 0px 10px;
+	background:url(../images/general/bg_select_city.png) left top repeat-y;
+	list-style:none;
+}
+    div.Theme_Human_List ul.Theme_Human li {
+	width: 168px;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index:99;
+	text-align:left;
+	list-style:none;
+	
+        }
+      
+		div.last {
+	background:url(../images/general/bg_select_bot.png) left top no-repeat;!important;
+	width:168px;
+	height:9px;
+	z-index:1000;
+	color:#000;
+	padding-top:5px;
+	position:absolute; z-index:10000; top:190px;
+	
+        }
+		
+		
+		
+        /*use for optgroup name*/
+        div.Theme_Human_List ul.Theme_Human li span {
+            font-size: 10px;
+            font-weight: bolder;
+            font-style: italic;
+            display: block;
+            padding: 4px 0;
+            cursor: default;
+            padding: 4px 0 4px 4px;
+			
+        }
+        /*Normal*/
+            div.Theme_Human_List ul.Theme_Human li a:link,
+            div.Theme_Human_List ul.Theme_Human li a:visited {
+                display: block;
+                width: 168px;
+                font-size: 14px;
+		font-family: Arial, Helvetica, sans-serif;
+                color: #fff;
+                padding: 6px 0px 5px 5px;
+                overflow: hidden;
+                text-decoration: none;
+             }
+             /*Active*/
+            div.Theme_Human_List ul.Theme_Human li.Active a:link,
+            div.Theme_Human_List ul.Theme_Human li.Active a:visited {
+                text-decoration: none;
+                color: #87c728;
+            }
+            /*Hover*/
+            div.Theme_Human_List ul.Theme_Human li.Hover a:link,
+            div.Theme_Human_List ul.Theme_Human li.Hover a:visited {
+                text-decoration: none;
+                color: #87c728;
+            }
+			
+/************************/
+div.Theme_Human01_Wrapper {/*Wrap all*/
+    width: 168px;
+    height: 23px;
+    background: url(../images/bg/bg-select-home03.png) left top no-repeat;
+}
+
+    div.Theme_Human01_List {/*Wrap UL*/
+	  border: 1px solid #81756a;
+	  margin: -2px 0px 0px 1px;
+    }
+    div.Theme_Human01_Wrapper p {
+        width: 168px;
+        color: #333333;
+        font-size: 12px;
+		font-family: Arial, Helvetica, sans-serif;
+        padding: 4px 0px 0px 12px;
+        cursor: pointer;
+        overflow: hidden !important;
+        height: 20px;
+    }
+
+    /* UL */
+    div.Theme_Human01_List ul.Theme_Human01 {
+        width: 168px;
+        overflow: hidden;
+        padding: 0px 0px 0px 0px;
+        background-color: #f3f3f3;
+    }
+        div.Theme_Human01_List ul.Theme_Human01 li {
+            font-size: 12px;
+			border-top: 1px solid #e7e7e7;
+			padding: 0px;
+			margin: 0px;
+			display: block;		
+        }
+        div.Theme_Human01_List ul.Theme_Human01 li.First {
+            border-top: none !important;
+			        }
+        /*use for optgroup name*/
+        div.Theme_Human01_List ul.Theme_Human01 li span {
+            font-size: 10px;
+            font-weight: bolder;
+            font-style: italic;
+            display: block;
+            cursor: default;
+            padding: 4px 0 4px 4px;
+        }
+        /*Normal*/
+            div.Theme_Human01_List ul.Theme_Human01 li a:link,
+            div.Theme_Human01_List ul.Theme_Human01 li a:visited {
+                display: block;
+                width: 168px;
+                font-size: 12px;
+                color: #333333;
+                padding: 4px 0px 5px 12px;
+                overflow: hidden;
+                text-decoration: none;
+             }
+             /*Active*/
+            div.Theme_Human01_List ul.Theme_Human01 li.Active a:link,
+            div.Theme_Human01_List ul.Theme_Human01 li.Active a:visited {
+                text-decoration: none;
+                color: #A3F112;
+            }
+            /*Hover*/
+            div.Theme_Human01_List ul.Theme_Human01 li.Hover a:link,
+            div.Theme_Human01_List ul.Theme_Human01 li.Hover a:visited {
+                text-decoration: none;
+                color: #A3F112;
+                background: #4c4d4b;
+            }
+
+            /*level 2 - in case has optgroup*/
+            div.Theme_Human_List ul.Theme_Human01 li ul {
+                border: none;
+            }
+                div.Theme_Human_List ul.Theme_Human01 li ul li {
+                    font-size: 1em;
+                }
+                    div.Theme_Human_List ul.Theme_Human01 li ul li a:link,
+                    div.Theme_Human_List ul.Theme_Human01 li ul li a:visited {
+                        width: 178px;
+                        padding: 3px 0px 5px 15px;
+                        font-weight: normal;
+                    }

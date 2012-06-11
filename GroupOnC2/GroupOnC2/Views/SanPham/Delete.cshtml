@@ -1,0 +1,48 @@
+﻿@model GroupOnC2.Models.CHITIETSANPHAM
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>CHITIETSANPHAM</legend>
+
+    <div class="display-label">MaCTSP</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaCTSP)
+    </div>
+
+    <div class="display-label">SANPHAM</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SANPHAM.MaLoaiSP)
+    </div>
+
+    <div class="display-label">SoLuong</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SoLuong)
+    </div>
+
+    <div class="display-label">GioiThieu</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GioiThieu)
+    </div>
+
+    <div class="display-label">GiaGoc</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GiaGoc)
+    </div>
+
+    <div class="display-label">GiaBan</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GiaBan)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,45 @@
+﻿@model GroupOnC2.Models.CHITIETSANPHAM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CHITIETSANPHAM</legend>
+
+    <div class="display-label">MaCTSP</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaCTSP)
+    </div>
+
+    <div class="display-label">SANPHAM</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SANPHAM.MaLoaiSP)
+    </div>
+
+    <div class="display-label">SoLuong</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SoLuong)
+    </div>
+
+    <div class="display-label">GioiThieu</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GioiThieu)
+    </div>
+
+    <div class="display-label">GiaGoc</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GiaGoc)
+    </div>
+
+    <div class="display-label">GiaBan</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GiaBan)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

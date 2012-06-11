@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GROUPONModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="GROUPONEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHITIETDONHANGs" EntityType="GROUPONModel.CHITIETDONHANG" />
+    <EntitySet Name="CHITIETSANPHAMs" EntityType="GROUPONModel.CHITIETSANPHAM" />
+    <EntitySet Name="COMMENTs" EntityType="GROUPONModel.COMMENT" />
+    <EntitySet Name="DONHANGs" EntityType="GROUPONModel.DONHANG" />
+    <EntitySet Name="HINHTHUCTHANHTOANs" EntityType="GROUPONModel.HINHTHUCTHANHTOAN" />
+    <EntitySet Name="LOAISANPHAMs" EntityType="GROUPONModel.LOAISANPHAM" />
+    <EntitySet Name="MULTIMEDIAs" EntityType="GROUPONModel.MULTIMEDIA" />
+    <EntitySet Name="PAYPALs" EntityType="GROUPONModel.PAYPAL" />
+    <EntitySet Name="SANPHAMs" EntityType="GROUPONModel.SANPHAM" />
+    <EntitySet Name="sysdiagrams" EntityType="GROUPONModel.sysdiagram" />
+    <EntitySet Name="TAIKHOANs" EntityType="GROUPONModel.TAIKHOAN" />
+    <EntitySet Name="THANHTOANTRUCTIEPs" EntityType="GROUPONModel.THANHTOANTRUCTIEP" />
+    <EntitySet Name="THONGTINADMINs" EntityType="GROUPONModel.THONGTINADMIN" />
+    <EntitySet Name="THONGTINDOANHNGHIEPs" EntityType="GROUPONModel.THONGTINDOANHNGHIEP" />
+    <EntitySet Name="THONGTINMEMBERs" EntityType="GROUPONModel.THONGTINMEMBER" />
+    <EntitySet Name="TINHTRANGDONHANGs" EntityType="GROUPONModel.TINHTRANGDONHANG" />
+    <EntitySet Name="TRANGTHAITAIKHOANs" EntityType="GROUPONModel.TRANGTHAITAIKHOAN" />
+    <AssociationSet Name="DONHANG_CHITIETDONHANG_FK1" Association="GROUPONModel.DONHANG_CHITIETDONHANG_FK1">
+      <End Role="DONHANG" EntitySet="DONHANGs" />
+      <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="SANPHAM_CHITIETDONHANG_FK1" Association="GROUPONModel.SANPHAM_CHITIETDONHANG_FK1">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="CHITIETDONHANG" EntitySet="CHITIETDONHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="CHITIETSANPHAM_MULTIMEDIA_FK1" Association="GROUPONModel.CHITIETSANPHAM_MULTIMEDIA_FK1">
+      <End Role="CHITIETSANPHAM" EntitySet="CHITIETSANPHAMs" />
+      <End Role="MULTIMEDIA" EntitySet="MULTIMEDIAs" />
+    </AssociationSet>
+    <AssociationSet Name="SANPHAM_CHITIETSANPHAM_FK1" Association="GROUPONModel.SANPHAM_CHITIETSANPHAM_FK1">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="CHITIETSANPHAM" EntitySet="CHITIETSANPHAMs" />
+    </AssociationSet>
+    <AssociationSet Name="SANPHAM_COMMENT_FK1" Association="GROUPONModel.SANPHAM_COMMENT_FK1">
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+      <End Role="COMMENT" EntitySet="COMMENTs" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_COMMENT_FK1" Association="GROUPONModel.TAIKHOAN_COMMENT_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="COMMENT" EntitySet="COMMENTs" />
+    </AssociationSet>
+    <AssociationSet Name="HINHTHUCTHANHTOAN_DONHANG_FK1" Association="GROUPONModel.HINHTHUCTHANHTOAN_DONHANG_FK1">
+      <End Role="HINHTHUCTHANHTOAN" EntitySet="HINHTHUCTHANHTOANs" />
+      <End Role="DONHANG" EntitySet="DONHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_DONHANG_FK1" Association="GROUPONModel.TAIKHOAN_DONHANG_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="DONHANG" EntitySet="DONHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="TINHTRANGDONHANG_DONHANG_FK1" Association="GROUPONModel.TINHTRANGDONHANG_DONHANG_FK1">
+      <End Role="TINHTRANGDONHANG" EntitySet="TINHTRANGDONHANGs" />
+      <End Role="DONHANG" EntitySet="DONHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="HINHTHUCTHANHTOAN_PAYPAL_FK1" Association="GROUPONModel.HINHTHUCTHANHTOAN_PAYPAL_FK1">
+      <End Role="HINHTHUCTHANHTOAN" EntitySet="HINHTHUCTHANHTOANs" />
+      <End Role="PAYPAL" EntitySet="PAYPALs" />
+    </AssociationSet>
+    <AssociationSet Name="HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1" Association="GROUPONModel.HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1">
+      <End Role="HINHTHUCTHANHTOAN" EntitySet="HINHTHUCTHANHTOANs" />
+      <End Role="THANHTOANTRUCTIEP" EntitySet="THANHTOANTRUCTIEPs" />
+    </AssociationSet>
+    <AssociationSet Name="LOAISANPHAM_SANPHAM_FK1" Association="GROUPONModel.LOAISANPHAM_SANPHAM_FK1">
+      <End Role="LOAISANPHAM" EntitySet="LOAISANPHAMs" />
+      <End Role="SANPHAM" EntitySet="SANPHAMs" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_THONGTINADMIN_FK1" Association="GROUPONModel.TAIKHOAN_THONGTINADMIN_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="THONGTINADMIN" EntitySet="THONGTINADMINs" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_THONGTINDOANHNGHIEP_FK1" Association="GROUPONModel.TAIKHOAN_THONGTINDOANHNGHIEP_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="THONGTINDOANHNGHIEP" EntitySet="THONGTINDOANHNGHIEPs" />
+    </AssociationSet>
+    <AssociationSet Name="TAIKHOAN_THONGTINMEMBER_FK1" Association="GROUPONModel.TAIKHOAN_THONGTINMEMBER_FK1">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="THONGTINMEMBER" EntitySet="THONGTINMEMBERs" />
+    </AssociationSet>
+    <AssociationSet Name="TRANGTHAITAIKHOAN_TAIKHOAN_FK1" Association="GROUPONModel.TRANGTHAITAIKHOAN_TAIKHOAN_FK1">
+      <End Role="TRANGTHAITAIKHOAN" EntitySet="TRANGTHAITAIKHOANs" />
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CHITIETDONHANG">
+    <Key>
+      <PropertyRef Name="MaDH" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaDH" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaSP" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="DONHANG" Relationship="GROUPONModel.DONHANG_CHITIETDONHANG_FK1" FromRole="CHITIETDONHANG" ToRole="DONHANG" />
+    <NavigationProperty Name="SANPHAM" Relationship="GROUPONModel.SANPHAM_CHITIETDONHANG_FK1" FromRole="CHITIETDONHANG" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="CHITIETSANPHAM">
+    <Key>
+      <PropertyRef Name="MaCTSP" />
+    </Key>
+    <Property Name="MaCTSP" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaSP" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="GioiThieu" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="GiaGoc" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="GiaBan" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="MULTIMEDIAs" Relationship="GROUPONModel.CHITIETSANPHAM_MULTIMEDIA_FK1" FromRole="CHITIETSANPHAM" ToRole="MULTIMEDIA" />
+    <NavigationProperty Name="SANPHAM" Relationship="GROUPONModel.SANPHAM_CHITIETSANPHAM_FK1" FromRole="CHITIETSANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="COMMENT">
+    <Key>
+      <PropertyRef Name="MaCM" />
+    </Key>
+    <Property Name="MaCM" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Ngay" Type="DateTime" />
+    <Property Name="MaSP" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaTK" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Noidung" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="SANPHAM" Relationship="GROUPONModel.SANPHAM_COMMENT_FK1" FromRole="COMMENT" ToRole="SANPHAM" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="GROUPONModel.TAIKHOAN_COMMENT_FK1" FromRole="COMMENT" ToRole="TAIKHOAN" />
+  </EntityType>
+  <EntityType Name="DONHANG">
+    <Key>
+      <PropertyRef Name="MaDH" />
+    </Key>
+    <Property Name="MaDH" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaTK" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="NgayDatHang" Type="DateTime" />
+    <Property Name="MaHTTT" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaTT" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="TenNguoiNhan" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CHITIETDONHANGs" Relationship="GROUPONModel.DONHANG_CHITIETDONHANG_FK1" FromRole="DONHANG" ToRole="CHITIETDONHANG" />
+    <NavigationProperty Name="HINHTHUCTHANHTOAN" Relationship="GROUPONModel.HINHTHUCTHANHTOAN_DONHANG_FK1" FromRole="DONHANG" ToRole="HINHTHUCTHANHTOAN" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="GROUPONModel.TAIKHOAN_DONHANG_FK1" FromRole="DONHANG" ToRole="TAIKHOAN" />
+    <NavigationProperty Name="TINHTRANGDONHANG" Relationship="GROUPONModel.TINHTRANGDONHANG_DONHANG_FK1" FromRole="DONHANG" ToRole="TINHTRANGDONHANG" />
+  </EntityType>
+  <EntityType Name="HINHTHUCTHANHTOAN">
+    <Key>
+      <PropertyRef Name="MaHTTT" />
+    </Key>
+    <Property Name="MaHTTT" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenHTTT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="DONHANGs" Relationship="GROUPONModel.HINHTHUCTHANHTOAN_DONHANG_FK1" FromRole="HINHTHUCTHANHTOAN" ToRole="DONHANG" />
+    <NavigationProperty Name="PAYPAL" Relationship="GROUPONModel.HINHTHUCTHANHTOAN_PAYPAL_FK1" FromRole="HINHTHUCTHANHTOAN" ToRole="PAYPAL" />
+    <NavigationProperty Name="THANHTOANTRUCTIEP" Relationship="GROUPONModel.HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1" FromRole="HINHTHUCTHANHTOAN" ToRole="THANHTOANTRUCTIEP" />
+  </EntityType>
+  <EntityType Name="LOAISANPHAM">
+    <Key>
+      <PropertyRef Name="MaLoaiSP" />
+    </Key>
+    <Property Name="MaLoaiSP" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenLoaiSP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SoLuongSP" Type="Int32" />
+    <NavigationProperty Name="SANPHAMs" Relationship="GROUPONModel.LOAISANPHAM_SANPHAM_FK1" FromRole="LOAISANPHAM" ToRole="SANPHAM" />
+  </EntityType>
+  <EntityType Name="MULTIMEDIA">
+    <Key>
+      <PropertyRef Name="MaMD" />
+    </Key>
+    <Property Name="MaMD" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaCTSP" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Multimedia1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CHITIETSANPHAM" Relationship="GROUPONModel.CHITIETSANPHAM_MULTIMEDIA_FK1" FromRole="MULTIMEDIA" ToRole="CHITIETSANPHAM" />
+  </EntityType>
+  <EntityType Name="PAYPAL">
+    <Key>
+      <PropertyRef Name="MaHTTT" />
+    </Key>
+    <Property Name="MaHTTT" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaSoThe" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenChuThe" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="HINHTHUCTHANHTOAN" Relationship="GROUPONModel.HINHTHUCTHANHTOAN_PAYPAL_FK1" FromRole="PAYPAL" ToRole="HINHTHUCTHANHTOAN" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaSP" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="MaLoaiSP" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenSP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CHITIETDONHANGs" Relationship="GROUPONModel.SANPHAM_CHITIETDONHANG_FK1" FromRole="SANPHAM" ToRole="CHITIETDONHANG" />
+    <NavigationProperty Name="CHITIETSANPHAMs" Relationship="GROUPONModel.SANPHAM_CHITIETSANPHAM_FK1" FromRole="SANPHAM" ToRole="CHITIETSANPHAM" />
+    <NavigationProperty Name="COMMENTs" Relationship="GROUPONModel.SANPHAM_COMMENT_FK1" FromRole="SANPHAM" ToRole="COMMENT" />
+    <NavigationProperty Name="LOAISANPHAM" Relationship="GROUPONModel.LOAISANPHAM_SANPHAM_FK1" FromRole="SANPHAM" ToRole="LOAISANPHAM" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Avatar" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="MaTT" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="COMMENTs" Relationship="GROUPONModel.TAIKHOAN_COMMENT_FK1" FromRole="TAIKHOAN" ToRole="COMMENT" />
+    <NavigationProperty Name="DONHANGs" Relationship="GROUPONModel.TAIKHOAN_DONHANG_FK1" FromRole="TAIKHOAN" ToRole="DONHANG" />
+    <NavigationProperty Name="THONGTINADMIN" Relationship="GROUPONModel.TAIKHOAN_THONGTINADMIN_FK1" FromRole="TAIKHOAN" ToRole="THONGTINADMIN" />
+    <NavigationProperty Name="THONGTINDOANHNGHIEP" Relationship="GROUPONModel.TAIKHOAN_THONGTINDOANHNGHIEP_FK1" FromRole="TAIKHOAN" ToRole="THONGTINDOANHNGHIEP" />
+    <NavigationProperty Name="THONGTINMEMBER" Relationship="GROUPONModel.TAIKHOAN_THONGTINMEMBER_FK1" FromRole="TAIKHOAN" ToRole="THONGTINMEMBER" />
+    <NavigationProperty Name="TRANGTHAITAIKHOAN" Relationship="GROUPONModel.TRANGTHAITAIKHOAN_TAIKHOAN_FK1" FromRole="TAIKHOAN" ToRole="TRANGTHAITAIKHOAN" />
+  </EntityType>
+  <EntityType Name="THANHTOANTRUCTIEP">
+    <Key>
+      <PropertyRef Name="MaHTTT" />
+    </Key>
+    <Property Name="MaHTTT" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TenNN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="HINHTHUCTHANHTOAN" Relationship="GROUPONModel.HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1" FromRole="THANHTOANTRUCTIEP" ToRole="HINHTHUCTHANHTOAN" />
+  </EntityType>
+  <EntityType Name="THONGTINADMIN">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySinh" Type="DateTime" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="GROUPONModel.TAIKHOAN_THONGTINADMIN_FK1" FromRole="THONGTINADMIN" ToRole="TAIKHOAN" />
+  </EntityType>
+  <EntityType Name="THONGTINDOANHNGHIEP">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Website" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="TenDN" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="GROUPONModel.TAIKHOAN_THONGTINDOANHNGHIEP_FK1" FromRole="THONGTINDOANHNGHIEP" ToRole="TAIKHOAN" />
+  </EntityType>
+  <EntityType Name="THONGTINMEMBER">
+    <Key>
+      <PropertyRef Name="MaTK" />
+    </Key>
+    <Property Name="MaTK" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Ten" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NgaySinh" Type="DateTime" />
+    <Property Name="GioiTinh" Type="Boolean" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="GROUPONModel.TAIKHOAN_THONGTINMEMBER_FK1" FromRole="THONGTINMEMBER" ToRole="TAIKHOAN" />
+  </EntityType>
+  <EntityType Name="TINHTRANGDONHANG">
+    <Key>
+      <PropertyRef Name="MaTT" />
+    </Key>
+    <Property Name="MaTT" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="TenTT" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="DONHANGs" Relationship="GROUPONModel.TINHTRANGDONHANG_DONHANG_FK1" FromRole="TINHTRANGDONHANG" ToRole="DONHANG" />
+  </EntityType>
+  <EntityType Name="TRANGTHAITAIKHOAN">
+    <Key>
+      <PropertyRef Name="MaTT" />
+    </Key>
+    <Property Name="MaTT" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="TenTT" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="TAIKHOANs" Relationship="GROUPONModel.TRANGTHAITAIKHOAN_TAIKHOAN_FK1" FromRole="TRANGTHAITAIKHOAN" ToRole="TAIKHOAN" />
+  </EntityType>
+  <Association Name="DONHANG_CHITIETDONHANG_FK1">
+    <End Role="DONHANG" Type="GROUPONModel.DONHANG" Multiplicity="1" />
+    <End Role="CHITIETDONHANG" Type="GROUPONModel.CHITIETDONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONHANG">
+        <PropertyRef Name="MaDH" />
+      </Principal>
+      <Dependent Role="CHITIETDONHANG">
+        <PropertyRef Name="MaDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SANPHAM_CHITIETDONHANG_FK1">
+    <End Role="SANPHAM" Type="GROUPONModel.SANPHAM" Multiplicity="1" />
+    <End Role="CHITIETDONHANG" Type="GROUPONModel.CHITIETDONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETDONHANG">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CHITIETSANPHAM_MULTIMEDIA_FK1">
+    <End Role="CHITIETSANPHAM" Type="GROUPONModel.CHITIETSANPHAM" Multiplicity="0..1" />
+    <End Role="MULTIMEDIA" Type="GROUPONModel.MULTIMEDIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHITIETSANPHAM">
+        <PropertyRef Name="MaCTSP" />
+      </Principal>
+      <Dependent Role="MULTIMEDIA">
+        <PropertyRef Name="MaCTSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SANPHAM_CHITIETSANPHAM_FK1">
+    <End Role="SANPHAM" Type="GROUPONModel.SANPHAM" Multiplicity="0..1" />
+    <End Role="CHITIETSANPHAM" Type="GROUPONModel.CHITIETSANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="CHITIETSANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SANPHAM_COMMENT_FK1">
+    <End Role="SANPHAM" Type="GROUPONModel.SANPHAM" Multiplicity="0..1" />
+    <End Role="COMMENT" Type="GROUPONModel.COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="MaSP" />
+      </Principal>
+      <Dependent Role="COMMENT">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_COMMENT_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.TAIKHOAN" Multiplicity="0..1" />
+    <End Role="COMMENT" Type="GROUPONModel.COMMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="COMMENT">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HINHTHUCTHANHTOAN_DONHANG_FK1">
+    <End Role="HINHTHUCTHANHTOAN" Type="GROUPONModel.HINHTHUCTHANHTOAN" Multiplicity="0..1" />
+    <End Role="DONHANG" Type="GROUPONModel.DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HINHTHUCTHANHTOAN">
+        <PropertyRef Name="MaHTTT" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="MaHTTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_DONHANG_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.TAIKHOAN" Multiplicity="0..1" />
+    <End Role="DONHANG" Type="GROUPONModel.DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TINHTRANGDONHANG_DONHANG_FK1">
+    <End Role="TINHTRANGDONHANG" Type="GROUPONModel.TINHTRANGDONHANG" Multiplicity="0..1" />
+    <End Role="DONHANG" Type="GROUPONModel.DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TINHTRANGDONHANG">
+        <PropertyRef Name="MaTT" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="MaTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HINHTHUCTHANHTOAN_PAYPAL_FK1">
+    <End Role="HINHTHUCTHANHTOAN" Type="GROUPONModel.HINHTHUCTHANHTOAN" Multiplicity="1" />
+    <End Role="PAYPAL" Type="GROUPONModel.PAYPAL" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HINHTHUCTHANHTOAN">
+        <PropertyRef Name="MaHTTT" />
+      </Principal>
+      <Dependent Role="PAYPAL">
+        <PropertyRef Name="MaHTTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HINHTHUCTHANHTOAN_THANHTOANTRUCTIEP_FK1">
+    <End Role="HINHTHUCTHANHTOAN" Type="GROUPONModel.HINHTHUCTHANHTOAN" Multiplicity="1" />
+    <End Role="THANHTOANTRUCTIEP" Type="GROUPONModel.THANHTOANTRUCTIEP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="HINHTHUCTHANHTOAN">
+        <PropertyRef Name="MaHTTT" />
+      </Principal>
+      <Dependent Role="THANHTOANTRUCTIEP">
+        <PropertyRef Name="MaHTTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LOAISANPHAM_SANPHAM_FK1">
+    <End Role="LOAISANPHAM" Type="GROUPONModel.LOAISANPHAM" Multiplicity="0..1" />
+    <End Role="SANPHAM" Type="GROUPONModel.SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAISANPHAM">
+        <PropertyRef Name="MaLoaiSP" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="MaLoaiSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_THONGTINADMIN_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.TAIKHOAN" Multiplicity="1" />
+    <End Role="THONGTINADMIN" Type="GROUPONModel.THONGTINADMIN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="THONGTINADMIN">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_THONGTINDOANHNGHIEP_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.TAIKHOAN" Multiplicity="1" />
+    <End Role="THONGTINDOANHNGHIEP" Type="GROUPONModel.THONGTINDOANHNGHIEP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="THONGTINDOANHNGHIEP">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TAIKHOAN_THONGTINMEMBER_FK1">
+    <End Role="TAIKHOAN" Type="GROUPONModel.TAIKHOAN" Multiplicity="1" />
+    <End Role="THONGTINMEMBER" Type="GROUPONModel.THONGTINMEMBER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="MaTK" />
+      </Principal>
+      <Dependent Role="THONGTINMEMBER">
+        <PropertyRef Name="MaTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TRANGTHAITAIKHOAN_TAIKHOAN_FK1">
+    <End Role="TRANGTHAITAIKHOAN" Type="GROUPONModel.TRANGTHAITAIKHOAN" Multiplicity="0..1" />
+    <End Role="TAIKHOAN" Type="GROUPONModel.TAIKHOAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANGTHAITAIKHOAN">
+        <PropertyRef Name="MaTT" />
+      </Principal>
+      <Dependent Role="TAIKHOAN">
+        <PropertyRef Name="MaTT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
