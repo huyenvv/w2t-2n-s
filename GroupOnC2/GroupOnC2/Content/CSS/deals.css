@@ -36,7 +36,7 @@
 	overflow:hidden;
 }
 .box-white-image i {
-	background: url(http://www.mjgroup.com.vn/images_v2/shadow-bg.png) no-repeat scroll 0 0 transparent;
+	background: url(../images_v2/shadow-bg.png) no-repeat scroll 0 0 transparent;
 	width: 302px;
 	height: 4px;
 	margin: 0 auto;
@@ -255,14 +255,14 @@ a.box-white-slogan:hover{text-decoration:underline;}
 }
 .view-button {	
 	display: block;
-	background: url(http://www.mjgroup.com.vn/images_v2/btn-xem-large.png) no-repeat scroll 0 0 transparent;
+	background: url(../images_v2/btn-xem-large.png) no-repeat scroll 0 0 transparent;
 	width: 157px;
 	height: 52px;
 	margin: 0 auto;
 }
 .view-button-en {	
 	display: block;
-	background: url(http://www.mjgroup.com.vn/images_v2/btn-xem-large-en.png) no-repeat scroll 0 0 transparent;
+	background: url(../images_v2/btn-xem-large-en.png) no-repeat scroll 0 0 transparent;
 	width: 157px;
 	height: 52px;
 	margin: 0 auto;
@@ -323,7 +323,7 @@ a.box-white-slogan:hover{text-decoration:underline;}
 	position: absolute !important;
 	top: -14px;
 	left: -14px;
-	background: url(http://www.mjgroup.com.vn/images_v2/img_tietkiem.png) no-repeat;
+	background: url(../images_v2/img_tietkiem.png) no-repeat;
 	width: 76px;
 	height: 55px;
 	padding-top: 20px;
