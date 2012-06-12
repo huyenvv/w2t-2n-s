@@ -1,0 +1,24 @@
+<MULTIMEDIA>
+	<IMAGES>
+		<IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\extend_01.jpg" type="1"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\extend_02.jpg" type="1"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\extend_03.jpg" type="1"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\extend_04.jpg" type="1"/>
+	<IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\extend_05.jpg" type="1"/>
+	<IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\extend_06.jpg" type="1"/>
+    
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\detail_01.jpg" type="0"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\detail_02.jpg" type="0"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\detail_03.jpg" type="0"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\detail_04.jpg" type="0"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\detail_05.jpg" type="0"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\detail_06.jpg" type="0"/>
+    <IMAGE src="Content\Images\SanPham\GiaoDuc\GD05\detail_07.jpg" type="0"/>
+	<IMAGE src="Content\Images\SanPham\GiaoDuc\GD04\detail_08.jpg" type="0"/>
+	<IMAGE src="Content\Images\SanPham\GiaoDuc\GD04\detail_09.jpg" type="0"/>
+	<IMAGE src="Content\Images\SanPham\GiaoDuc\GD04\detail_10.jpg" type="0"/>
+	<IMAGE src="Content\Images\SanPham\GiaoDuc\GD04\detail_11.jpg" type="0"/>
+	<IMAGE src="Content\Images\SanPham\GiaoDuc\GD04\detail_12.jpg" type="0"/>
+	</IMAGES>
+  <MAP src="Content\Images\SanPham\GiaoDuc\GD05\map.jpg"/>
+</MULTIMEDIA>
