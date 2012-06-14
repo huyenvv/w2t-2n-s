@@ -1,0 +1,46 @@
+﻿
+
+@if (!Request.IsAuthenticated)
+{   
+    <span id="info_acc" class="info_acc" style="margin: 13px 0px 0px; ">
+        <a title="Nguyễn Phú Mai Trang">
+            Nguyễn Phú Mai Trang</a>
+            @Html.ActionLink("txf", "AccountInformation")
+        <span id="content_acc" class="content_acc" style="display: none; ">
+            <ul>
+                <li><a href="/don-hang">Thông tin đơn hàng</a></li>
+         	    <li><a href="/thong-tin-tai-khoan">Thông tin tài khoản</a></li>
+                <li><a href="/Profile/Logout" onclick="Logout();">Đăng xuất</a></li>
+            </ul>
+        </span>
+    </span>
+}
+else
+{
+    <div class="top_login">
+        <a href="javascript:void(0)" title="Đăng nhập" onclick="LoginAndRegisterFunction.ShowWindow(1)">
+            Đăng nhập
+        </a>
+
+        <text>|</text>
+
+        <a href="javascript:void(0)" title="Tạo tài khoản" onclick="LoginAndRegisterFunction.ShowWindow(2)">
+            Tạo tài khoản</a>
+    </div>
+    <div class="newsletter">
+        <div class="mail_L"></div>
+
+        <div class="mail_C">
+            <form action="#formSubscriberMenuTop" id="formSubscriberMenuTop" method="post">                            
+                <span>Nhận thông tin khuyến mãi</span>
+                <input id="tbEmail" value="Email của bạn" class="key_word">
+                <input class="btn_send" type="submit" onclick="return SubmitForm(0)" value="">
+            </form> 
+        </div>
+
+        <div class="mail_R"></div>
+        <div id="erroemail" style="font-size: 12px; padding-left: 33px; padding-top: 4px; text-align: left;color: Red; display: none">
+            Email không hợp lệ</div>
+
+    </div>
+}

@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "OrderList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg_account">
+    <div class="bg_account_T">
+        Thông tin đơn hàng
+    </div>
+
+    <div class="bg_account_M">
+        <ul class="account_tab">
+            <li class="active">@Html.ActionLink("Thông tin đơn hàng", "OrderList")</li>
+            <li>@Html.ActionLink("Thông tin tài khoản", "AccountInformation")</li>
+            <li>@Html.ActionLink("Đổi mật khẩu", "ChangePassword")</li>
+        </ul>
+
+        <div class="account_content">
+            <div class="account_item">
+                <p>
+                    <span style="float: left;">Mã đơn hàng: <strong>6778-181-530</strong></span>
+                    <span style="float: right;">Ngày đặt hàng: <strong>13/06/2012</strong></span>
+                    <br class="clean">
+                </p>
+                <table class="account_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <th style="width: 100px;" colspan="2" scope="col" align="center">
+                                Phiếu/Sản phẩm
+                            </th>
+                            <th style="width: 135px;" align="center" scope="col">
+                                Đơn giá
+                            </th>
+                            <th style="width: 135px;" align="center" scope="col">
+                                Số lượng
+                            </th>
+                            <th style="width: 190px;" scope="col" align="center">
+                                Thành tiền
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <a href="link san pham">Giày xăng đan kết hoa - Trị giá 380.000đ</a>
+                            </td>
+                            <td align="center">
+                                165.000đ
+                            </td>
+                            <td align="center">
+                                1
+                            </td>
+                            <td align="right">
+                                <strong>165.000đ</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" align="right">
+                                Phí giao hàng
+                            </td>
+                            <td align="right">
+                                <strong> 0đ </strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" align="right">
+                                Số tiền phải trả
+                            </td>
+                            <td align="right">
+                                <strong>165.000đ</strong>
+                            </td>
+                        </tr>
+
+                        <tr bgcolor="#EDEDEE">
+                            <td width="30%" align="center">
+                                Trạng thái: <strong>Chưa xử lý</strong>
+                            </td>
+                            <td width="27%" align="center">
+                                <strong>Chưa thanh toán</strong>
+                            </td>
+                            <td colspan="3" align="center">
+                                Hình thức thanh toán: <strong>Thu tiền tại nhà</strong>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p style="text-align: right;"><a class="btn_delete" href="" onclick="return confirm()">Hủy đơn hàng</a></p>
+            </div>
+
+            <p class="line3">
+            </p>
+
+            <div id="pager">
+                <br class="clean">
+            </div>
+        </div>
+        <br class="clean">
+        <br class="clean">
+    </div>
+
+    <div class="bg_account_B">
+    </div>
+</div>
+

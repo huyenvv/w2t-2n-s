@@ -24,6 +24,8 @@
     <link href="../../Content/css/detail_v3.css" rel="stylesheet" type="text/css">
     <link href="../../Content/css/deals.css" rel="stylesheet" type="text/css">
     <link href="../../Content/css/skin.css" rel="stylesheet" type="text/css">
+    <link href="../../Content/CSS/account.css" rel="stylesheet" type="text/css">
+    <link href="../../Content/CSS/info_account.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="../../Content/scripts/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="../../Content/scripts/jquery.unobtrusive-ajax.min.js"></script>
@@ -50,6 +52,14 @@
     <script type="text/javascript" src="../../Content/scripts/currency.js"></script>
     <script type="text/javascript" src="../../Content/scripts/facebook_login.js"></script>
     <script type="text/javascript" src="../../Content/scripts/openid_login.js"></script>
+    <script type="text/javascript" src="../../Content/scripts/ga.js"></script>
+    <script type="text/javascript" src="../../Content/scripts/uayEaic31hJ.js"></script>
+    <script type="text/javascript" src="../../Content/scripts/editcustomer.js"></script>
+    <script type="text/javascript" src="../../Content/scripts/PaymentConfirm.js"></script>
+
+    <script type="text/javascript">
+        
+    </script>
 
     <script type="text/javascript">
         homepagePageSize = 100;
@@ -133,7 +143,16 @@
         var deliveryAtCompany = "AtCompany";
     </script>
     
-
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-17947695-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
 </head>
 
 <body>
@@ -150,40 +169,15 @@
                 </p>
 
                 <div id="selectCity">
-                    <div class="DropListUI Theme_Human_Wrapper"><p>TP. HỒ CHÍ MINH</p></div><select class="SelectUI Theme_Human HasSelectUI" id="cityList" name="SelectedCity" style="display: none; opacity: 0; position: absolute; left: -1000em; top: -1000em; "><option selected="selected" value="1">TP. HỒ CHÍ MINH</option>
-                    
+                    <div class="DropListUI Theme_Human_Wrapper"><p>TP. HỒ CHÍ MINH</p></div><select class="SelectUI Theme_Human HasSelectUI" id="cityList" name="SelectedCity" style="display: none; opacity: 0; position: absolute; left: -1000em; top: -1000em; ">
+                        <option selected="selected" value="1">TP. HỒ CHÍ MINH</option>
+                        <option value="2">HÀ NỘI</option>
                     </select>
                 </div>
 
+               
                 <div class="menu_center">
-                     <div class="top_login">
-                        <a href="javascript:void(0)" title="Đăng nhập" onclick="LoginAndRegisterFunction.ShowWindow(1)">
-                            Đăng nhập
-                        </a>
-
-                        <text>|</text>
-
-                        <a href="javascript:void(0)" title="Tạo tài khoản" onclick="LoginAndRegisterFunction.ShowWindow(2)">
-                            Tạo tài khoản</a>
-                     </div>
-
-                     <div class="newsletter">
-                        <div class="mail_L"></div>
-
-                        <div class="mail_C">
-                            <form action="#formSubscriberMenuTop" id="formSubscriberMenuTop" method="post">                            
-                                <span>Nhận thông tin khuyến mãi</span>
-                                <input id="tbEmail" value="Email của bạn" class="key_word">
-                                <input class="btn_send" type="submit" onclick="return SubmitForm(0)" value="">
-                            </form> 
-                        </div>
-
-                        <div class="mail_R"></div>
-                        <div id="erroemail" style="font-size: 12px; padding-left: 33px; padding-top: 4px; text-align: left;color: Red; display: none">
-                            Email không hợp lệ</div>
-
-                    </div>
-
+                    @Html.Partial("LoginStatus");
                     <br class="clean">
 
                 </div>
@@ -215,11 +209,11 @@
                         if ($(this).val() == "Nhập email để nhận thông tin khuyến mãi") $(this).val("");
                     });
 
-                    $('#content_acc').hide();
+                    $("#content_acc").hide();
 
-                    $('#info_acc').hover(function () {
-                        $('#content_acc').show();
-                    }, function () { $('#content_acc').hide(); })
+                    $("#info_acc").hover(function () {
+                        $("#content_acc").show();
+                    }, function () { $("#content_acc").hide(); });
                 });
 
 
@@ -383,8 +377,8 @@
     </div>
 
     <div id="divpopup" style="display: none;">
-        @Html.Partial("~/Views/Shared/Login.cshtml")
-        @Html.Partial("~/Views/Shared/Register.cshtml")
+        @Html.Partial("~/Views/Account/Login.cshtml")
+        @Html.Partial("~/Views/Account/Register.cshtml")
     </div>
 
 </body>

@@ -1,0 +1,142 @@
+﻿
+<div class="register">
+    <p class="title">
+        Tạo tài khoản Cùng Mua
+    </p>
+    <img src="../../Content/themes/images/close(1).png" border="0" style="float:right; margin-top:-37px; margin-right:5px;cursor:pointer;" onclick="LoginAndRegisterFunction.CloseWindow();">
+    <div class="content">
+        <form action="#" id="RegisterForm" method="post">
+            <div class="form_res">
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Email <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+                        <input data-val="true" data-val-required="The EmailRegister field is required." id="EmailRegister" name="RegisterModel.EmailRegister" type="text" value=""></p>
+                    <br class="clean">
+                </div>
+
+                <div id="EmailRegister-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Mật khâu <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+                        <input data-val="true" data-val-required="The PasswordRegister field is required." id="PasswordRegister" name="RegisterModel.PasswordRegister" type="password"></p>
+                    <br class="clean">
+                </div>
+
+                <div id="PasswordRegister-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Nhập lại mật khẩu <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+                        <input data-val="true" data-val-required="The RePassword field is required." id="RePassword" name="RegisterModel.RePassword" type="password"></p>
+                    <br class="clean">
+                </div>
+
+                <div id="RePassword-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Họ tên <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+                        <input data-val="true" data-val-required="The Name field is required." id="Name" name="RegisterModel.Name" type="text" value=""></p>
+                    <br class="clean">
+                </div>
+
+                <div id="Name-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Điện thoại di động <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+                        <input data-val="true" data-val-required="The Phone field is required." id="Phone" name="RegisterModel.Phone" type="text" value=""></p>
+                    <br class="clean">
+                </div>
+
+                <div id="Phone-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Giới tính  <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+                        </p><p style="text-align:left;padding:15px 0 0 0"><input checked="checked" data-val="true" data-val-number="The field Gender must be a number." data-val-required="The Gender field is required." id="RegisterModel_Gender" name="RegisterModel.Gender" type="radio" value="0"> Nam
+                        <input id="RegisterModel_Gender" name="RegisterModel.Gender" type="radio" value="1"> Nữ</p>
+                    <p></p>
+                    <br class="clean">
+                </div>
+
+                <div id="Gender-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Ngày sinh <span class="other_color">(*)</span></p>
+                    <p id="BirthDay" class="form_incard_right">
+                        <select name="RegisterModel.CurrentDate">
+                            <option>Ngày</option>
+                                @for (int i = 1; i <= 31; i++ )
+                                {
+                                    <option value= @i>@i</option>
+                                }
+                                        
+                        </select>
+                        <select name="RegisterModel.CurrentMonth">
+                            <option>Tháng</option>
+                                @for (int i = 1; i <= 12; i++)
+                                {
+                                    <option value= @i>@i</option>
+                                }
+                                        
+                        </select>
+                        <select name="RegisterModel.CurrentYear">
+                            <option>Năm</option>
+                                @for (int i = 1930; i <= 2012; i++)
+                                {
+                                    <option value= @i>@i</option>
+                                }
+                                        
+                        </select></p>
+                    <br class="clean">
+                </div>
+
+                <div id="BirthDay-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation"></div>
+                <br class="clean">
+
+                <div class="lostpass_res" style="margin-top: -20px; *margin-top: -10px">
+                    <span>
+                        <label id="Agree">
+                            <input data-val="true" data-val-required="The Agree field is required." id="RegisterModel_Agree" name="RegisterModel.Agree" type="checkbox" value="true"><input name="RegisterModel.Agree" type="hidden" value="false">
+                            Tôi đã xem và đồng ý với <a target="blank" href="http://www.cungmua.com/quy-che-san-giao-dich">Quy chế sàn
+                                giao dịch</a> của Cùng Mua
+                        </label>
+                    </span>
+                </div>
+                <br class="clean">
+
+                <div class="lostpass">
+                    <span style="line-height: 40px; margin-left: 134px; font-size: 12px; margin-top: 10px;">
+                        <input id="registerBtn" style="float: left" type="submit" class="button" value="Ðăng ký " onclick="return LoginAndRegisterFunction.DoRegister();">&nbsp;&nbsp;Hoặc đăng nhập với&nbsp;&nbsp;<a href="javascript:void(0)" onclick="facebook_login()"><img src="../../Content/themes/images/icon_fb.png" border="0" style="vertical-align: middle;"></a><a href="javascript:void(0)" onclick="google_login()"><img src="../../Content/themes/images/icon_google.png" border="0" style="vertical-align: middle;"></a><a href="javascript:void(0)" onclick="yahoo_login()"><img src="../../Content/themes/images/icon_yahoo.png" border="0" style="vertical-align: middle;"></a></span>
+                    <br class="clean">
+                </div>
+                <br class="clean">
+
+                <div class="lostpass">
+                    <div class="line">
+                        &nbsp;</div>
+                </div>
+                <div class="lostpass" style="margin-bottom: 10px;">
+                    <span class="register2">Nếu bạn đã có tài khoản vui lòng đăng nhập
+                        <input type="button" class="button4" value="Đăng nhập" style="vertical-align: middle;" onclick="LoginAndRegisterFunction.ShowWindow(1)">
+                    </span>
+                </div>
+
+            </div>
+        </form>
+        <br class="clean">
+
+    </div>
+</div>
+

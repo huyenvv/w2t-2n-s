@@ -1,0 +1,209 @@
+﻿@{
+    ViewBag.Title = "AccountInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg_account">
+    <div class="bg_account_T">
+        Thông tin tài khoản
+    </div>
+
+    <div class="bg_account_M">
+        <ul class="account_tab">
+            <li>@Html.ActionLink("Thông tin đơn hàng", "OrderList")</li>
+            <li class="active">@Html.ActionLink("Thông tin tài khoản", "AccountInformation")</li>
+            <li>@Html.ActionLink("Đổi mật khẩu", "ChangePassword")</li>
+        </ul>
+
+        <div class="account_content">
+            <div class="info_user">
+                <fieldset>
+                    <legend>Thông tin tài khoản</legend>
+                    <div class="acc_row">
+                        <p class="left">
+                            Họ tên:
+                        </p>
+                        <p class="right">
+                            <span id="nameLabel">Nguyễn Phú Mai Trang</span>
+                            <span id="contentName" style="display: none">
+                                <input class="input_edit" tabindex="1" id="Name" maxlength="50" value="Nguyễn Phú Mai Trang"><br>
+                            </span>
+                        </p>
+                        <span class="edit">
+                            <img id="iconedit" src="../../Content/Images/general/edit.png" align="bottom" border="0" style="margin-bottom: -3px; margin-right: 3px; cursor: pointer">
+                            <a href="javascript:void(0)" id="btEdit">Chỉnh sửa</a>
+                            
+                        </span>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Name-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Họ tên không được rỗng
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Điện thoại:
+                        </p>
+                        <p class="right">
+                            <span id="mobileLabel">0923456789</span>
+                            <span id="contentMobile" style="display: none">
+                                <input class="input_edit" tabindex="2" id="Phone" value="0923456789">
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Phone-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Số điện thoại không hợp lệ
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Giới tính: 
+                        </p>
+                        <p class="right">
+                            <span id="GenderLabel">Nữ</span>
+                            <span id="ContentGender" style="display: none">
+                                    <input type="radio" id="men" name="group1" value="0" tabindex="3"> <label>Nam</label>
+                                    <input type="radio" id="wmem" name="group1" value="1" checked="checked" tabindex="4"> <label>Nữ</label>
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Gender-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Số điện thoại không hợp lệ
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Ngày sinh:
+                        </p>
+
+                        <p class="right">
+                            <span id="BirthDayLabel">21/12/1991</span>
+                            <span id="ContentBirthDay" style="display: none">
+                                <select id="CurrentDate" name="CurrentDate" tabindex="5">
+                                    <option>Ngày</option>
+                                    @functions { int day = 21;}
+                                    @for(int i = 1; i <= 31; i++)
+                                    {
+                                        if(i == day)
+                                        {
+                                            <option value=@i selected="true">@i</option>
+                                        }else
+                                        {
+                                            <option value=@i>@i</option>
+                                        }
+                                    }
+                                </select>
+
+                                <select id="CurrentMonth" name="CurrentMonth" tabindex="6">
+                                    <option>Tháng</option>
+                                    @functions { int month = 12;}
+                                    @for(int i = 1; i <= 12; i++)
+                                    {
+                                        if(i == month)
+                                        {
+                                            <option value=@i selected="true">@i</option>
+                                        }else
+                                        {
+                                            <option value=@i>@i</option>
+                                        }
+                                    }
+                                </select>
+
+                                <select id="CurrentYear" name="CurrentYear" tabindex="7">
+                                    <option>Năm</option>
+                                    @functions { int year = 1991; }
+                                    @for(int i = 1930; i <= 2012; i++)
+                                    {
+                                        if(i == year)
+                                        {
+                                            <option value=@i selected="true">@i</option>
+                                        }else
+                                        {
+                                            <option value=@i>@i</option>
+                                        }
+                                    }
+                                </select>
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="BirthDay-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Ngày tháng năm sinh không hợp lệ
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Email:
+                        </p>
+                        <p class="right">
+                            nhoc_heo_way@yahoo.com
+                        </p>
+                    </div>
+                </fieldset>
+                <br class="clean">
+
+            </div>
+            <div class="info_user2">
+                <fieldset>
+                    <legend>Nhận email thông tin khuyến mãi</legend>
+                    <div class="row">
+                        <table class="acc_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <th width="40%" scope="col" style="padding-left: 30px;">
+                                        Thành phố
+                                    </th>
+                                    <th width="24%" scope="col">
+                                        Nhận email
+                                    </th>
+                                    <th width="13%" scope="col">
+                                        &nbsp;
+                                    </th>
+                                </tr>
+
+                                <tr class="row1">
+                                    <td width="40%" scope="col" style="padding-left: 30px;">
+                                        TP. HỒ CHÍ MINH
+                                    </td>
+                                    <td width="24%" scope="col" style="padding-left: 30px;">
+                                            <input type="hidden" id="subscriber1" value="1874894">
+                                        <img id="img1" email="nhoc_heo_way@yahoo.com" cityid="1" cityname="TP. HỒ CHÍ MINH" class="imgCheck" style="cursor: pointer" src="../../Content/Images/general/check.png" border="0">
+                                    </td>
+                                    <td width="13%" scope="col">
+                                        <a id="title1" class="ReceiveEmailButton" email="nhoc_heo_way@yahoo.com" cityid="1" cityname="TP. HỒ CHÍ MINH" href="javascript:void(0)">Ngưng nhận</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="row2">
+                                    <td width="40%" scope="col" style="padding-left: 30px;">
+                                        HÀ NỘI
+                                    </td>
+                                    <td width="24%" scope="col" style="padding-left: 30px;">
+                                            <input type="hidden" id="subscriber2">
+                                        <img id="img2" email="nhoc_heo_way@yahoo.com" cityid="2" cityname="HÀ NỘI" class="imgCheck" style="cursor: pointer" src="../../Content/Images/general/delete.png" border="0">
+                                    </td>
+                                    <td width="13%" scope="col">
+                                        <a id="title2" class="ReceiveEmailButton" email="nhoc_heo_way@yahoo.com" cityid="2" cityname="HÀ NỘI" href="javascript:void(0)">Nhận mail</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+                <br class="clean">
+
+            </div>    
+        </div>
+        <br class="clean">
+        <br class="clean">
+    </div>
+
+    <div class="bg_account_B">
+    </div>
+</div>
