@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.bg_account{width:950px;}
+	div.bg_account_T{ background:url(../images/account/bg_account.png) no-repeat center top; height:37px; text-align:left; font-family:Verdana, Geneva, sans-serif; font-size:29px; text-shadow:0 0 1px #ccc; color:#89B554; padding:15px 0px 0px 275px;margin-top: -6px; }
+	div.bg_account_M{background:url(../images/account/bg_account_M.png) repeat-y center top;padding:0px 0px 5px 0px; text-align:left; }
+	div.bg_account_B{ background:url(../images/account/bg_account.png) no-repeat center bottom; height:6px;}
+	ul.account_tab{ float:left; width:237px; list-style:none; padding-left:10px;}
+	ul.account_tab li{ height:38px; background:url(../images/account/bg_tab.png) no-repeat left top; padding-top:17px; padding-left:38px; color:#BCBEC0; cursor:pointer; }
+	ul.account_tab li a{ color:#BCBEC0;}
+	ul.account_tab li:hover ,ul.account_tab li.active { text-shadow: 0px 0px 1px #555;color:#000; background:url(../images/account/bg_tab_hover.png) no-repeat left top; }
+	div.account_content{float:left;width:650px; margin:0px 10px 0px 15px ;}
+	div.account_item{ margin:20px 0px;}
+	ul.account_tab li:hover a ,ul.account_tab li.active a{ text-shadow: 0px 1px 0px #ccc; color:#000; }
+	ul.account_tab li:hover a:hover, ul.account_tab li.active a:hover {text-shadow: 0px 1px 0px #ccc;color:#000; }
+	div.account_content p{ margin:5px 14px 5px 13px; font-size:14px;}
+	div.account_content a.btn_delete{  background:url(../images/account/btn_delete_hover.png) no-repeat left center; height:16px; color:#000; padding-left:17px; font-size:12px; }
+		div.account_content a.btn_delete:hover{font-size:12px;  background:url(../images/account/btn_delete.png) no-repeat left center; height:16px; color:red; }	
+	table.account_list { border:1px solid #939598; font-size:13px; border-collapse:collapse; margin-left:12px; width:650px; color:#58595B; font-family:Arial, Helvetica, sans-serif;}
+	table.account_list a{text-decoration:none; color:#58595B;}
+	table.account_list a:hover {text-decoration:none; color:#000;}
+table.account_list th{ background:#656565; color:#FFF;padding: 3px 10px 3px 10px ; border:1px solid #939598;}
+table.account_list td{ border-bottom:1px solid #939598; padding:3px 10px 3px 10px ; border:1px solid #939598;}
+div.account_content{ width:675px;}

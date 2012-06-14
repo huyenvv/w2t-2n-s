@@ -43,7 +43,7 @@ var LoginAndRegisterFunction = {
             setTimeout(" $('#EmailRegister').focus();$('#EmailRegister').select();", 10);
         }
         $.BigLoading(610, 'divpopup');
-        
+
     },
     CloseWindow: function () {
         $.ClosePopup();
@@ -72,7 +72,7 @@ function DoLogin() {
                 }
             });
         }
-
+       
     return false;
 };
 
@@ -92,7 +92,7 @@ function DoRegister() {
                 }
             });
     }
-
+    LoginAndRegisterFunction.CloseWindow();
     return false;
 };
 

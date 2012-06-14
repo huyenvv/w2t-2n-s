@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS info_account */
+table.acc_list { border:1px solid #E6E7E8; font-size:13px; border-collapse:collapse; margin-left:5px; width:590px; color:#58595B; }
+table.acc_list th{ background:#656565; color:#E6E7E8;padding: 7px 10px 7px 10px ; font-weight:bold;border:1px solid #656565;border-bottom:1px solid #E6E7E8;}
+table.acc_list tr.row1{ background-color:#FFF;padding:7px 10px 7px 10px ; }
+table.acc_list tr.row2{ background-color:#E6E7E8;padding:7px 10px 7px 10px ; }
+table.acc_list td{ border-bottom:1px solid #E6E7E8; padding:7px 10px 7px 10px ; }
+table.acc_list a{ color:#666;}
+table.acc_list a:hover{ color:#000;}
+div.form_acc_err {color:#F00; font-size:11px; text-align:left; margin:0px; padding:0px;padding-left:105px; width:300px; *padding-left:60px; *width:350px; }
+div.form_faq_err {color:#F00; font-size:11px; text-align:left; margin:0px; padding:0px;padding-left:215px; width:300px; *padding-left:170px; *width:350px; }
+	div.info_user{ border: 0px; width:610px; margin-left:20px;background-color:#FFF; margin-top:20px;  }
+	fieldset { border: 1px solid #89B554;margin: 1em 0;padding: 1em; padding-top:5px; *padding: 1em; width:605px;}
+	legend { padding: 2px 4px 8px; font-weight:bold; font-size:16px; padding-top:0px;}
+	div.info_user div.title2{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#000; background-color:#FFF; padding-left:5px; padding-right:10px; z-index:9999; margin-top:-20px; width:155px; margin-bottom:0px;}
+	div.info_user div.acc_row{ width:600px; padding-top:0px; padding-left:0px; float:left; height:auto; color:#58595B;}
+	div.info_user div.acc_row span.edit{ float:right; font-size:12px; color:#000; vertical-align:text-top; height:10px;}
+	div.info_user div.acc_row span.edit a{ font-size:12px; color:#666; vertical-align:text-top; height:10px;}
+	div.info_user div.acc_row span.edit a:hover { font-size:12px; color:#000;}
+	div.info_user2{ border: 0px; width:610px; margin-left:20px;  }
+	div.info_user2 div.title2{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#000; background-color:#FFF; padding-left:5px; padding-right:10px; z-index:9999; margin-top:-20px; width:295px; margin-bottom:10px;}
+	div.info_user2 div.title3{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#000; background-color:#FFF; padding-left:5px; padding-right:10px; z-index:9999; margin-top:-20px; width:135px; margin-bottom:10px;}
+	div.info_user2 div.money_row{ width:600px; padding-top:10px;float:left; height:auto; color:#58595B;}
+		div.info_user div.acc_row div.content_L{ float:left; width:200px; text-align:right;}
+			div.info_user div.acc_row p.left{ padding-right:0px; width:80px; float:left; text-align:right; padding-top:4px;font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal;}
+			div.acc_row p.right{ width:250px; float:left; text-align:left; padding-top:4px;font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal;}
+			div.acc_row p.right .input_edit{ border: 1px solid #D5D5D5; border-radius: 5px 5px 5px 5px; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.07) inset;  color: #000; font: 14px/25px "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; height:28px ;padding: 0px  8px;  word-spacing: 0.1em; width:300px; margin-top:-7px; margin-left:-12px;}
+			div.money_row p.money { padding-right:0px; width:150px; float:left; text-align:left; padding-top:18px;font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal; margin-right:-15px;}
+			div.money_row p.money_number{ width:200px; float:left; text-align:left; padding-top:0px;font-family:Arial, Helvetica, sans-serif; font-size:44px; font-weight:bold; color:#89B554;}
+			
+	div.info_user_money{ border:0px; width:610px; margin-left:20px; margin-bottom:0px; background-color:#FFF; margin-top:20px; display:block;}
+	div.info_user_money div.money_row{ width:600px; padding-top:10px; padding-left:0px; float:left; height:auto; color:#58595B; }
+		table.buy_list2 { border:1px solid #E6E7E8; font-size:12px; border-collapse:collapse;  width:185px; color:#58595B; font-size:14px;  float:right;}
+		table.buy_list2 td{ padding-left:8px; padding-top:8px; padding-bottom:8px; border-bottom:1px solid #E6E7E8; width:20%;}
+		table.buy_list2 td.number{ font-size:15px; font-weight:bold; padding-top:5px; padding-bottom:5px; border-bottom:1px solid #E6E7E8; padding-left:0px;}
+/* FAQs */
+img.account_img{ margin:15px 10px 15px 10px; padding:3px;  border:1px solid #D1D3D4;}
+div.faq { width:640px; padding:5px 10px 10px 5px; line-height:22px;}
+	div.faq h4.question { color:#89B554;  font-size:16px;}
+	div.faq div.answers { color:#333; font-weight:normal; font-size:14px; margin:0px; margin:5px 0px 5px 0px ; text-align:justify;}
+	div.answers ul{ margin:5px 5px 5px 40px; list-style:disc;  }
+	div.answers ul li{ padding:0px 7px;} 
+	div.faq a{ color:#000; cursor:pointer;}	
+	div.faq a:hover{ text-decoration:underline;  color:#F00; }
+	div.answers img{ border:1px solid #D1D3D4; margin:5px; padding:3px;}	
+	ul.list_card li p{ text-align:center; color:#000; font-size:10px !important; line-height:10px; margin:0px; padding:0px 0px 0px 15px ;}
+ul.list_card{ list-style:none !important; width:600px; margin:5px 5px 5px 5px !important; 
+}
+ul.list_card li{ width:100px; margin:3px; float:left; cursor:pointer;font-size:10px !important; line-height:10px; text-align:center; padding:0px;}
+ul.list_card li:hover{ opacity:0.7;}
+table.job_list { border:1px solid #939598; font-size:13px; border-collapse:collapse; margin-left:12px; width:650px; color:#58595B; font-family:Arial, Helvetica, sans-serif; margin-top:5px; line-height:19px;}
+table.job_list th{ background:#656565; color:#FFF;padding: 2px 10px 2px 10px ; }
+table.job_list td{ border-bottom:1px solid #939598; padding:2px 10px 2px 10px ; border:1px solid #939598;}
+ul.job_detail{ text-align:left; font-size:14px; margin:15px 25px 15px 35px; line-height:25px;}

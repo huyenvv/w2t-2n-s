@@ -124,6 +124,19 @@ namespace GroupOnC2.Controllers
         }
 
 
+        public ActionResult AccountInformation()
+        {
+            return View();
+        }
 
+        public ActionResult OrderList()
+        {
+            return View();
+        }
+
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
     }
 }
