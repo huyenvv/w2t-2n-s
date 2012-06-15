@@ -1,4 +1,5 @@
 ﻿@model GroupOnC2.Models.CHITIETSANPHAM
+@Html.BeginForm("Details", "Home", FormMethod.Post)	  
 @{
 	ViewBag.Title = "Details";
 	Layout = "~/Views/Shared/_Layout.cshtml";
@@ -38,11 +39,11 @@
                 <div id = "slider" class = "nivoSlider" style="position: absolute !important"> 
 				    @functions {int i = 0;}
 				    @foreach (var str in @Model.AnhBia)
-	                {
+		{
 		
 					    <img src = "@Model.AnhBia.ElementAt(i)" alt="@Model.AnhBia.ElementAt(i)" title="@Model.AnhBia.ElementAt(i)" width="496px" height="300px" style="position: absolute; opacity: 1; top: 0px; z-index: 5; left: -496px; display: none; "/>
-		                i++;
-	                }     
+			i++;
+		}     
 				</div>
 
                 <div class="product_detail_info" style="position: relative;">
@@ -111,19 +112,20 @@
                     <p>@Model.GioiThieu
                     @functions {int j = 0;}
                     @foreach (var str in @Model.AnhBia)
-	                {
-                        if (j < @Model.AnhBia.Count)
-                        {
+					{
+						if (j < @Model.AnhBia.Count)
+						{
                             <img style="text-align: center; display: block; margin-left: auto; margin-right: auto;" title="@Model.AnhBia.ElementAt(j)" src="@Model.AnhBia.ElementAt(j)" alt="@Model.AnhBia.ElementAt(j)" width="496px" height="300px"/>
-                        }
-                        j++;
+						}
+						j++;
                         <p>&nbsp;</p>
-                    }  
+					}  
 
                     </p>
 
                     <p style="text-align: center; margin: 10px 0px;">
-                        <input onmouseover=""  this.src="#" onmouseout="" type="image" src="../../Content/themes/images/btn_buy.png" onclick=" purchase1()">
+					@Html.ActionLink("Mua ngay", "OrderInformation", "Home", new { MaSP = Model.MaSP }, "")
+                        @*<input onmouseover=""  this.src="#" onmouseout="" type="image" src="../../Content/themes/images/btn_buy.png" onclick=" purchase1()"/>*@
                     </p>
                 </div>
             </div>
@@ -141,13 +143,22 @@
 
         <div class="col_left_M">
             <div class="write-comment">    
-                <p>Bình luận <span></span></p>  
+                <p>Bình luận <span></span></p>
+				
+                    @foreach (var comment in @Model.COMMENTs)
+					{
+                        <h5><span style="color: #0000FF; font-size: medium">@comment.UserName</span></h5>
+						<textarea class="textareaCP" id="txtCommentDeal" placeholder="@comment.Noidung" ></textarea>
+					} 
                 <span>
-                    <textarea class="textareaCP" id="txtCommentDeal" placeholder="Viết bình luận cho deal này"></textarea>
+                    <textarea class="textareaCP" id="txtCommentDeal" placeholder="Viết bình luận cho deal này" name = "NoiDung"></textarea>
                 </span>
                 <span>
                     <p style="text-align: center; margin: 10px 0px;">
-                        <input onmouseover=""  this.src="#" onmouseout="" type="image" src="../../Content/Images/images_v2/btn-gui.png" onclick="comment()">
+                        @*<input onmouseover=""  this.src="#" onmouseout="" type="image" src="../../Content/Images/images_v2/btn-gui.png" onclick="comment()">*@
+
+						<input id="Submit1" type="submit" value="Gửi" />
+						
                     </p>
                 </span>
             </div>
@@ -174,7 +185,7 @@
                         </p>
                         <div class="total-comment" style="cursor: pointer;" onclick="showSubCommentSP(213675)">
                             <span class="icon-comment"></span>
-                            <span class="num-comment" id="subCount_213675">0 lời bình</span>
+                            <span class="num-comment" id="subCount_213675">@Model.COMMENTs.Count lời bình</span>
                         </div>
                     </div>
                     <i></i>

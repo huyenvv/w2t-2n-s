@@ -5,7 +5,6 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
-using System.Web;
 using System.Web.Mvc;
 using GroupOnC2.Models;
 using PagedList.Mvc;
@@ -15,20 +14,20 @@ using Microsoft.SqlServer;
 
 namespace GroupOnC2.Models
 {
-   
-	 [Bind(Exclude = "MaSP")]
-    public partial class CHITIETSANPHAM
-    {
-		 GROUPONEntities1 db = new GROUPONEntities1();		    
-        public string MaCTSP { get; set; }
-        public string MaSP { get; set; }
-        public Nullable<int> SoLuong { get; set; }
-        public string GioiThieu { get; set; }
-        public Nullable<decimal> GiaGoc { get; set; }
-        public Nullable<decimal> GiaBan { get; set; }
-    
-        public virtual ICollection<MULTIMEDIA> MULTIMEDIAs { get; set; }
-        public virtual SANPHAM SANPHAM { get; set; }
+
+	[Bind(Exclude = "MaSP")]
+	public partial class CHITIETSANPHAM
+	{
+		GROUPONEntities1 db = new GROUPONEntities1();
+		public string MaCTSP { get; set; }
+		public string MaSP { get; set; }
+		public Nullable<int> SoLuong { get; set; }
+		public string GioiThieu { get; set; }
+		public Nullable<decimal> GiaGoc { get; set; }
+		public Nullable<decimal> GiaBan { get; set; }
+
+		public virtual ICollection<MULTIMEDIA> MULTIMEDIAs { get; set; }
+		public virtual SANPHAM SANPHAM { get; set; }
 		private string _Anh;
 
 		public string Anh
@@ -41,7 +40,8 @@ namespace GroupOnC2.Models
 
 		public List<string> AnhBia
 		{
-			get {
+			get
+			{
 
 				string filePath = LayChiTietSanPham();
 				using (var template = File.OpenRead(filePath))
@@ -49,7 +49,7 @@ namespace GroupOnC2.Models
 					XMLHelper helper = new XMLHelper(filePath);
 					// string path = HttpContext.Current.Server.MapPath(helper.LayAnhBia().ElementAt(0));
 					List<string> str = helper.LayAnhBia();
-					
+
 					return str;
 				}
 			}
@@ -82,5 +82,13 @@ namespace GroupOnC2.Models
 			filePath = HttpContext.Current.Server.MapPath(mul.Multimedia1);
 			return filePath;
 		}
-    }
+
+		private List<COMMENT> _COMMENTs;
+
+		public List<COMMENT> COMMENTs
+		{
+			get { return db.LayDSCommentTheoMaSP(MaSP); }
+			set { _COMMENTs = value; }
+		}
+	}
 }
