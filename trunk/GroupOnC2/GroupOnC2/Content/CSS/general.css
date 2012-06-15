@@ -18,12 +18,11 @@ span.other_color{ color:#F00;}
 span.other_color1{ color:#F00;}
 /*button*/
 div.listbtn{ text-align:left; margin:10px;height:38px; }
-input.button { background: url("../images/buy/submit.png") no-repeat scroll 0 0 transparent; border: medium none;
+input.button { border: medium none;
     color: #FFFFFF;cursor: pointer;display: block; font-size: 17px;height: 36px; font-weight:normal;text-decoration: none; text-shadow: -1px -1px #6E8C41;
     width: 104px;}
 input.button_dis { background: url("../images/buy/submit_dis.png") no-repeat scroll 0 0 transparent; border: medium none; color: #FFFFFF;cursor: pointer;display: block; font-size: 17px;height: 36px; font-weight:normal;text-decoration: none; text-shadow: -1px -1px #999;
-    width: 104px;}input.button:hover {background: url("../images/buy/submit.png") no-repeat scroll 0 -36px transparent; text-shadow:-1px -1px #6E8C41;}
-input.button:active { background: url("../images/buy/submit.png") no-repeat scroll 0 -72px transparent;}
+    width: 104px;}
 input.button1 { background: url("../images/buy/submit1.png") no-repeat scroll 0 0 transparent;border: medium none;
     color: #FFFFFF;cursor: pointer;display: block;font-size: 13px;height: 24px; font-weight:normal; text-decoration: none;    text-shadow: -1px -1px #6E8C41; width: 69px;}
 input.button1_dis { background: url("../images/buy/submit1_dis.png") no-repeat scroll 0 0 transparent;border: medium none;
@@ -49,9 +48,7 @@ div.menu_center input.button4:active { background: url("../images/buy/submit4.pn
 input.button5 { background: url("../images/buy/submit5.png") no-repeat scroll 0 0 transparent; border: medium none; color: #FFFFFF; cursor: pointer; display: block; font-size:17px; height: 36px; height: 26px \9; font-weight:normal; text-decoration: none; text-shadow: -1px -1px #6E8C41;  width:220px; padding-left:15px; padding-top:10px \9; }
 input.button5:hover { background: url("../images/buy/submit5_h.png") no-repeat scroll 0 0 transparent; border: medium none; color: #FFFFFF; cursor: pointer; display: block; font-size:17px; height: 36px; height: 26px \9; font-weight:normal; text-decoration: none; text-shadow: -1px -1px #6E8C41;  width:220px; padding-left:15px; padding-top:10px \9; }
 input.buttonTT { background: url("../images/buy/submit_TT.png") no-repeat scroll 0 0 transparent; border: medium none; color: #FFFFFF; cursor: pointer; display: block; font-size:17px; height: 36px;font-weight:normal; text-decoration: none; text-shadow: -1px -1px #6E8C41;  width:104px; padding-left:15px; padding-top:10px \9; }
-input.buttonTT:hover { background: url("../images/buy/submit_TT_h.png") no-repeat scroll 0 0 transparent; border: medium none; color: #FFFFFF; cursor: pointer; display: block; font-size:17px; height: 36px; font-weight:normal; text-decoration: none; text-shadow: -1px -1px #6E8C41;  width:104px; padding-left:15px; padding-top:10px \9; }
-input.buttonDM { background: url("../images/buy/submit_DM.png") no-repeat scroll 0 0 transparent; border: medium none; color: #FFFFFF; cursor: pointer; display: block; font-size:17px; height: 36px;  font-weight:normal; text-decoration: none; text-shadow: -1px -1px #6E8C41;  width:104px; padding-left:15px; padding-top:10px \9; }
-input.buttonDM:hover { background: url("../images/buy/submit_DM_h.png") no-repeat scroll 0 0 transparent; border: medium none; color: #FFFFFF; cursor: pointer; display: block; font-size:17px; height: 36px; font-weight:normal; text-decoration: none; text-shadow: -1px -1px #6E8C41;  width:104px; padding-left:15px; padding-top:10px \9; }
+
 /* Css khung*/
 body{ height:100%; margin:0px; padding:0px ;text-align:center;background: #89B554;}
 div.index{ width:100%; margin: 0 auto;margin:0px; padding:0px;}

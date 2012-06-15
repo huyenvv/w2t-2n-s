@@ -1072,7 +1072,7 @@
         <EntityTypeShape EntityType="GROUPONModel.LOAISANPHAM" Width="1.5" PointX="0.75" PointY="3.875" Height="1.787985026041667" IsExpanded="true" />
         <EntityTypeShape EntityType="GROUPONModel.MULTIMEDIA" Width="1.5" PointX="7.5" PointY="20.875" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="GROUPONModel.PAYPAL" Width="1.5" PointX="8.25" PointY="3.375" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="GROUPONModel.SANPHAM" Width="1.5" PointX="3" PointY="3.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="GROUPONModel.SANPHAM" Width="2.125" PointX="3" PointY="3.625" Height="2.3648893229166665" IsExpanded="true" />
         <EntityTypeShape EntityType="GROUPONModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333317" IsExpanded="true" />
         <EntityTypeShape EntityType="GROUPONModel.TAIKHOAN" Width="1.5" PointX="3" PointY="6.875" Height="3.7109993489583317" IsExpanded="true" />
         <EntityTypeShape EntityType="GROUPONModel.THANHTOANTRUCTIEP" Width="1.5" PointX="8.25" PointY="11.875" Height="1.9802864583333317" IsExpanded="true" />
@@ -1086,10 +1086,10 @@
           <ConnectorPoint PointX="10.5" PointY="8.7112939453125" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.SANPHAM_CHITIETDONHANG_FK1" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="4.8074446614583337" />
-          <ConnectorPoint PointX="5.416666666666667" PointY="4.8074446614583328" />
-          <ConnectorPoint PointX="5.583333333333333" PointY="4.8074446614583337" />
-          <ConnectorPoint PointX="5.75" PointY="4.8074446614583337" />
+          <ConnectorPoint PointX="5.125" PointY="5.073071661458334" />
+          <ConnectorPoint PointX="5.416666666666667" PointY="5.0730716614583331" />
+          <ConnectorPoint PointX="5.583333333333333" PointY="5.073071661458334" />
+          <ConnectorPoint PointX="5.75" PointY="5.073071661458334" />
           <ConnectorPoint PointX="5.75" PointY="6.75" />
           <ConnectorPoint PointX="7.072916666666667" PointY="6.7499999999999991" />
           <ConnectorPoint PointX="7.239583333333333" PointY="6.75" />
@@ -1105,20 +1105,19 @@
           <ConnectorPoint PointX="7.5" PointY="21.768992513020834" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.SANPHAM_CHITIETSANPHAM_FK1" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="5.9898893229166674" />
-          <ConnectorPoint PointX="4.875" PointY="6.3648893229166674" />
-          <ConnectorPoint PointX="4.875" PointY="21.778595377604166" />
+          <ConnectorPoint PointX="4.84375" PointY="5.9898893229166665" />
+          <ConnectorPoint PointX="4.84375" PointY="21.778595377604166" />
           <ConnectorPoint PointX="5.25" PointY="21.778595377604166" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.SANPHAM_COMMENT_FK1" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="4.09375" />
+          <ConnectorPoint PointX="5.125" PointY="4.09375" />
           <ConnectorPoint PointX="5.5" PointY="4.09375" />
           <ConnectorPoint PointX="5.5" PointY="7.625" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.TAIKHOAN_COMMENT_FK1" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="8.8074446614583337" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="8.8074446614583337" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="8.8074446614583337" />
+          <ConnectorPoint PointX="4.760416666666667" PointY="8.8074446614583337" />
+          <ConnectorPoint PointX="4.927083333333333" PointY="8.8074446614583337" />
           <ConnectorPoint PointX="5.25" PointY="8.8074446614583337" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.HINHTHUCTHANHTOAN_DONHANG_FK1" ManuallyRouted="false">
@@ -1132,8 +1131,8 @@
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.TAIKHOAN_DONHANG_FK1" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="10.285543619791667" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="10.285543619791667" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="10.285543619791667" />
+          <ConnectorPoint PointX="4.760416666666667" PointY="10.285543619791667" />
+          <ConnectorPoint PointX="4.927083333333333" PointY="10.285543619791667" />
           <ConnectorPoint PointX="7.2760441666666669" PointY="10.285543619791667" />
           <ConnectorPoint PointX="7.4427108333333329" PointY="10.285543619791667" />
           <ConnectorPoint PointX="8.25" PointY="10.285543619791667" />
@@ -1164,22 +1163,22 @@
           <ConnectorPoint PointX="3.75" PointY="13.518992513020834" />
           <ConnectorPoint PointX="4.0729191666666669" PointY="13.518992513020834" />
           <ConnectorPoint PointX="4.2395858333333329" PointY="13.518992513020834" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="13.518992513020834" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="13.518992513020834" />
+          <ConnectorPoint PointX="4.760416666666667" PointY="13.518992513020834" />
+          <ConnectorPoint PointX="4.927083333333333" PointY="13.518992513020834" />
           <ConnectorPoint PointX="5.25" PointY="13.518992513020834" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.TAIKHOAN_THONGTINDOANHNGHIEP_FK1" ManuallyRouted="false">
           <ConnectorPoint PointX="4.1562525" PointY="10.585999348958332" />
           <ConnectorPoint PointX="4.1562525" PointY="16.018992513020834" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="16.018992513020834" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="16.018992513020834" />
+          <ConnectorPoint PointX="4.760416666666667" PointY="16.018992513020834" />
+          <ConnectorPoint PointX="4.927083333333333" PointY="16.018992513020834" />
           <ConnectorPoint PointX="5.25" PointY="16.018992513020834" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.TAIKHOAN_THONGTINMEMBER_FK1" ManuallyRouted="false">
           <ConnectorPoint PointX="3.3437475" PointY="10.585999348958332" />
           <ConnectorPoint PointX="3.3437475" PointY="18.740143229166669" />
-          <ConnectorPoint PointX="4.791666666666667" PointY="18.740143229166669" />
-          <ConnectorPoint PointX="4.958333333333333" PointY="18.740143229166669" />
+          <ConnectorPoint PointX="4.760416666666667" PointY="18.740143229166669" />
+          <ConnectorPoint PointX="4.927083333333333" PointY="18.740143229166669" />
           <ConnectorPoint PointX="5.25" PointY="18.740143229166669" />
         </AssociationConnector>
         <AssociationConnector Association="GROUPONModel.TRANGTHAITAIKHOAN_TAIKHOAN_FK1" ManuallyRouted="false">

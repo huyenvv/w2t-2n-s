@@ -1,12 +1,12 @@
-﻿@using GroupOnC2.Models
-@model OrderInformation
-
+﻿@model GroupOnC2.Models.CHITIETDONHANG		   
+@Html.BeginForm("OrderInformation", "Home", FormMethod.Post)
 @{
-    ViewBag.Title = "ReceiverInformation";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "ReceiverInformation";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ReceiverInformation</h2>
+<h2> GIỎ HÀNG CỦA BẠN</h2>
+
 
 <script type="text/javascript">
     var PayByCash = 1;
@@ -27,18 +27,18 @@
                             <div class="col_left_T">
                             </div>
                             <div class="col_left_M">
-                                <div class="buy">
+                               <div class="buy">
                                    <!-- <p class="step_panel">
                                         <img src="../../Content/themes/images/steps_01.png" width="666" height="38">
                                     </p>-->
 
-                                    <input id="DeliveryMethod" data-val="true" data-val-required="The DeliveryMethod field is required." name="DeliveryMethod" type="hidden" value="AtHome">
-                                    <input id="dealAlias" name="dealAlias" type="hidden" value="can-cam-tay-mini">
-                                    <input type="hidden" id="ToCityId" value="1">
-                                    <input type="hidden" id="TotalWeight" value="0">
+                                    <input id="DeliveryMethod" data-val="true" data-val-required="The DeliveryMethod field is required." name="DeliveryMethod" type="hidden" value="AtHome"/>
+                                    <input id="dealAlias" name="dealAlias" type="hidden" value="can-cam-tay-mini"/>
+                                    <input type="hidden" id="ToCityId" value="1"/>
+                                    <input type="hidden" id="TotalWeight" value="0"/>
                                     <div id="VoucherMode-Error" style="display:none;background:#FDE9F1 url(images/buy/icon_alert.png) no-repeat left center; border:1px solid #f45555; height:21px; margin:2px;margin-bottom: 10px; margin-left:14px; width:636px;font-size:12px; color:#F00; padding-top:6px; padding-left:28px; text-align:left;font-weight:bold;" class="Enternet-Field-Validation">
                                     </div>
-
+									
                                     <table class="buy_list" width="100%" border="0" cellspacing="0" cellpadding="0" id="VoucherMode" name="VoucherMode">
                                         <tbody><tr>
                                             <th width="40%" scope="col" style="text-align:center;">
@@ -55,28 +55,28 @@
                                             </th>
                                         </tr>
 
-                                        <input data-val="true" data-val-number="The field DealId must be a number." data-val-required="The DealId field is required." id="DealId" name="DealId" type="hidden" value="6559">
-                                        <input type="hidden" name="dealAlias" id="dealAlias" value="can-cam-tay-mini">
+                                        <input data-val="true" data-val-number="The field DealId must be a number." data-val-required="The DealId field is required." id="DealId" name="DealId" type="hidden" value="6559"/>
+                                        <input type="hidden" name="dealAlias" id="dealAlias" value="can-cam-tay-mini"/>
 
-                                        <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Vouchers_0__Id" name="Vouchers[0].Id" type="hidden" value="7432">
-                                        <input data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="Vouchers_0__Price" name="Vouchers[0].Price" type="hidden" value="49000">
-                                        <tr id="7432" price="49000" weight="0">
-                                            <td style="text-align: left;">
-                                                Cân mini trọng lượng tối đa 5kg - Trị giá 98.000đ
+                                        <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Vouchers_0__Id" name="Vouchers[0].Id" type="hidden" value="7432"/>
+                                        <input data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="Vouchers_0__Price" name="Vouchers[0].Price" type="hidden" value="@Model.DonGia"/>
+                                        <tr id="7432" price= @Model.DonGia weight="0"/>
+                                            <td style="text-align: left;" name="TenSP">
+                                                @Model.TenSP
                                             </td>
-                                            <td style="text-align: center;">
-                                                49.000đ
+                                            <td style="text-align: center;" name="DonGia">
+                                                @Model.DonGia
                                             </td>
                                             <td align="center">
                                                 <select class="vSelect" id="Vouchers_0__SelectedQuantity" name="Vouchers[0].SelectedQuantity">
-                                                    @for(int i = 1; i <= 10; i++)
-                                                    {
+                                                    @for (int i = 1; i <= 10; i++)
+													{
                                                         <option value=@i>@i</option>
                                                     }
                                                 </select>                         
                                             </td>
-                                            <td align="right" holder="voucherAmount">
-                                                <b>49.000đ</b>
+                                            <td align="right" holder="voucherAmount" name="ThanhTien">
+                                                <b>@Model.ThanhTien</b>
                                             </td>
 
                                         </tr>
@@ -94,7 +94,7 @@
                                             <td colspan="3" align="right">
                                                 Số tiền phải trả
                                             </td>
-                                            <td align="right" id="OrderAmount" name="OrderAmount"><b>49.000đ</b></td>
+                                            <td align="right" id="OrderAmount" name="OrderAmount"><b>@Model.ThanhTien</b></td>
                                         </tr> </tbody>
                                     </table>
 
@@ -105,7 +105,7 @@
                                             <p class="title_right">
                                             </p>
                                         </h3>
-                                        <br class="clean">
+                                        <br class="clean"/>
                                     </div>
 
                                     <div id="BuyAtCompanyHolder" style="display: none; "></div>
@@ -115,7 +115,7 @@
                                                     <h4>Giao hàng tận nơi</h4>
                                                     <p>Vui lòng cho biết địa chỉ giao phiếu/sản phẩm.</p> 
                                             </div>
-                                            <br class="clean">
+                                            <br class="clean"/>
                                         </li>
                                     </ul>
 
@@ -125,9 +125,9 @@
                                                 <p class="form_buy_left">
                                                     Họ tên (<span class="other_color">*</span>)</p>
                                                 <p class="form_buy_right">
-                                                    <input id="HFullName" name="HFullName" type="text" value="Nguyễn Phú Mai Trang" class="valid">
+                                                    <input id="HFullName" name="HoTen" type="text" value="Tên người nhận" class="valid"/>
                                                 </p>
-                                                <br class="clean">
+                                                <br class="clean"/>
                                             </div>
 
                                             <div id="HFullName-Error" style="display:none;" class="Enternet-Field-Validation">
@@ -137,9 +137,9 @@
                                                 <p class="form_buy_left">
                                                     Email (<span class="other_color">*</span>)</p>
                                                 <p class="form_buy_right">
-                                                    <input id="HEmail" name="HEmail" type="text" value="nhoc_heo_way@yahoo.com">
+                                                    <input id="HEmail" name="Email" type="text" value="Email"/>
                                                 </p>
-                                                <br class="clean">
+                                                <br class="clean"/>
                                             </div>
 
                                             <div id="HEmail-Error" style="display:none;" class="Enternet-Field-Validation">
@@ -148,9 +148,9 @@
                                                 <p class="form_buy_left">
                                                     Điện thoại di động (<span class="other_color">*</span>)</p>
                                                 <p class="form_buy_right">
-                                                    <input id="HMobile" name="HMobile" type="text" value="0978676712">
+                                                    <input id="HMobile" name="DienThoai" type="text" value="0978676712"/>
                                                 </p>
-                                                <br class="clean">
+                                                <br class="clean"/>
                                             </div>
 
                                             <div id="AdditionInfoDiv" style="">
@@ -159,7 +159,8 @@
                                                             Địa chỉ   
                                                         (<span class="other_color">*</span>)</p>
                                                     <p class="form_buy_right">
-                                                        <input id="HAddress" name="HAddress" type="text" value=""></p>
+                                                        <input id="HAddress" name="DiaChi" type="text" value=""/>
+													</p>
                                                 </div>
 
                                                 <div id="HAddress-Error" style="display:none;" class="Enternet-Field-Validation">
@@ -169,11 +170,11 @@
                                                     <p class="form_buy_left">
                                                         Tỉnh/Thành phố (<span class="other_color">*</span>)</p>
                                                     <p class="form_buy_right">
-                                                        <select data-val="true" data-val-number="The field HCityId must be a number." data-val-required="The HCityId field is required." id="HCityId" name="HCityId" style="width:147px;float:left;margin-right:5px">
+                                                        <select data-val="true" data-val-number="The field HCityId must be a number." data-val-required="The HCityId field is required." id="HCityId" name="ThanhPho" style="width:147px;float:left;margin-right:5px;">
                                                             <option selected="selected" value="1">TP. HỒ CHÍ MINH</option>
                                                         </select>
 
-                                                        <select data-val="true" data-val-number="The field HDistrictId must be a number." data-val-required="The HDistrictId field is required." id="HDistrictId" name="HDistrictId" style="width:164px;">
+                                                        <select data-val="true" data-val-number="The field HDistrictId must be a number." data-val-required="The HDistrictId field is required." id="HDistrictId" name="Quan" style="width:164px;">
                                                             <option selected="selected" value="-1">-- Chọn quận/huyện --</option>
                                                             <option value="1">Quận 1</option>
                                                             <option value="2">Quận 2</option>
@@ -192,7 +193,7 @@
                                                             <option value="17">Quận Phú Nhuận</option>
                                                         </select>
 
-                                                        <select data-val="true" data-val-number="The field HWardId must be a number." data-val-required="The HWardId field is required." id="HWardId" name="HWardId" style="width:164px;">
+                                                        <select data-val="true" data-val-number="The field HWardId must be a number." data-val-required="The HWardId field is required." id="HWardId" name="Phuong" style="width:164px;">
                                                             <option value="-1">--Chọn phường--</option>
                                                             <option value="24">Phường 1</option>
                                                             <option value="25">Phường 2</option>
@@ -214,11 +215,11 @@
                                                         <span id="ShippingCostAnnounceText" class="ship"></span>
                                                     </p>
 
-                                                    <br class="clean">
-                                                    <input id="CacheCurrentCityId" name="CacheCurrentCityId" type="hidden" value="1">
-                                                    <input id="CurrentCityName" name="CurrentCityName" type="hidden" value="TP. HỒ CHÍ MINH">
-                                                    <input id="CurrentDistrictName" name="CurrentDistrictName" type="hidden" value="-- Chọn quận/huyện --">
-                                                    <input id="CurrentWardName" name="CurrentWardName" type="hidden" value="--Chọn phường--">
+                                                    <br class="clean"/>
+                                                    <input id="CacheCurrentCityId" name="CacheCurrentCityId" type="hidden" value="1"/>
+                                                    <input id="CurrentCityName" name="CurrentCityName" type="hidden" value="TP. HỒ CHÍ MINH"/>
+                                                    <input id="CurrentDistrictName" name="CurrentDistrictName" type="hidden" value="-- Chọn quận/huyện --"/>
+                                                    <input id="CurrentWardName" name="CurrentWardName" type="hidden" value="--Chọn phường--"/>
 
                                                 </div>
 
@@ -246,18 +247,15 @@
                                                     Ghi chú</p>
                                                 <p class="form_buy_right">
                                                     <textarea cols="20" id="HDescription" name="HDescription" rows="2"></textarea>
-                                                    <br>
+                                                    <br/>
                                                 </p>
                                             </div>
 
-                                            <br class="clean">
+                                            <br class="clean"/>
                                             
 
                                         </div>
                                     </div>
-
-                                    
-
                                     <!--Hình thức thanh toán-->
                                     <div style="height: 50px; position: relative;">
                                         <h3 class="title_page">
@@ -266,7 +264,7 @@
                                             <p class="title_right">
                                             </p>
                                         </h3>
-                                        <br class="clean">
+                                        <br class="clean"/>
                                     </div>
 
                                     <ul class="choose_buy">
@@ -290,11 +288,12 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <br class="clean">
+                                    <br class="clean"/>
 
-                                    <div class="form_buy_item" style="margin-top: 5px; *margin-top: 20px;">
-                                                <input class="buttonDM" type="submit" value=" " id="buttonDoBuy">
-                                    </div>
+                                    <div class="form_buy_item" style="margin-top: 5px; margin-top: 20px;"/>
+                                     <input  type="submit" value="Đặt mua"/>
+									 @*<input type="submit" value="Đặt mua"/>
+                                    @Html.ActionLink("Dat mua","Index", "Home")*@
 
                                     <div class="form_buy_note">
                                         <span>Lưu ý</span>
@@ -304,7 +303,7 @@
 
 
                                 </div>
-                                <br class="clean">
+                                <br class="clean"/>
 
                             </div>
                             <div class="col_left_B">
@@ -351,9 +350,15 @@
             <p>
                 <span>
                     <img src="../../Content/Images/icon_email.png" width="24" height="24" style="vertical-align: middle;
-                        margin-top: -5px; *margin-top: 0px;"></span><span style="display: block;font-weight: normal;"><a href="mailto:hotro@cungmua.com">hotro@cungmua.com</a></span></p>
+                        margin-top: -5px; margin-top: 0px;"/>
+				</span>
+				<span style="display: block;font-weight: normal;">
+				<a href="mailto:hotro@cungmua.com">hotro@cungmua.com
+				</a>
+				</span>
+			</p>
       
-            <br class="clean">
+            <br class="clean"/>
         </div>
    
     </div>

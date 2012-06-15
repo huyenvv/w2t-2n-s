@@ -12,7 +12,7 @@ namespace GroupOnC2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class THONGTINDOANHNGHIEP:TAIKHOAN
+    public partial class THONGTINDOANHNGHIEP
     {
         public string MaTK { get; set; }
         public string Website { get; set; }

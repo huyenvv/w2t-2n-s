@@ -14,11 +14,19 @@ namespace GroupOnC2.Models
     
     public partial class COMMENT
     {
+		GROUPONEntities1 db = new GROUPONEntities1();
         public string MaCM { get; set; }
         public Nullable<System.DateTime> Ngay { get; set; }
         public string MaSP { get; set; }
         public string MaTK { get; set; }
         public string Noidung { get; set; }
+		private string _UserName;
+
+		public string UserName
+		{
+			get { return db.LayUserNameTheoMaTK(MaTK); }
+			set { _UserName = value; }
+		}
     
         public virtual SANPHAM SANPHAM { get; set; }
         public virtual TAIKHOAN TAIKHOAN { get; set; }
