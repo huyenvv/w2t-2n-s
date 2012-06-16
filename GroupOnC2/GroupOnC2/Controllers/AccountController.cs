@@ -79,6 +79,9 @@ namespace GroupOnC2.Controllers
 				FormsAuthentication.SetAuthCookie(MaTK, true);
 				Response.Cookies["MaTK"]["MaTK"] = MaTK;
 				Response.Cookies["MaTK"].Expires = DateTime.Now.AddMinutes(10);
+				
+				Response.Cookies["UserName"]["UserName"] = userName;
+				Response.Cookies["UserName"].Expires = DateTime.Now.AddMinutes(10) ;
 				if (Url.IsLocalUrl(returnUrl) &&
 					returnUrl.Length > 1 &&
 					returnUrl.StartsWith("/") &&
@@ -151,9 +154,32 @@ namespace GroupOnC2.Controllers
 		}
 		#endregion
 
-        public void SignOut()
-        {
-            FormsAuthentication.SignOut();
-        }
+		public ActionResult SignOut()
+		{
+			FormsAuthentication.SignOut();
+
+			foreach (var cookie in Request.Cookies.AllKeys)
+			{
+				Request.Cookies.Remove(cookie);
+			}
+			
+			return RedirectToAction("Index", "Home");
+		}
+		////[HttpPost]
+		//public ActionResult SignOut()
+		//{
+		//    FormsAuthentication.SignOut();
+
+		//    foreach (var cookie in Request.Cookies.AllKeys)
+		//    {
+		//        Request.Cookies.Remove(cookie);
+		//    }
+		//    foreach (var cookie in Response.Cookies.AllKeys)
+		//    {
+		//        Response.Cookies.Remove(cookie);
+		//    }
+		//    return RedirectToAction("Index", "Home");
+
+		//}
 	}
 }

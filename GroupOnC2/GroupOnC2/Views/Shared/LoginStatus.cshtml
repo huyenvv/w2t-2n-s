@@ -3,12 +3,12 @@
 @if (Request.IsAuthenticated)
 {   
     <span id="info_acc" class="info_acc" style="margin: 13px 0px 0px; ">
-        <a id="user" title="Nguyen Trang">Nguyen Trang</a>
+        <a id="user" title="Nguyen Trang"> @Request.Cookies["UserName"]["UserName"]</a>
         <span id="content_acc" class="content_acc" style="display: none; ">
             <ul>
                 <li>@Html.ActionLink("Thông tin đơn hàng", "OrderList")</li>
                 <li class="active">@Html.ActionLink("Thông tin tài khoản", "AccountInformation")</li>
-                <li>@Html.ActionLink("Sign Out", "Index")</li>
+                <li>@Html.ActionLink("Sign Out", "SignOut" ,"Account")</li>
             </ul>
         </span>
     </span>

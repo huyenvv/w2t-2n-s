@@ -1,4 +1,6 @@
-﻿@{
+﻿@Html.BeginForm("AccountInformation", "Home", FormMethod.Post)
+@model GroupOnC2.Models.THONGTINMEMBER
+@{
     ViewBag.Title = "AccountInformation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -24,14 +26,14 @@
                             Họ tên:
                         </p>
                         <p class="right">
-                            <span id="nameLabel">Nguyễn Phú Mai Trang</span>
+                            <span id="nameLabel">@Model.Ten</span>
                             <span id="contentName" style="display: none">
                                 <input class="input_edit" tabindex="1" id="Name" maxlength="50" value="Nguyễn Phú Mai Trang"><br>
                             </span>
                         </p>
                         <span class="edit">
                             <img id="iconedit" src="../../Content/Images/general/edit.png" align="bottom" border="0" style="margin-bottom: -3px; margin-right: 3px; cursor: pointer">
-                            <a href="javascript:void(0)" id="btEdit">Chỉnh sửa</a>
+@*                            <a href="javascript:void(0)" id="btEdit">Chỉnh sửa</a>*@
                             
                         </span>
                     </div>
@@ -46,7 +48,7 @@
                             Điện thoại:
                         </p>
                         <p class="right">
-                            <span id="mobileLabel">0923456789</span>
+                            <span id="mobileLabel">@Model.TAIKHOAN.SDT</span>
                             <span id="contentMobile" style="display: none">
                                 <input class="input_edit" tabindex="2" id="Phone" value="0923456789">
                             </span>
@@ -63,7 +65,7 @@
                             Giới tính: 
                         </p>
                         <p class="right">
-                            <span id="GenderLabel">Nữ</span>
+                            <span id="GenderLabel">@Model.GioiTinh1</span>
                             <span id="ContentGender" style="display: none">
                                     <input type="radio" id="men" name="group1" value="0" tabindex="3"> <label>Nam</label>
                                     <input type="radio" id="wmem" name="group1" value="1" checked="checked" tabindex="4"> <label>Nữ</label>
@@ -82,7 +84,7 @@
                         </p>
 
                         <p class="right">
-                            <span id="BirthDayLabel">21/12/1991</span>
+                            <span id="BirthDayLabel">@Model.NgaySinh</span>
                             <span id="ContentBirthDay" style="display: none">
                                 <select id="CurrentDate" name="CurrentDate" tabindex="5">
                                     <option>Ngày</option>
@@ -142,12 +144,13 @@
                             Email:
                         </p>
                         <p class="right">
-                            nhoc_heo_way@yahoo.com
+                           @Model.TAIKHOAN.Email
                         </p>
                     </div>
+					
                 </fieldset>
                 <br class="clean">
-
+				<input id="Submit1" type="submit" value="Chỉnh sửa" />
             </div>
             <div class="info_user2">
                 <fieldset>

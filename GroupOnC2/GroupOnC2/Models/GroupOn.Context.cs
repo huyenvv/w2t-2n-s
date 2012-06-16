@@ -155,6 +155,15 @@ namespace GroupOnC2.Models
 			return dsDonHang.ToList();
 		}
 
+		//public List<DONHANG> LayDSCTDonHangTheoMaTK(string MaTK)
+		//{
+
+		//    var dsDonHang = from dh in CHITIETDONHANGs
+		//                    where dh.MaTK == MaTK
+		//                    select dh;
+		//    return dsDonHang.ToList();
+		//}
+
 		public List<COMMENT> LayDSCommentTheoMaSP(string MaSP)
 		{
 			
@@ -168,6 +177,12 @@ namespace GroupOnC2.Models
 		{
 			TAIKHOAN taiKhoan = TAIKHOANs.SingleOrDefault(p => p.MaTK == MaTK);
 			return taiKhoan.UserName;
+		}
+
+		public TAIKHOAN LayTaiKhoanTheoMaTK(string MaTK)
+		{
+			TAIKHOAN taiKhoan = TAIKHOANs.SingleOrDefault(p => p.MaTK == MaTK);
+			return taiKhoan;
 		}
 	}
 }

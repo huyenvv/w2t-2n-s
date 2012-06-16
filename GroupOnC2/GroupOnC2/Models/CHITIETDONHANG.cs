@@ -23,7 +23,13 @@ namespace GroupOnC2.Models
         public Nullable<int> SoLuong { get; set; }
 		public Nullable<decimal> DonGia { get; set; }
 
-		public string TenSP { get; set; }
+		private string _TenSP;
+
+		public string TenSP
+		{
+			get { return LaySanPham(MaSP).TenSP; }
+			set { _TenSP = value; }
+		}
 
 		private Decimal _ThanhTien;
 
