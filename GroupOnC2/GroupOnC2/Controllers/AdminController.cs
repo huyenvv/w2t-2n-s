@@ -75,9 +75,9 @@ namespace GroupOnC2.Controllers
 		{
 			THONGTINMEMBER member = new THONGTINMEMBER();
 			member.Avatar = null;
-			member.UserName = collection["TenDangNhap"];
-			member.Email = collection["RegisterModel.EmailRegister"];
-			var gioiTinh = ValueProvider.GetValue("RegisterModel.Gender");
+			member.UserName = collection["UserName"];
+			member.Email = collection["Email"];
+			var gioiTinh = ValueProvider.GetValue("Gender");
 			if (gioiTinh != null)
 			{
 				string gt = gioiTinh.AttemptedValue;
@@ -88,14 +88,14 @@ namespace GroupOnC2.Controllers
 
 			member.MaTK = "MB" + (db.LaySoLuongMember() + 1).ToString();
 			member.MaTT = "TT01";
-			string ngaySinh = collection["RegisterModel.CurrentDate"];
-			string thangSinh = collection["RegisterModel.CurrentMonth"];
-			string namSinh = collection["RegisterModel.CurrentYear"];
+			string ngaySinh = collection["Date"];
+			string thangSinh = collection["Month"];
+			string namSinh = collection["Year"];
 			member.NgaySinh = DateTime.Parse(thangSinh + "/" + ngaySinh + "/" + namSinh);
-			member.Password = collection["RegisterModel.PasswordRegister"];
+			member.Password = collection["Password"];
 
-			member.SDT = collection["RegisterModel.Phone"];
-			member.Ten = collection["RegisterModel.Name"];
+			member.SDT = collection["Phone"];
+			member.Ten = collection["Name"];
 
 
 			bool res = db.ThemMember(member);
@@ -169,6 +169,31 @@ namespace GroupOnC2.Controllers
 			List<COMMENT> lstCmds = db.LayDSComment();
 			return View(lstCmds);
 		}
+
+        public ActionResult OrderManager()
+        {
+            List<DONHANG> dsDh = db.LayDSDonHang();
+            return View(dsDh);
+        }
+
+        public ActionResult DeleteOrder(string id)
+        {
+            DONHANG donhang =  db.DONHANGs.Find(id);
+            
+            db.Entry(donhang.CHITIETDONHANGs).State = EntityState.Deleted;
+            db.Entry(donhang).State = EntityState.Deleted;
+            db.SaveChanges();
+            return RedirectToAction("OrderManager");
+        }
+
+        public ActionResult UpdateOrder(string id)
+        {
+            List<string> tinhtrangDH = new List<string>();
+            tinhtrangDH.Add("abc");
+            tinhtrangDH.Add("ede");
+            var dh = db.DONHANGs.Single(r => r.MaDH == id);
+            return View(dh);
+        }
 
 	}
 
