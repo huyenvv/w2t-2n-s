@@ -1,0 +1,169 @@
+﻿body
+{
+	font-size: .85em;
+	font-family: Tahoma , Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+    background-image: url('Images/Backgrounds/bg.png');
+	background-repeat: repeat;
+}
+
+#page1000
+{
+    position:relative;
+    margin:auto;
+    width: 1000px;
+}
+
+.header
+{
+	width: 100%;
+	min-height:150px;
+	margin: 0;
+	padding: 0;
+    background:#cdf;
+}
+
+.main
+{ 
+    position: relative;
+    width:100%;
+	min-height:400px;
+	height:400px;
+	display:table;
+	top: 0px;
+	left: 0px;
+	background:#cdf;
+}
+
+.footer
+{
+	text-align: center;
+	display:table;
+	font-size: .9em;
+    background:#3cc;
+}
+
+.info_account
+{
+float:right;
+background-color:#ccc;
+border-radius: 5px;
+margin-left:5px;
+border-right-width: 2px;
+padding: 2px 5px
+}
+
+.search_thanhpho_bg
+{
+background:#3cc;
+}
+
+.thanh_pho
+{
+float:left;
+}
+
+.text_left
+{
+    text-align:left;
+}
+
+.text_right
+{
+    text-align:right;
+}
+
+.search
+{
+float:right;
+}
+
+.text_right
+{
+    text-align:right;
+}
+
+.width16percent
+{
+    width:16%;
+}
+
+.menu ul{float:left;list-style:none;width:100%;margin:0;padding:0;background:#CCC;}
+.menu ul li{position: relative;float:left}  
+.menu ul li a{text-decoration:none;color:#000;display:block;padding:7px 20px 7px 20px;font:bold 12px tahoma, verdana;}
+.menu ul li ul li{float:none;}
+.menu ul li ul{display:none; position:absolute; }
+.menu ul li:hover ul{display:block;list-style:none;z-index:1000; }
+.menu ul li a:hover{background:#EEE}
+
+.text_space
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.select_style
+{
+    width: 120px; 
+    padding:3px;
+    height:24px;
+}
+
+.txt_input
+{
+    width: 150px; 
+    height: 18px;
+}
+
+.space_each_line
+{
+height:29px;
+padding-top:4px;
+}
+
+.distance_with_menu
+{
+    margin-top:20px;
+}
+
+.heading
+{
+    margin-left: 10px;
+}
+
+.marginbottom100
+{
+    margin-bottom:100px;
+}
+
+.center
+{
+    text-align:center;
+}
+
+table.acc_list {border:1px solid #ccc; font-size:13px; border-collapse:collapse; width:100%; color:#58595B; }
+table.acc_list th{ text-align:left; background:#ddd;padding: 7px 10px 7px 10px ; font-weight:bold;border:1px solid #ccc;}
+table.acc_list tr.row1{text-align:left; background-color:#FFF;padding:7px 10px 7px 10px ; }
+table.acc_list tr.row2{text-align:left; background-color:#E6E7E8;padding:7px 10px 7px 10px ; }
+table.acc_list td{padding:4px 10px 4px 10px ;border:1px solid #ccc; }
+
+
+/*.field{float:left;width:100%;padding-top:4px;margin:5px auto 10px;}
+
+
+.field label{float:left;padding-right:20px;width:130px;line-height:30px;text-align:right;}
+.field .f-input{float:left;width:150px; padding:3px; height:18px;}
+.field .f-select{float:left;width:160px; padding:4px; height:26px;}
+.field .f-textarea{float:left;width:320px;height:120px;margin:3px 0 0;}
+.field .f-textarea{float:left;width:700px;height:160px;margin:3px 0 0;}
+*/
+
+.field{float:left;width:100%;margin-top:25px;}
+
+
+.field text{float:left; width:130px; padding-right:20px; text-align:right; padding-top:4px;}
+.field .f-input{ float:left; height:20px; width:150px;font: 14px Tahoma , Verdana, Helvetica, Sans-Serif;}
+.field .f-browse{ float:left; height:20px; width:450px;font: 14px Tahoma , Verdana, Helvetica, Sans-Serif;}
+.field .f-select{float:left; height:26px; width:156px;padding:3px;font: 14px Tahoma , Verdana, Helvetica, Sans-Serif;}
+.field .f-textarea{float:left; font: 14px Tahoma , Verdana, Helvetica, Sans-Serif; width: 762px;}

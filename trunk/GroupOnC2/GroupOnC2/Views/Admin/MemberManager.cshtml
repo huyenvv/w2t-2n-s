@@ -1,0 +1,116 @@
+﻿@model IEnumerable<GroupOnC2.Models.Member>
+
+
+@{
+    ViewBag.Title = "MemberManager";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<h3 class="heading">Danh sách thành viên</h3>
+<hr />
+
+<div class="space_each_line distance_with_menu">
+    <text class="text_space">Tên đăng nhập</text><input class="txt_input" type="text"/>
+    <text class="text_space">Email</text><input class="txt_input" type="text"/>
+    <input  type="button" value="Tìm kiếm"/>
+</div>
+
+<div >
+    <input type="button" value="Thêm"/>
+    <input type="button" value="Xóa" />
+</div>
+
+
+<div >
+    <table class="acc_list">
+        <tr>
+            <th>
+                <input id="checkall" type="checkbox" />
+            </th>
+            <th>
+                Tên đăng nhập
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Tên thành viên
+            </th>
+            <th>
+                Ngày sinh
+            </th>
+            <th>
+                Giới tính
+            </th>
+            <th>
+                Điện thoại
+            </th>
+            <th>
+                Thao tác
+            </th>
+        </tr>
+        @functions {int i = 1;}
+        @foreach (var item in Model)
+        {
+            if (i % 2 == 1)
+            {
+                <tr class="row1">
+                <td>
+                    <input id="checkbox" type="checkbox"/>
+                </td>
+                <td>
+                    @item.account.UserName
+                </td>
+                <td>
+                    @item.account.Email
+                </td>
+                <td>
+                    @item.member.Ten
+                </td>
+                <td>
+                    @item.member.NgaySinh
+                </td>
+                <td>
+                    @item.member.GioiTinh
+                </td>
+                <td>
+                    @item.account.SDT
+                </td>
+                <td>
+                    @Html.ActionLink("Delete","Delete", new {id=item.account.MaTK})
+                </td>
+            </tr>
+            }
+            else
+            {
+                <tr class="row2">
+                <td>
+                    <input id="checkbox" type="checkbox"/>
+                </td>
+                <td>
+                    @item.account.UserName
+                </td>
+                <td>
+                    @item.account.Email
+                </td>
+                <td>
+                    @item.member.Ten
+                </td>
+                <td>
+                    @item.member.NgaySinh
+                </td>
+                <td>
+                    @item.member.GioiTinh
+                </td>
+                <td>
+                    @item.account.SDT
+                </td>
+                <td>
+                    @Html.ActionLink("Delete","Delete", new {id=item.account.MaTK})
+                </td>
+            </tr>
+            }
+            i++;
+        }
+    </table>
+</div>
