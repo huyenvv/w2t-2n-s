@@ -156,6 +156,13 @@ namespace GroupOnC2.Models
 			return dsDonHang.ToList();
 		}
 
+        public List<DONHANG> LayDSDonHang()
+        {
+            var dsDonHang = from dh in DONHANGs
+                            select dh;
+            return dsDonHang.ToList();
+        } 
+
 		public List<COMMENT> LayDSCommentTheoMaSP(string MaSP)
 		{
 

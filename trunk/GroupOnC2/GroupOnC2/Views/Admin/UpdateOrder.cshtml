@@ -1,0 +1,38 @@
+﻿@model GroupOnC2.Models.DONHANG
+@{
+    ViewBag.Title = "UpdateOrder";
+}
+
+<div class="bg_account">
+    <div class="bg_account_T">
+        Cập nhật đơn hàng
+    </div>
+
+    <div class="bg_account_M">
+        <ul class="account_tab">
+            <li class="active">@Html.ActionLink("Thông tin đơn hàng", "OrderList")</li>
+        </ul>
+        <div class="account_content">
+            <form action="./UpdateOrder.cshtml" id="FormChangePass" method="post">
+                <div class="form_buy">
+                        <p class="form_buy_left" style="width: 180px; margin: 0px;">
+                            Tình trạng đơn đặt hàng <span class="other_color">(*)</span></p>
+                        <p class="form_buy_right" style="margin: 0px;">
+                            @Html.TextBox("TinhTrang")
+                        </p>
+                        <br class="clean">
+
+                    <div class="form_buy_item" align="center" style="margin-top: 20px;">
+                        <input class="button" id="btChangePass" type="submit" value="Cập nhật "/>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br class="clean">
+        <br class="clean">
+    </div>
+
+    <div class="bg_account_B">
+    </div>
+</div>
