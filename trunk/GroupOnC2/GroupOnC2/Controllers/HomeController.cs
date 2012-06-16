@@ -86,8 +86,8 @@ namespace GroupOnC2.Controllers
 		public ActionResult Details(FormCollection collection)
 		{
 			string MaTK = Request.Cookies["MaTK"]["MaTK"] ?? "";
-			if (MaTK == "")
-				return RedirectToAction("Index", "Home");
+			if (MaTK == ""|| !Request.IsAuthenticated)
+				return RedirectToAction("Login", "Account");
 			else
 			{
 				COMMENT comment = new COMMENT();
@@ -157,16 +157,66 @@ namespace GroupOnC2.Controllers
 		//        gioHang = new GIOHANG();
 		//        gioHang.MaTK = maTK;
 		//    }
-		//    gioHang.Them_CTGioHang(ctGioHang);
+		//    gioHang.Them_CTGioHang(ctGioHang);TAIKHOANs.SingleOrDefault(p => p.MaTK == MaTK);
 		//    //db.ThemGioHang(gioHang);
 		//    return View(gioHang);
 		//}
 
         public ActionResult AccountInformation()
         {
-            return View();
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINMEMBER member = db.THONGTINMEMBERs.SingleOrDefault(p => p.MaTK == maTK);
+            return View(member);
         }
 
+		[HttpPost]
+		public ActionResult AccountInformation(FormCollection collection)
+		{
+			return RedirectToAction("ChangedAccIformation", "Home");
+		}
+
+		public ActionResult ChangedAccIformation()
+		{
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINMEMBER member = db.THONGTINMEMBERs.SingleOrDefault(p => p.MaTK == maTK);
+			return View(member);
+		}
+
+		[HttpPost]
+		public ActionResult ChangedAccIformation( FormCollection collection)
+		{
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINMEMBER member = db.THONGTINMEMBERs.SingleOrDefault(p => p.MaTK == maTK);
+			TAIKHOAN taiKhoan = db.TAIKHOANs.SingleOrDefault(p => p.MaTK == maTK);
+
+			string DiaChi = collection["DiaChi"];
+			string phuong = collection["Phuong"];
+			string quan = collection["Quan"];
+			string thanhPho = collection["ThanhPho"];
+			member.DiaChi = DiaChi + " phường " + phuong + " Quận " + quan + " thành phố " + thanhPho;
+			member.Email = collection["Email"];
+			var gioiTinh = ValueProvider.GetValue("GioiTinh");
+			if (gioiTinh != null)
+			{
+				string gt = gioiTinh.AttemptedValue;
+				if (gt == "Nam")
+					member.GioiTinh = true;
+				else member.GioiTinh = false;
+			}
+
+			string ngaySinh = collection["Ngay"];
+			string thangSinh = collection["Thang"];
+			string namSinh = collection["Nam"];
+			member.NgaySinh = DateTime.Parse(thangSinh + "/" + ngaySinh + "/" + namSinh);
+			member.Ten = collection["Ten"];
+
+			taiKhoan.DiaChi = member.DiaChi;
+			taiKhoan.Email = member.Email;
+			taiKhoan.SDT = collection["SDT"];
+
+			db.SaveChanges();
+			return RedirectToAction("AccountInformation", "Home");
+		}
 		public ActionResult OrderInformation(string MaSP)
 		{
 			CHITIETDONHANG ctDonHang = new CHITIETDONHANG(MaSP);
@@ -178,7 +228,7 @@ namespace GroupOnC2.Controllers
 		public ActionResult OrderInformation(FormCollection collection)
 		{
 			string maTK = Request.Cookies["MaTK"]["MaTK"] ?? "";
-			if (maTK == "")
+			if (maTK == "" || !Request.IsAuthenticated)
 				return RedirectToAction("Login", "Account");
 			else
 			{
@@ -219,7 +269,16 @@ namespace GroupOnC2.Controllers
 
         public ActionResult OrderList()
         {
-            return View();
+			string MaTK = Request.Cookies["MaTK"]["MaTK"] ?? " ";
+			if (MaTK == " " || !Request.IsAuthenticated)
+				return RedirectToAction("Login", "Account");
+			else
+			{
+				List<DONHANG> lstDonHang = db.LayDSDonHangTheoMaTK(MaTK);
+
+				return View(lstDonHang);
+			}
+            
         }
 
         public ActionResult ChangePassword()
@@ -227,5 +286,20 @@ namespace GroupOnC2.Controllers
             return View();
         }
 
+		[HttpPost]
+		public ActionResult ChangePassword(FormCollection collection)
+		{
+			string old = collection["OldPassword"];
+			string newpass = collection["NewPassword"];
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			TAIKHOAN taiKhoan = db.LayTaiKhoanTheoMaTK(maTK);
+			if (old == taiKhoan.Password)
+			{
+				taiKhoan.Password = newpass;
+				db.SaveChanges();
+				
+			}
+			return RedirectToAction("Index", "Home");
+		}
     }
 }
