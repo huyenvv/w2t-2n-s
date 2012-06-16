@@ -3,14 +3,12 @@
 @if (!Request.IsAuthenticated)
 {   
     <span id="info_acc" class="info_acc" style="margin: 13px 0px 0px; ">
-        <a title="Nguyễn Phú Mai Trang">
-            Nguyễn Phú Mai Trang</a>
-            @Html.ActionLink("txf", "AccountInformation")
+        <a id="user" title="Nguyen Trang">Nguyen Trang</a>
         <span id="content_acc" class="content_acc" style="display: none; ">
             <ul>
-                <li><a href="/don-hang">Thông tin đơn hàng</a></li>
-         	    <li><a href="/thong-tin-tai-khoan">Thông tin tài khoản</a></li>
-                <li><a href="/Profile/Logout" onclick="Logout();">Đăng xuất</a></li>
+                <li>@Html.ActionLink("Thông tin đơn hàng", "OrderList")</li>
+                <li class="active">@Html.ActionLink("Thông tin tài khoản", "AccountInformation")</li>
+                <li>@Html.ActionLink("Sign Out", "Index")</li>
             </ul>
         </span>
     </span>
