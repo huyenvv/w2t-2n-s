@@ -22,7 +22,7 @@ namespace GroupOnC2.Controllers
             return View();
         }
 
-        public ActionResult MemberManager(int? page)
+        public ActionResult MemberManager(string userName, string Email)
         {
             var member =
                 from tk in db.TAIKHOANs
@@ -39,29 +39,25 @@ namespace GroupOnC2.Controllers
         }
 
         [HttpPost]
-        public ViewResult NewAccount(Member member)
+        public ActionResult NewAccount(accountMember member)
         {
-            TRANGTHAITAIKHOAN t = new TRANGTHAITAIKHOAN();
-            t.MaTT = "chết";
-            t.TenTT = "chết rồi";
-            db.TRANGTHAITAIKHOANs.Add(t);
+            TAIKHOAN t = new TAIKHOAN(member.maTK, member.userName, member.passWord, member.email, member.avatar,"TT01", member.diachi, member.sdt);
+            THONGTINMEMBER m = new THONGTINMEMBER(member.maTK, member.ten, member.gioiTinh, member.ngaySinh);
+            db.TAIKHOANs.Add(t);
+            db.SaveChanges();
+            db.THONGTINMEMBERs.Add(m);
             db.SaveChanges();
             return View();
         }
 
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
             Member member = new Member();
             member.account = db.TAIKHOANs.Find(id);
             member.member = db.THONGTINMEMBERs.Find(id);
-            return View(member);
-        }
-
-        [HttpPost]
-        public ActionResult Delete(Member member)
-        {
-            db.Entry(member.account).State = EntityState.Deleted;
             db.Entry(member.member).State = EntityState.Deleted;
+            db.Entry(member.account).State = EntityState.Deleted;
+            db.SaveChanges();
             return RedirectToAction("MemberManager");
         }
     }

@@ -19,6 +19,18 @@ namespace GroupOnC2.Models
             this.COMMENTs = new HashSet<COMMENT>();
             this.DONHANGs = new HashSet<DONHANG>();
         }
+
+        public TAIKHOAN(string ma, string un, string pw, string e, string av, string matt, string dc, string sdt)
+        {
+            MaTK = ma;
+            UserName = un;
+            Password = pw;
+            Email = e;
+            Avatar = av;
+            MaTT = matt;
+            DiaChi = dc;
+            SDT = sdt;
+        }
     
         public string MaTK { get; set; }
         public string UserName { get; set; }
