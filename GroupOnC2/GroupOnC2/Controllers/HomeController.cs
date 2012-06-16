@@ -167,7 +167,6 @@ namespace GroupOnC2.Controllers
             return View();
         }
 
-<<<<<<< .mine
 		public ActionResult OrderInformation(string MaSP)
 		{
 			CHITIETDONHANG ctDonHang = new CHITIETDONHANG(MaSP);
@@ -217,7 +216,7 @@ namespace GroupOnC2.Controllers
 				return RedirectToAction("Index", "Home");
 			}
 		}
-=======
+
         public ActionResult OrderList()
         {
             return View();
@@ -227,6 +226,6 @@ namespace GroupOnC2.Controllers
         {
             return View();
         }
->>>>>>> .r7
+
     }
 }

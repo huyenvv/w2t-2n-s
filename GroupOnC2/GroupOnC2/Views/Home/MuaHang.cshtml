@@ -1,0 +1,72 @@
+﻿@model GroupOnC2.Models.GIOHANG
+		   
+@Html.BeginForm("MuaHang", "Home", FormMethod.Post)
+@{
+    ViewBag.Title = "MuaHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2> GIỎ HÀNG CỦA BẠN</h2>
+<h3> Mã tài khoản</h3> @Model.MaTK
+ <table class="buy_list" width="100%" border="0" cellspacing="0" cellpadding="0" id="VoucherMode" name="VoucherMode">
+    <tbody>
+	<tr>
+	    <th width="40%" scope="col" style="text-align:center;">
+			 Phiếu/Sản phẩm
+       </th>
+	   <th width="24%" scope="col">
+			Đơn giá
+       </th>
+       <th width="15%" scope="col">
+			Số lượng
+       </th>
+       <th width="21%" scope="col">
+			 Thành tiền
+		 </th>
+    </tr>
+@*	<input data-val="true" data-val-number="The field DealId must be a number." data-val-required="The DealId field is required." id="DealId" name="DealId" type="hidden" value="6559"/>
+     <input type="hidden" name="dealAlias" id="dealAlias" value="can-cam-tay-mini"/>
+
+                                        <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Vouchers_0__Id" name="Vouchers[0].Id" type="hidden" value="7432">
+                                        <input data-val="true" data-val-number="The field Price must be a number." data-val-required="The Price field is required." id="Vouchers_0__Price" name="Vouchers[0].Price" type="hidden" value="49000">*@
+	@foreach (var item in @Model.lstCTGioHang)
+	{
+		 <tr id="7432" price="49000" weight="0">
+			<td style="text-align: left;">
+				@item.TenSP
+            </td>
+			<td style="text-align: center;">
+				@item.DonGia
+            </td>
+            <td align="center">
+				<select class="vSelect" id="Vouchers_0__SelectedQuantity" name="Vouchers[0].SelectedQuantity">
+					@for (int i = 1; i <= 10; i++)
+					{
+						<option value=@i>@i</option>
+					}
+                </select>                         
+            </td>
+            <td align="right" holder="voucherAmount">
+			@*@functions{
+			Decimal donGia = item.
+			   }*@
+            <b>@item.ThanhTien</b>
+           </td>
+	</tr>
+		  }
+										 <tr>
+                                            <td colspan="3" align="right">
+                                                Phí giao hàng
+                                            </td>
+                                            <td align="right">
+                                                <b id="CurrentShippingCost">0đ</b>
+                                            </td>
+                                        </tr>
+										  <tr>
+                                            <td colspan="3" align="right">
+                                                Số tiền phải trả
+                                            </td>
+                                            <td align="right" id="OrderAmount" name="OrderAmount"><b>@Model.ThanhTien</b></td>
+                                        </tr> </tbody>
+                                    </table>
+<input type="submit" value="Tiếp tục mua"/>
+@Html.ActionLink("Thanh toán", "ThanhToan", "Home", new{MaGH = @Model.MaGH}, "")
