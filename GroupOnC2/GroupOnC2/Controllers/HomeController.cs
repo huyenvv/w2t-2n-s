@@ -227,6 +227,7 @@ namespace GroupOnC2.Controllers
 		}
 		
 		[HttpPost]
+        [Authorize]
 		public ActionResult OrderInformation(FormCollection collection)
 		{
 			string maTK = Request.Cookies["MaTK"]["MaTK"] ?? "";
@@ -297,6 +298,13 @@ namespace GroupOnC2.Controllers
 			TAIKHOAN taiKhoan = db.LayTaiKhoanTheoMaTK(maTK);
 			if (old == taiKhoan.Password)
 			{
+                if (collection["NewPassword"].CompareTo(collection["RePassword"]) != 0)
+                    ModelState.AddModelError("Password", "Mật khẩu không trùng khớp");
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+
 				taiKhoan.Password = newpass;
 				db.SaveChanges();
 				
