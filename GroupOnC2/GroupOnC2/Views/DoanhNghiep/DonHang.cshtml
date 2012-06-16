@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "DonHang";
+    Layout = "~/Views/Shared/_Layout_doanhnghiep.cshtml";
+}
+
+@model GroupOnC2.Models.ThongKe
+<div class="bg_account">
+    <div class="bg_account_T">
+        Thông tin đơn hàng
+    </div>
+
+    <div class="bg_account_M">
+        
+
+        <div class="account_content">
+            <div class="account_item">
+                <p>
+                    @*<span style="float: left;">Mã đơn hàng: <strong>6778-181-530</strong></span>
+                    <span style="float: right;">Ngày đặt hàng: <strong>13/06/2012</strong></span>*@
+                    <br class="clean">
+                </p>
+                <table class="account_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <th style="width: 100px;" colspan="2" scope="col" align="center">
+                                Phiếu/Sản phẩm
+                            </th>
+                            <th style="width: 135px;" align="center" scope="col">
+                                Đơn giá
+                            </th>
+                            <th style="width: 135px;" align="center" scope="col">
+                                Số lượng
+                            </th>
+                            <th style="width: 190px;" scope="col" align="center">
+                                Thành tiền
+                            </th>
+							<th style="width: 190px;" scope="col" align="center">
+                                Hủy
+                            </th>
+                        </tr>
+						@foreach (var item in Model.DONHANGs)
+	  {
+                        <tr>
+                            <td colspan="2">
+                                <li>@Html.ActionLink(@item.CHITIETDONHANGs.ElementAt(0).TenSP, "Details", "Home", new { id = item.CHITIETDONHANGs.ElementAt(0).TenSP }, "")</li>
+                            </td>
+                            <td align="center">
+                                @item.CHITIETDONHANGs.ElementAt(0).DonGia
+                            </td>
+                            <td align="center">
+                                @item.CHITIETDONHANGs.ElementAt(0).SoLuong
+                            </td>
+                            <td align="right">
+                                <strong>@item.CHITIETDONHANGs.ElementAt(0).ThanhTien</strong>
+                            </td>
+							<td align="right">
+                                @Html.ActionLink("Hủy", "#")
+                            </td>
+                        </tr>
+							
+                        <tr>
+                            <td colspan="4" align="right">
+                                Phí giao hàng
+                            </td>
+                            <td align="right">
+                                <strong> 0đ </strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="4" align="right">
+                                Số tiền phải trả
+                            </td>
+                            <td align="right">
+                                <strong>@item.CHITIETDONHANGs.ElementAt(0).ThanhTien</strong>
+                            </td>
+                        </tr>
+
+                        <tr bgcolor="#EDEDEE">
+                            <td width="30%" align="center">
+                                Trạng thái: <strong>Chưa xử lý</strong>
+                            </td>
+                            <td width="27%" align="center">
+                                <strong>Chưa thanh toán</strong>
+                            </td>
+                            <td colspan="3" align="center">
+                                Hình thức thanh toán: <strong>Thu tiền tại nhà</strong>
+                            </td>
+                        </tr>
+                    	  
+	  } 
+	  </tbody>
+                </table>
+				<h4>Tổng số đơn hàng: @Model.SoDonDatHang</h4>
+				<h4>Tổng tiền: @Model.TongTien</h4>
+
+            </div>
+	  
+            <p class="line3">
+            </p>
+
+            <div id="pager">
+                <br class="clean">
+            </div>
+        </div>
+        <br class="clean">
+        <br class="clean">
+    </div>
+
+    <div class="bg_account_B">
+    </div>
+</div>
+
+

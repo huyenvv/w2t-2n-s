@@ -9,6 +9,7 @@ using GroupOnC2.Models;
 using PagedList.Mvc;
 using PagedList;
 using GroupOnC2.ViewModels;
+using System.Web.Security;
 
 namespace GroupOnC2.Controllers
 {
@@ -164,11 +165,56 @@ namespace GroupOnC2.Controllers
 			return View(hotDeal);
 		}
 
-		public ActionResult CommentManager()
+		
+		public ActionResult ThongTinTaiKhoan()
 		{
-			List<COMMENT> lstCmds = db.LayDSComment();
-			return View(lstCmds);
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINADMIN admin = db.THONGTINADMINs.SingleOrDefault(p => p.MaTK == maTK);
+			return View(admin);
 		}
+
+		[HttpPost]
+		public ActionResult ThongTinTaiKhoan(FormCollection collection)
+		{
+			return RedirectToAction("ChangedAccIformation", "Admin");
+		}
+
+		public ActionResult ChangedAccIformation()
+		{
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINADMIN admin = db.THONGTINADMINs.SingleOrDefault(p => p.MaTK == maTK);
+			return View(admin);
+		}
+
+		[HttpPost]
+		public ActionResult ChangedAccIformation(FormCollection collection)
+		{
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINADMIN admin = db.THONGTINADMINs.SingleOrDefault(p => p.MaTK == maTK);
+			TAIKHOAN taiKhoan = db.TAIKHOANs.SingleOrDefault(p => p.MaTK == maTK);
+
+			string DiaChi = collection["DiaChi"];
+			string phuong = collection["Phuong"];
+			string quan = collection["Quan"];
+			string thanhPho = collection["ThanhPho"];
+			admin.DiaChi = DiaChi + " phường " + phuong + " Quận " + quan + " thành phố " + thanhPho;
+			admin.Email = collection["Email"];
+			
+			string ngaySinh = collection["Ngay"];
+			string thangSinh = collection["Thang"];
+			string namSinh = collection["Nam"];
+			admin.NgaySinh = DateTime.Parse(thangSinh + "/" + ngaySinh + "/" + namSinh);
+			admin.Ten = collection["Ten"];
+
+			taiKhoan.DiaChi = admin.DiaChi;
+			taiKhoan.Email = admin.Email;
+			taiKhoan.SDT = collection["SDT"];
+
+			db.SaveChanges();
+			return RedirectToAction("ThongTinTaiKhoan", "Admin");
+		}
+
+		
 
         public ActionResult OrderManager()
         {
@@ -194,6 +240,7 @@ namespace GroupOnC2.Controllers
             var dh = db.DONHANGs.Single(r => r.MaDH == id);
             return View(dh);
         }
+
 
 	}
 

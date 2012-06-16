@@ -1,0 +1,44 @@
+﻿
+@model GroupOnC2.Models.THONGTINDOANHNGHIEP
+
+@{
+    ViewBag.Title = "ThongTinTaiKhoan";
+    Layout = "~/Views/Shared/_Layout_doanhnghiep.cshtml";
+}
+
+<h2>ThongTinTaiKhoan</h2>
+
+<fieldset>
+    <legend>THONGTINDOANHNGHIEP</legend>
+
+    <div class="display-label">Website</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Website)
+    </div>
+
+    <div class="display-label">TenDN</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TenDN)
+    </div>
+
+    
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+   
+
+    <div class="display-label">DiaChi</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DiaChi)
+    </div>
+
+    <div class="display-label">SDT</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SDT)
+    </div>
+	
+</fieldset>
+@Html.ActionLink("Chỉnh sửa", "ChangedAccIformation", "DoanhNghiep", new {id = @Model.MaTK}, "")
+</form>

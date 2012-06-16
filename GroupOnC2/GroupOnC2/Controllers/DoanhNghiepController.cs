@@ -8,57 +8,75 @@ using System.Web.Mvc;
 using GroupOnC2.Models;
 using PagedList.Mvc;
 using PagedList;
+using System.Transactions;
+using System.Web.Helpers;
+
 
 namespace GroupOnC2.Controllers
 {
-    
-    public class DoanhNghiepController : Controller
-    {
-        private GROUPONEntities1 db = new GROUPONEntities1();
-        //
-        // GET: /DoanhNghiep/
 
-        public ActionResult DoanhNghiep()
-        {
-            return View();
-        }
-        // GET: /DoanhNghiep/ThongTinDoanhNghiep
+	public class DoanhNghiepController : Controller
+	{
+		private GROUPONEntities1 db = new GROUPONEntities1();
+		//
+		// GET: /DoanhNghiep/
 
-        public ActionResult ThongTinDoanhNghiep()
-        {
-            return View();
-        }
-        // GET: /DoanhNgiep/SanPham
+		public ActionResult DoanhNghiep()
+		{
+			return View();
+		}
 
-        public ActionResult SanPhamDoanhNgiep()
-        {
-            return View();
-        }
-        // GET: /DoanhNgiep/KhuyenMaiMoi
+		public ActionResult SanPham()
+		{
+			var lstSanPham = from p in db.SANPHAMs
+							 where p.MaLoaiSP == "DL"
+							 select p;
+			return View(lstSanPham.ToList());
+		}
 
-        public ActionResult SanPhamNews()
-        {
-            return View();
-        }
+		public ActionResult DonHang()
+		{
+			List<DONHANG> lstDonHangs = db.LayDSDonHangTheoLoai("DL");
+			ThongKe thongKe = new ThongKe(lstDonHangs);
+			return View(thongKe);
+		}
 
-        public ViewResult Browse(string MaLoaiSP, int? page)
-        {
-            var loai = db.LOAISANPHAMs.Single(g => g.MaLoaiSP == MaLoaiSP);
-            var sanPhams = loai.SANPHAMs;
-            int pageSize = 12;
-            int n = sanPhams.Count;
-            int pageNumber = (page ?? 1);
-            return View(sanPhams.ToPagedList(pageNumber, pageSize));
+		public ActionResult ThongTinTaiKhoan()
+		{
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINDOANHNGHIEP doanhNghiep = db.THONGTINDOANHNGHIEPs.SingleOrDefault(p => p.MaTK == maTK);
+			return View(doanhNghiep);
+		}
 
-        }
+		
 
-        // GET: /Home/Details/5
+		public ActionResult ChangedAccIformation(string id)
+		{
+			THONGTINDOANHNGHIEP dn = db.THONGTINDOANHNGHIEPs.SingleOrDefault(p => p.MaTK == id);
+			return View(dn);
+		}
 
-        public ViewResult Details(string id)
-        {
-            var ctSp = db.CHITIETSANPHAMs.Single(r => r.MaSP == id);
-            return View(ctSp);
+		[HttpPost]
+		public ActionResult ChangedAccIformation(FormCollection collection)
+		{
+			string maTK = Request.Cookies["MaTK"]["MaTK"];
+			THONGTINDOANHNGHIEP doanhNghiep = db.THONGTINDOANHNGHIEPs.SingleOrDefault(p => p.MaTK == maTK);
+			TAIKHOAN taiKhoan = db.TAIKHOANs.SingleOrDefault(p => p.MaTK == maTK);
 
-        }
-    }
+			string DiaChi = collection["DiaChi"];
+			
+			doanhNghiep.DiaChi = DiaChi ;
+			doanhNghiep.Email = collection["Email"];
+			doanhNghiep.Website = collection["Website"];
+			
+			doanhNghiep.TenDN = collection["TenDN"];
+
+			taiKhoan.DiaChi = doanhNghiep.DiaChi;
+			taiKhoan.Email = doanhNghiep.Email;
+			taiKhoan.SDT = collection["SDT"];
+
+			db.SaveChanges();
+			return RedirectToAction("DoanhNghiep", "DoanhNghiep");
+		}
+	}
 }

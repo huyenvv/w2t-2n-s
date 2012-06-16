@@ -1,10 +1,10 @@
-﻿@Html.BeginForm("AccountInformation", "Home", FormMethod.Post)
+﻿
 @model GroupOnC2.Models.THONGTINMEMBER
 @{
     ViewBag.Title = "AccountInformation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<form action="/Home/AccountInformation" id="LoginForm" method="post">
 <div class="bg_account">
     <div class="bg_account_T">
         Thông tin tài khoản
@@ -210,3 +210,4 @@
     <div class="bg_account_B">
     </div>
 </div>
+</form>

@@ -1,0 +1,115 @@
+﻿@model GroupOnC2.Models.THONGTINADMIN
+@{
+    ViewBag.Title = "ThongTinTaiKhoan";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<form action="/Admin/ThongTinTaiKhoan" id="LoginForm" method="post">
+<fieldset>
+                    <legend>Thông tin tài khoản</legend>
+                    <div class="acc_row">
+                        <p class="left">
+                            Họ tên:
+                        </p>
+                        <p class="right">
+                            <span id="nameLabel">@Model.Ten</span>
+                            <span id="contentName" style="display: none">
+                                <input class="input_edit" tabindex="1" id="Name" maxlength="50" value="Nguyễn Phú Mai Trang"><br>
+                            </span>
+                        </p>
+                        
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Name-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Họ tên không được rỗng
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Điện thoại:
+                        </p>
+                        <p class="right">
+                            <span id="mobileLabel">@Model.TAIKHOAN.SDT</span>
+                            <span id="contentMobile" style="display: none">
+                                <input class="input_edit" tabindex="2" id="Phone" value="0923456789">
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Phone-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Số điện thoại không hợp lệ
+                    </div>
+
+                     <div class="acc_row">
+                        <p class="left">
+                            Ngày sinh:
+                        </p>
+
+                        <p class="right">
+                            <span id="BirthDayLabel">@Model.NgaySinh</span>
+                            <span id="ContentBirthDay" style="display: none">
+                                <select id="CurrentDate" name="CurrentDate" tabindex="5">
+                                    <option>Ngày</option>
+                                    @functions { int day = 21;}
+                                    @for(int i = 1; i <= 31; i++)
+                                    {
+                                        if(i == day)
+                                        {
+                                            <option value=@i selected="true">@i</option>
+                                        }else
+                                        {
+                                            <option value=@i>@i</option>
+                                        }
+                                    }
+                                </select>
+
+                                <select id="CurrentMonth" name="CurrentMonth" tabindex="6">
+                                    <option>Tháng</option>
+                                    @functions { int month = 12;}
+                                    @for(int i = 1; i <= 12; i++)
+                                    {
+                                        if(i == month)
+                                        {
+                                            <option value=@i selected="true">@i</option>
+                                        }else
+                                        {
+                                            <option value=@i>@i</option>
+                                        }
+                                    }
+                                </select>
+
+                                <select id="CurrentYear" name="CurrentYear" tabindex="7">
+                                    <option>Năm</option>
+                                    @functions { int year = 1991; }
+                                    @for(int i = 1930; i <= 2012; i++)
+                                    {
+                                        if(i == year)
+                                        {
+                                            <option value=@i selected="true">@i</option>
+                                        }else
+                                        {
+                                            <option value=@i>@i</option>
+                                        }
+                                    }
+                                </select>
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="BirthDay-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Ngày tháng năm sinh không hợp lệ
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Email:
+                        </p>
+                        <p class="right">
+                           @Model.TAIKHOAN.Email
+                        </p>
+                    </div>
+				<input id="Submit1" type="submit" value="Chỉnh sửa" />
+                </fieldset>
+</form>

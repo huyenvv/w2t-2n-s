@@ -78,10 +78,10 @@ namespace GroupOnC2.Controllers
 				
 				FormsAuthentication.SetAuthCookie(MaTK, true);
 				Response.Cookies["MaTK"]["MaTK"] = MaTK;
-				Response.Cookies["MaTK"].Expires = DateTime.Now.AddMinutes(10);
+				Response.Cookies["MaTK"].Expires = DateTime.Now.AddDays(2);
 				
 				Response.Cookies["UserName"]["UserName"] = userName;
-				Response.Cookies["UserName"].Expires = DateTime.Now.AddMinutes(10) ;
+				Response.Cookies["UserName"].Expires = DateTime.Now.AddDays(2);
 				if (Url.IsLocalUrl(returnUrl) &&
 					returnUrl.Length > 1 &&
 					returnUrl.StartsWith("/") &&
@@ -91,7 +91,15 @@ namespace GroupOnC2.Controllers
 					return Redirect(returnUrl);
 				}
 				else
-					return RedirectToAction("Index", "Home");
+				{
+					int loai = db.KiemTraLoaiTaiKhoan(MaTK);
+					if (loai == 1)
+						return RedirectToAction("Index", "Home");
+					else if (loai == 3)
+						return RedirectToAction("MemberManager", "Admin");
+					else return RedirectToAction("DoanhNghiep", "DoanhNghiep");
+						 
+				}
 
 			}
 			else

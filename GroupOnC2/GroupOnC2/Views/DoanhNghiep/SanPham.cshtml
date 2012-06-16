@@ -1,0 +1,80 @@
+﻿
+@model List<GroupOnC2.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_doanhnghiep.cshtml";
+}
+    <link rel="stylesheet" href="../../Content/CSS/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../../Content/CSS/nivo-style.css" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script  type="text/javascript" src="../../Content/scripts/jquery.nivo.slider.pack.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#slider').nivoSlider({
+        effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
+        slices: 8,
+        directionNav:true, //Next & Prev
+        directionNavHide:true, //Only show on hover
+        controlNav:true, //1,2,3...
+        keyboardNav:true, //Use left & right arrows
+   
+            });
+        });
+    </script>
+
+<div class="bg">
+    <div class="bg_T">
+    </div>
+    <div class="bg_M">
+      
+        <ul class="product">
+            @foreach (var item in Model)
+			{
+                <li>
+                    <h3>
+                        @Html.ActionLink(item.TenSP, "Details", new { id = item.MaSP })
+                    </h3>
+                    <div class="percent1">
+                            
+                    </div>
+
+                    <img title = "@item.TenSP" class="product_img loading1" src= "@item.HinhAnh"/>
+                    <div class="product_info">
+                        <p class="product_price">
+                                        
+                        </p>
+                       
+                    </div>
+
+                    <div class="product_info1">
+                        <p class="product_price_true">
+                            Trị giá: <span> @Html.DisplayFor(modelItem => item.GiaGoc)</span></p>
+                        <p class="product_infobuy">
+                            Giá bán: <span> @Html.DisplayFor(modelItem => item.GiaBan)</span></p>
+                    </div>
+                </li>
+			}
+        </ul>
+        <script type="text/javascript">
+        	//alert(heightLoad);
+        	$(function () {
+        		heightLoad = heightLoad + 9570;
+        	});
+        
+        </script>
+
+        <br class="clean">
+        <div class="see_more" style="display: none">
+            <div href="" id="moreLink">
+                Đang tải</div>
+        </div>
+                  
+    </div>
+
+    <div class="bg_B">
+    </div>
+</div>
+
+</div>

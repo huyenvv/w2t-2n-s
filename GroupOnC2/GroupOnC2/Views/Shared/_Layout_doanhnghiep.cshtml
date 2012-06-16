@@ -1,301 +1,47 @@
-﻿
 <!DOCTYPE html>
+
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.5.1.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
-
-    <title>Cùng Mua tại TP. HỒ CHÍ MINH</title>
-    <link href="../../Content/css/general.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/j-select.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/j-select-theme.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/product.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/custom.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/errorpopup.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/buy.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/register.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/login.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/landing.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/landing_page.css" rel="stylesheet" type="text/css">
-    <link href="../../Content/css/incard.css" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript" async="" src="../../Content/scripts/ga.js"></script><script type="text/javascript">
-    </script>
-
-    <script type="text/javascript" src="../../Content/scripts/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/jquery.unobtrusive-ajax.min.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/jquery.cookie.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/j-mousewheel.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/j-scrollpane.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/j-select.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/j-select.external.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/scrolltopcontrol.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/common.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/jquery.MvcClientDataAnnotationValidationUI.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/LoginAndRegisterScript.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/jquery.blockUInew.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/customer.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/effectcycle.js"></script>
-
-    <script type="text/javascript" src="../../Content/scripts/jquery.lazyload.pack.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/pagingscroll.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/PaymentFAQScript.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/PaymentProcedureChooseVoucher.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/PaymentProcedureStep1.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/currency.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/facebook_login.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/openid_login.js"></script>
-
-
-    <script type="text/javascript">
-        homepagePageSize = 100;
-        urlMoreDeal = '/trang-chu';
-        $(function () {
-        });
-    </script>
-
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#slideShowImages').cycle(
-                    {
-                        //fx:    'fade',
-                        //fx: 'scrollRight',
-                        fx: 'scrollBothWays',
-                        next: '.btnright',
-                        prev: '.btnleft',
-                        pager: '.silde_img_btn',
-                        timeout: 3000,
-                        pause: 1
-                    });
-
-            $('.silde_img_btn a').text('');
-            GetCount();
-
-        });
-
-
-        function purchase(dealAlias, free) {
-            if (free == "False") {
-                LoginAndRegisterFunction.LoginDone = function (v) {
-                    location.href = "_SitePurchase/dang-ky-mua-hang/thong-tin-thanh-toan".replace("_SitePurchase", dealAlias);
-                };
-                LoginAndRegisterFunction.RegisterDone = function (v) {
-                    location.href = "_SitePurchase/dang-ky-mua-hang/thong-tin-thanh-toan".replace("_SitePurchase", dealAlias);
-                };
-                LoginAndRegisterFunction.ForgotPasswordDone = function (v) {
-                    location.href = location.pathname;
-                };
-
-                LoginAndRegisterFunction.ShowWindow(1);
-            }
-            else {
-                location.href = "_SitePurchase/dang-ky-mua-hang/thong-tin-thanh-toan".replace("_SitePurchase", dealAlias);
-            }
-
-        }
-    </script>
-
-    <script type="text/javascript">
-        isShippingFree = true;
-        haveShippingCostDefine = " (Có phí)";
-        var deliveryAtHome = "AtHome";
-        var deliveryAtCompany = "AtCompany";
-    </script>
-    
-
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+    <title>DoanhNghiep</title>
+	<link href="../../Content/Styles.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-    
-    <div class="index">
-        
-        <div class="index_header">
-
-            <div class="header">
-                <p class="logo">
-                    <a href="#logocungmua">
-                        <img src="../../Content/themes/images/logo_CungMua.png" width="220" height="51" border="0" title="cungmua.com" class="FixPng" id="logocungmua">
-                    </a>
-                </p>
-
-                <div id="selectCity">
-                    <div class="DropListUI Theme_Human_Wrapper"><p>TP. HỒ CHÍ MINH</p></div><select class="SelectUI Theme_Human HasSelectUI" id="cityList" name="SelectedCity" style="display: none; opacity: 0; position: absolute; left: -1000em; top: -1000em; "><option selected="selected" value="1">TP. HỒ CHÍ MINH</option>
-                    
-                    </select>
-                </div>
-
-                <div class="menu_center">
-                     <div class="top_login">
-                        <a href="javascript:void(0)" title="thong-tin-cong-ty" onclick="LoginAndRegisterFunction.ShowWindow(1)">
-                            Hi Cong Ty HELL
-                        </a>
-
-                        <text>|</text>
-                        <a href="javascript:void(0)" title="thoat-congty" onclick="LoginAndRegisterFunction.ShowWindow(2)">
-                            Thoát</a>
-                     </div>
-
-                     <div class="newsletter">
-                        <div class="mail_L"></div>
-
-                        <div class="mail_C">
-                            <form action="#formSubscriberMenuTop" id="formSubscriberMenuTop" method="post">                            
-                                <span>Nhận thông tin khuyến mãi</span>
-                                <input id="tbEmail" value="Email của bạn" class="key_word">
-                                <input class="btn_send" type="submit" onclick="return SubmitForm(0)" value="">
-                            </form> 
-                        </div>
-
-                        <div class="mail_R"></div>
-                        <div id="erroemail" style="font-size: 12px; padding-left: 33px; padding-top: 4px; text-align: left;color: Red; display: none">
-                            Email không hợp lệ</div>
-
-                    </div>
-
-                    <br class="clean">
-
-                </div>
-
+		<div id="page1000" class="header">
+            <div>
+			    <object type="application/x-shockwave-flash"  data="../../Content/Flashs/Banner/banner.swf" width="1000" height="150">
+                    <!--<param name="movie" value="images/chu.swf" />-->
+                    <param name="quality" value="high"/>
+                    <param name="wmode" value="transparent"/>
+                </object>
             </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/Home/Index">Trang chủ</a></li>
+					<li><a href="/DoanhNghiep/SanPham">Sản phẩm</a></li>
+					<li><a href="/DoanhNghiep/DonHang">Đơn hàng</a></li>
+						
+					<li><a href="/DoanhNghiep/ThongTinTaiKhoan">Thông tin tài khoản</a></li>
+					<li><a href="/Account/SignOut">Thoát</a></li>
+                </ul>
 
-            <div id="PopupWrapper" style="display: none">
-                <div class="popupbg">
-                    <div class="popup">
-                        <div class="popup_TT">
-                            Thông báo</div>
-                        <ul>
-                        </ul>
-                        <br class="clean">
-                    </div>
-                </div>
-                <div class="btn_button" id="popupCloseBtn">
-                    <a href="http://www.cungmua.com/#">
-                        <img src="../../Content/themes/images/close.png" width="31" height="30"></a></div>
-            </div>
+			</div><!--End menu -->
 
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $("#tbEmail").blur(function () {
-                        if (!$(this).val()) $(this).val("Nhập email để nhận thông tin khuyến mãi");
-                    });
+		</div> <!--End Header-->
 
-                    $("#tbEmail").focus(function () {
-                        if ($(this).val() == "Nhập email để nhận thông tin khuyến mãi") $(this).val("");
-                    });
+		<!-- Phan rieng-->
+		<div id="page1000" class="main" runat="server">
+        @RenderBody()
+		</div> <!--End Content-->
 
-                    $('#content_acc').hide();
-
-                    $('#info_acc').hover(function () {
-                        $('#content_acc').show();
-                    }, function () { $('#content_acc').hide(); })
-                });
-
-
-
-                $(function () {
-                    var div = $selectDroplist_Manager.els;
-                    div.cityList.droplistTITLE.hover(function () {
-                        $('.DropListUIContainer').show();
-                    }, function () {
-                        $('.DropListUIContainer').hide();
-                    });
-                    $('.DropListUIContainer').hover(function () {
-                        $('.DropListUIContainer').show();
-                    }, function () {
-                        $('.DropListUIContainer').hide();
-                    });
-                    $('ul.SelectUI li').hover(function () {
-                        $('.DropListUIContainer').show();
-                    }, function () {
-                        $('.DropListUIContainer').hide();
-                    });
-                });
-            </script>
-
-        </div>
-
-      
-        
-            <script type="text/javascript">
-                $().ready(function () {
-                    if ($('p.calogue_M_active').length > 1) {
-                        $('p.calogue_M_active:first').removeClass("calogue_M_active").addClass("calogue_M");
-                        $('p.calogue_line_active:first').removeClass("calogue_line_active").addClass("calogue_line");
-                        $('p.all_L_active').removeClass("all_L_active").addClass("all_L");
-                    }
-                });    
-            </script>
-        </div>
-
-        <div class="index_middle">
-            <div class="error" style="display: none">
-                <img src="../../Content/themes/images/icon-alert.png" width="40" height="40" border="0" style="float: left;
-            margin-top: 5px; margin-left: 5px;">
-                <p>
-                    <span id="msgemail"></span>
-                </p>
-                <input class="close-message">
-            </div>
-
-            <div class="inform" style="display: none">
-                <img src="../../Content/themes/images/icon-success.png" width="40" height="40" border="0" style="float: left;
-            margin-top: 5px; margin-left: 5px;">
-                <p>
-                    <span id="Span2"></span>
-                </p>
-                <input class="close-message">
-            </div>
-
-
-            @RenderBody()
-            
-        </div>
-        <br class="clean">
-
-        <div class="index_footer">
-            <div class="footer">
-                <div class="footer_item">
-                    <h3>
-                        GVHD</h3>
-                    <ul class="menu_footer">
-                        <li>abc</li>
-                        <li>eghf</li>
-                        <li>ammd</li>
-                    </ul>
-                </div>
-
-                <div class="footer_item" style="height: 195px;">
-                    <h3>
-                        Thành viên nhóm</h3>
-                    <ul class="menu_footer">
-                        <li><pre>09125..     </pre></li>
-                        <li><pre>09125..     </pre></li>
-                        <li><pre>09125..     </pre></li>
-                        <li><pre>09125..     </pre></li>
-                        <li><pre>09125..     </pre></li>
-                    </ul>
-                </div>
-
-                <div class="footer_item" style="background: none !important;">
-                    <h3>
-                        Hỗ trợ</h3>
-                    <ul class="menu_footer">
-                        <li><a href="#">Cách thức mua hàng</a></li>
-                        <li><a href="#">Hình thức thanh toán</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
+		<div id="page1000" class="footer">
+            <div>
+				<h3>Trường Đại Học Khoa Học Tự Nhiên </h3>
+				<h3> ĐH Quốc Gia Thành Phố Hồ Chí Minh</h3>
+				<h4>Môn học: Phát triển ứng dụng Web</h4>
+				<h4>Sinh viên thực hiện: Nhóm C2</h4>
+			</div>
+		</div><!--End Footer-->
 </body>
 </html>
+
