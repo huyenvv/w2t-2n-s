@@ -1,4 +1,4 @@
-﻿@model GroupOnC2.Models.Member
+﻿@model GroupOnC2.Models.accountMember
 @{
     ViewBag.Title = "NewAccount";
     Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
@@ -8,26 +8,25 @@
 <hr />
 @using (Html.BeginForm())
 {
-<div class="field">
-    <text>Mã tài khoản</text><span class="f-input">@Html.TextBoxFor(x => x.account.MaTK)</span>
-    <text>User name</text><span class="f-input">@Html.TextBoxFor(x => x.account.UserName)</span>
-    <text>Password</text><span class="f-input">@Html.PasswordFor(x => x.account.Password)</span>
-</div>
+    <div class="field">
+        <text>Mã tài khoản</text><span class="f-input">@Html.TextBoxFor(x => x.maTK)</span>
+        <text>User name</text><span class="f-input">@Html.TextBoxFor(x => x.userName)</span>
+        <text>Password</text><span class="f-input">@Html.PasswordFor(x => x.passWord)</span>
+    </div>
 
-<div class="field">
-    <text>Email</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
-    <text>Địa chỉ</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
-    <text>Số điện thoại</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
-</div>
+    <div class="field">
+        <text>Email</text><span class="f-input">@Html.TextBoxFor(x => x.email)</span>
+        <text>Địa chỉ</text><span class="f-input">@Html.TextBoxFor(x => x.diachi)</span>
+        <text>Số điện thoại</text><span class="f-input">@Html.TextBoxFor(x => x.sdt)</span>
+    </div>
 
-<div class="field">
-    <text>Tên thành viên</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
-    <text>Ngày sinh</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
-    <text>Giới tính</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
-</div>
+    <div class="field">
+        <text>Tên thành viên</text><span class="f-input">@Html.TextBoxFor(x => x.ten)</span>
+        <text>Ngày sinh</text><span class="f-input">@Html.TextBoxFor(x => x.ngaySinh)</span>
+        <text>Giới tính</text><span class="f-input">@Html.TextBoxFor(x => x.gioiTinh)</span>
+    </div>
 
-<div class="field marginbottom100 center">
-    <input type="submit" value="Thêm"/>
-    <input type="submit" value="Xóa"/>
-</div>
+    <div class="field marginbottom100 center">
+        <input type="submit" value="Thêm"/>
+    </div>
 }

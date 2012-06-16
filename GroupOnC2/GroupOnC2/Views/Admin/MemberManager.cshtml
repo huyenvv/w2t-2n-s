@@ -9,15 +9,17 @@
 <h3 class="heading">Danh sách thành viên</h3>
 <hr />
 
-<div class="space_each_line distance_with_menu">
-    <text class="text_space">Tên đăng nhập</text><input class="txt_input" type="text"/>
-    <text class="text_space">Email</text><input class="txt_input" type="text"/>
-    <input  type="button" value="Tìm kiếm"/>
-</div>
+@using (Html.BeginForm())
+{
+    <div class="space_each_line distance_with_menu">
+        <text class="text_space">Tên đăng nhập</text><input class="txt_input" type="text"/>
+        <text class="text_space">Email</text><input class="txt_input" type="text"/>
+        <input  type="submit" value="Tìm kiếm"/>
+    </div>
+}
 
 <div >
-    <input type="button" value="Thêm"/>
-    <input type="button" value="Xóa" />
+    <a href="/Admin/NewAccount">Thêm thành viên</a>
 </div>
 
 

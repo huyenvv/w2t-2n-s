@@ -20,5 +20,17 @@ namespace GroupOnC2.Models
         public Nullable<bool> GioiTinh { get; set; }
     
         public virtual TAIKHOAN TAIKHOAN { get; set; }
+
+        public THONGTINMEMBER()
+        {
+        }
+
+        public THONGTINMEMBER(string ma, string ten, bool gt, DateTime ns)
+        {
+            MaTK = ma;
+            Ten = ten;
+            GioiTinh = gt;
+            NgaySinh = ns;
+        }
     }
 }
