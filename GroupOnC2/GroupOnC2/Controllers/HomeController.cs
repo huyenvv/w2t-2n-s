@@ -9,6 +9,8 @@ using GroupOnC2.Models;
 using PagedList.Mvc;
 using PagedList;
 using System.Transactions;
+using System.Web.Helpers;
+using System.Web.Mvc;
 
 namespace GroupOnC2.Controllers
 {
@@ -301,5 +303,34 @@ namespace GroupOnC2.Controllers
 			}
 			return RedirectToAction("Index", "Home");
 		}
-    }
+
+		
+		[HttpPost]
+		public ActionResult FeedbackSent(FormCollection collection)
+		{
+			string email = collection["Email"];
+			try
+			{
+				WebMail.SmtpServer = "smtp.gmail.com";// "antispam2.emt.ee"; "gprsmail.emt.ee";
+				WebMail.EnableSsl = true;
+				WebMail.SmtpPort = 25;
+				WebMail.UserName = "lanrung1706@gmail.com";
+				WebMail.Password = "17061991";
+				WebMail.From = "lanrung1706@gmail.com";
+				WebMail.Send(
+						email,
+						subject: "GroupOnC2 Thông tin khuyến mãi",
+						body: "Hehehe"
+					//email
+					);
+
+				//return RedirectToAction("FeedbackSent");
+			}
+			catch (System.Exception ex)
+			{
+				ViewData.ModelState.AddModelError("_Form", ex.ToString());
+			}
+			return RedirectToAction("Index", "Home");
+		}
+	}
 }

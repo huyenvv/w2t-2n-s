@@ -303,7 +303,7 @@ div.newsletter{ background: none;margin-left:30px;}
 div.newsletter .mail_L{background: url(../images/general/bg_mail_left.png) no-repeat scroll left top transparent; float:left; width:10px; height:37px;}
 div.newsletter .mail_C{background: url(../images/general/bg_mail_c.png) repeat-x; float:left;height:37px;}
 
-div.newsletter .mail_C input.btn_send{background: url(../images/general/btn_send_h.png) no-repeat scroll left top transparent;border: 0 none;color: #1E3E52;cursor: pointer;float: left;font-size: 14px;font-weight: bold;height: 26px;line-height: 30px;text-shadow: 1px 1px  #f6f6f6;width: 56px;margin:7px 0 0 0;}
+div.newsletter .mail_C input.btn_send{border: 0 none;color: #1E3E52;cursor: pointer;float: left;font-size: 14px;font-weight: bold;height: 26px;line-height: 30px;text-shadow: 1px 1px  #f6f6f6;width: 56px;margin:7px 0 0 0;}
 div.newsletter .mail_C input.btn_send:active{background: url(../images/general/btn_send_h.png) no-repeat scroll left bottom transparent;}
 div.newsletter .mail_C input.btn_men{background: url(../images/general/btn_men.png) no-repeat scroll left top transparent;border: 0 none;color: #1E3E52;cursor: pointer;float: left;font-size: 14px;font-weight: bold;height: 26px;line-height: 30px;text-shadow: 1px 1px  #f6f6f6;width: 56px;margin:7px 3px 0 0;}
 div.newsletter .mail_C input.btn_men:active{background: url(../images/general/btn_men.png) no-repeat scroll left bottom transparent;}
