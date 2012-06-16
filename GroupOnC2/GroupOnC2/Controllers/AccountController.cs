@@ -150,5 +150,10 @@ namespace GroupOnC2.Controllers
 			}
 		}
 		#endregion
+
+        public void SignOut()
+        {
+            FormsAuthentication.SignOut();
+        }
 	}
 }

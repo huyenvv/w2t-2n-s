@@ -71,13 +71,16 @@
     <script type="text/javascript" src="../../Content/scripts/facebook_login.js"></script>
     <script type="text/javascript" src="../../Content/scripts/openid_login.js"></script>
     <script type="text/javascript" src="../../Content/scripts/ga.js"></script>
-    <script type="text/javascript" src="../../Content/scripts/uayEaic31hJ.js"></script>
+    <script type="text/javascript" src="../../Content/scripts/dropmenu.js"></script>
+
     <script type="text/javascript" src="../../Content/scripts/editcustomer.js"></script>
     <script type="text/javascript" src="../../Content/scripts/PaymentConfirm.js"></script>
 
     <script type="text/javascript">
         
     </script>
+
+    
 
     <script type="text/javascript">
         homepagePageSize = 100;
@@ -195,7 +198,7 @@
 
                
                 <div class="menu_center">
-                    @Html.Partial("LoginStatus");
+                    @Html.Partial("LoginStatus")
                     <br class="clean">
 
                 </div>
@@ -217,44 +220,6 @@
                         <img src="../../Content/themes/images/close.png" width="31" height="30"></a></div>
             </div>
 
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $("#tbEmail").blur(function () {
-                        if (!$(this).val()) $(this).val("Nhập email để nhận thông tin khuyến mãi");
-                    });
-
-                    $("#tbEmail").focus(function () {
-                        if ($(this).val() == "Nhập email để nhận thông tin khuyến mãi") $(this).val("");
-                    });
-
-                    $("#content_acc").hide();
-
-                    $("#info_acc").hover(function () {
-                        $("#content_acc").show();
-                    }, function () { $("#content_acc").hide(); });
-                });
-
-
-
-                $(function () {
-                    var div = $selectDroplist_Manager.els;
-                    div.cityList.droplistTITLE.hover(function () {
-                        $('.DropListUIContainer').show();
-                    }, function () {
-                        $('.DropListUIContainer').hide();
-                    });
-                    $('.DropListUIContainer').hover(function () {
-                        $('.DropListUIContainer').show();
-                    }, function () {
-                        $('.DropListUIContainer').hide();
-                    });
-                    $('ul.SelectUI li').hover(function () {
-                        $('.DropListUIContainer').show();
-                    }, function () {
-                        $('.DropListUIContainer').hide();
-                    });
-                });
-            </script>
 
         </div>
 
