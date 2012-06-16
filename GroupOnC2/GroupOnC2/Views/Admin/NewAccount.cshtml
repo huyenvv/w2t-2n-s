@@ -1,0 +1,33 @@
+﻿@model GroupOnC2.Models.Member
+@{
+    ViewBag.Title = "NewAccount";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<h3 class="heading">New Account</h3>
+<hr />
+@using (Html.BeginForm())
+{
+<div class="field">
+    <text>Mã tài khoản</text><span class="f-input">@Html.TextBoxFor(x => x.account.MaTK)</span>
+    <text>User name</text><span class="f-input">@Html.TextBoxFor(x => x.account.UserName)</span>
+    <text>Password</text><span class="f-input">@Html.PasswordFor(x => x.account.Password)</span>
+</div>
+
+<div class="field">
+    <text>Email</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
+    <text>Địa chỉ</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
+    <text>Số điện thoại</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
+</div>
+
+<div class="field">
+    <text>Tên thành viên</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
+    <text>Ngày sinh</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
+    <text>Giới tính</text><span class="f-input">@Html.TextBoxFor(x => x.account.Password)</span>
+</div>
+
+<div class="field marginbottom100 center">
+    <input type="submit" value="Thêm"/>
+    <input type="submit" value="Xóa"/>
+</div>
+}
