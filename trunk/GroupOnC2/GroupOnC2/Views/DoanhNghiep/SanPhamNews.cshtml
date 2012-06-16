@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "SanPhamNews";
+    Layout = "~/Views/Shared/_Layout_doanhnghiep.cshtml";
+}
+
+
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>SANPHAM</legend>
+            <fieldset  id="ffield_sanpham_name" >
+                <div class="label"><label for="sanpham_name">Title:</label></div>
+                <div class="input"><input maxlength="255" value="tên sản phẩm" size="50" type="text" class="form_text_input" name="sanpham_name" id="sanpham_name" />
+                   </div>
+                </fieldset>
+            <fieldset  id="ffield_sanpham_chitiet" >
+                <div class="label"><label for="sanpham_chitiet">Chi Tiết Sản Phẩm</label></div>
+                <textarea cols="50" class="large form_textarea_input" name="sanpham_chitiet" id="sanpham_chitiet" rows="5">
+                </textarea>
+                </fieldset>
+            <fieldset  id="ffield_sanpham_mutimedia" >
+                <div class="label"><label for="sanpham_mutimedia">MUTIMEDIA</label></div>
+                <textarea cols="50" class="large form_textarea_input" name="sanpham_mutimadia" id="sanpham_mutimadia" rows="5">
+                </textarea>
+                </fieldset>
+                      
+        
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

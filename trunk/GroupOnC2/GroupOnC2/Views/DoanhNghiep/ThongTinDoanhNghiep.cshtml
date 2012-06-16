@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "ThongTinDoanhNghiep";
+    Layout = "~/Views/Shared/_Layout_doanhnghiep.cshtml";
+}
+
+
+        <div class="account_content">
+            <div class="info_user">
+                <fieldset>
+                    <legend>Thông tin tài khoản</legend>
+                    <div class="acc_row">
+                        <p class="left">
+                            Họ tên:
+                        </p>
+                        <p class="right">
+                            <span id="nameLabel">Cong ty A</span>
+                            <span id="contentName" style="display: none">
+                                <input class="input_edit" tabindex="1" id="Name" maxlength="50" value="Cong Ty A"><br>
+                            </span>
+                        </p>
+                        <span class="edit">
+                            <img id="iconedit" src="../../Content/Images/general/edit.png" align="bottom" border="0" style="margin-bottom: -3px; margin-right: 3px; cursor: pointer">
+                            <a href="javascript:void(0)" id="btEdit">Chỉnh sửa</a>
+                            
+                        </span>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Name-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Tên Công Ty không được rỗng
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Điện thoại:
+                        </p>
+                        <p class="right">
+                            <span id="mobileLabel">0923456789</span>
+                            <span id="contentMobile" style="display: none">
+                                <input class="input_edit" tabindex="2" id="Phone" value="0923456789">
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Phone-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Số điện thoại không hợp lệ
+                    </div>
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Địa Chỉ: 
+                        </p>
+                        <p class="right">
+                            <span id="GenderLabel"> 224 Nguyễn Văn Cừ</span>
+                            <span id="contentDiaChi" style="display: none">
+                                <input class="input_edit" tabindex="2" id="diachi" value="555 Lý Thai Tổ" />
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Gender-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Địa Chỉ không hợp lệ
+                    </div>
+                    
+                    <div class="acc_row">
+                        <p class="left">
+                            Website: 
+                        </p>
+                        <p class="right">
+                            <span id="websiteLabel"> 224 Nguyễn Văn Cừ</span>
+                            <span id="contentwebsite" style="display: none">
+                                <input class="input_edit" tabindex="2" id="www.mypham.com.vn" value="555 Lý Thai Tổ">
+                            </span>
+                        </p>
+                    </div>
+                    <br class="clear">
+
+                    <div class="form_acc_err" id="Website-Error" style="display: none; padding: 0 0 0 104px !important">
+                        Địa Chỉ website không hợp lệ
+                    </div>
+                    
+
+                    <div class="acc_row">
+                        <p class="left">
+                            Email:
+                        </p>
+                        <p class="right">
+                            mypham@yahoo.com
+                        </p>
+                    </div>
+                </fieldset>
+                <br class="clean">
+
+            </div>
+            </div>
