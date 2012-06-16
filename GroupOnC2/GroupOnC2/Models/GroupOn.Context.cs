@@ -43,7 +43,8 @@ namespace GroupOnC2.Models
 		public DbSet<THONGTINMEMBER> THONGTINMEMBERs { get; set; }
 		public DbSet<TINHTRANGDONHANG> TINHTRANGDONHANGs { get; set; }
 		public DbSet<TRANGTHAITAIKHOAN> TRANGTHAITAIKHOANs { get; set; }
-		
+
+
 		private List<Cart1> CARTs = new List<Cart1>();
 		public List<Cart1> CARTs1
 		{
@@ -58,7 +59,7 @@ namespace GroupOnC2.Models
 			get { return _GIOHANGs; }
 			set { _GIOHANGs = value; }
 		}
-		
+
 
 		public bool ThemMember(THONGTINMEMBER member)
 		{
@@ -126,7 +127,7 @@ namespace GroupOnC2.Models
 			else return true;
 		}
 
-		public int LaySoLuongDonHang ()
+		public int LaySoLuongDonHang()
 		{
 			return DONHANGs.ToList().Count;
 		}
@@ -149,27 +150,18 @@ namespace GroupOnC2.Models
 
 		public List<DONHANG> LayDSDonHangTheoMaTK(string MaTK)
 		{
-			var dsDonHang =from dh in DONHANGs
+			var dsDonHang = from dh in DONHANGs
 							where dh.MaTK == MaTK
 							select dh;
 			return dsDonHang.ToList();
 		}
 
-		//public List<DONHANG> LayDSCTDonHangTheoMaTK(string MaTK)
-		//{
-
-		//    var dsDonHang = from dh in CHITIETDONHANGs
-		//                    where dh.MaTK == MaTK
-		//                    select dh;
-		//    return dsDonHang.ToList();
-		//}
-
 		public List<COMMENT> LayDSCommentTheoMaSP(string MaSP)
 		{
-			
+
 			var dsComment = from cm in COMMENTs
-									   where cm.MaSP == MaSP
-									   select cm;
+							where cm.MaSP == MaSP
+							select cm;
 			return dsComment.ToList();
 		}
 
@@ -179,10 +171,26 @@ namespace GroupOnC2.Models
 			return taiKhoan.UserName;
 		}
 
+		public List<THONGTINMEMBER> LayMemberTheoUserName(string userName, string email)
+		{
+			var members = from p in THONGTINMEMBERs
+						  where p.TAIKHOAN.Email == email && p.TAIKHOAN.UserName == userName
+						  select p;
+			return members.ToList();
+		}
+
+		public List<COMMENT> LayDSComment()
+		{
+			var listComments = from p in COMMENTs
+							   select p;
+			return listComments.ToList();
+		}
+
 		public TAIKHOAN LayTaiKhoanTheoMaTK(string MaTK)
 		{
-			TAIKHOAN taiKhoan = TAIKHOANs.SingleOrDefault(p => p.MaTK == MaTK);
-			return taiKhoan;
+			TAIKHOAN tk = TAIKHOANs.SingleOrDefault(p => p.MaTK == MaTK);
+			return tk;
+
 		}
 	}
 }

@@ -9,15 +9,28 @@
 
 namespace GroupOnC2.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class THONGTINDOANHNGHIEP
-    {
-        public string MaTK { get; set; }
-        public string Website { get; set; }
-        public string TenDN { get; set; }
-    
-        public virtual TAIKHOAN TAIKHOAN { get; set; }
-    }
+	using System;
+	using System.Collections.Generic;
+
+	public partial class THONGTINDOANHNGHIEP : TAIKHOAN
+	{
+		public string MaTK { get; set; }
+		public string Website { get; set; }
+		public string TenDN { get; set; }
+
+		public virtual TAIKHOAN TAIKHOAN { get; set; }
+
+		public THONGTINDOANHNGHIEP()
+		{
+		}
+
+		public THONGTINDOANHNGHIEP(string ma, string ws, string tenDN)
+		{
+			MaTK = ma;
+			Website = ws;
+			TenDN = tenDN;
+		}
+	}
+
+
 }
