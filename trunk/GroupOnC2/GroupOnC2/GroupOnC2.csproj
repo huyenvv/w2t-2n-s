@@ -72,12 +72,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DoanhNghiepController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\XMLHelper.cs" />
+    <Compile Include="Models\accountBusiness.cs" />
+    <Compile Include="Models\accountMember.cs" />
+    <Compile Include="Models\Business.cs" />
     <Compile Include="Models\Cart1.cs" />
     <Compile Include="Models\CHITIETDONHANG.cs">
       <DependentUpon>GroupOn.tt</DependentUpon>
@@ -90,6 +95,9 @@
     </Compile>
     <Compile Include="Models\CT_GIOHANG.cs" />
     <Compile Include="Models\GIOHANG.cs" />
+    <Compile Include="Models\HotDeal.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\NewHotDeal.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\DONHANG.cs">
       <DependentUpon>GroupOn.tt</DependentUpon>
@@ -1733,6 +1741,14 @@
     <Content Include="Views\Home\ChangePassword.cshtml" />
     <Content Include="Views\Home\MuaHang.cshtml" />
     <Content Include="Views\Home\ChangedAccIformation.cshtml" />
+    <Content Include="Views\Admin\MemberManager.cshtml" />
+    <Content Include="Views\Admin\NewAccount.cshtml" />
+    <Content Include="Views\DoanhNghiep\Browse.cshtml" />
+    <Content Include="Views\DoanhNghiep\Details.cshtml" />
+    <Content Include="Views\DoanhNghiep\DoanhNghiep.cshtml" />
+    <Content Include="Views\DoanhNghiep\SanPhamDoanhNgiep.cshtml" />
+    <Content Include="Views\DoanhNghiep\SanPhamNews.cshtml" />
+    <Content Include="Views\DoanhNghiep\ThongTinDoanhNghiep.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Images\SanPham\DuLich\DL19\" />

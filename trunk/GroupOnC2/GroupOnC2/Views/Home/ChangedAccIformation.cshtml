@@ -1,0 +1,166 @@
+﻿@Html.BeginForm("ChangedAccIformation", "Home", FormMethod.Post)
+@model GroupOnC2.Models.THONGTINMEMBER
+@{
+    ViewBag.Title = "AccountInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bg_account">
+    <div class="bg_account_T">
+        Thông tin tài kho?n
+    </div>
+
+    <div class="bg_account_M">
+        <ul class="account_tab">
+            <li>@Html.ActionLink("Thông tin don hàng", "OrderList")</li>
+            <li class="active">@Html.ActionLink("Thông tin tài khoản", "AccountInformation")</li>
+            <li>@Html.ActionLink("Ðổi mật khẩu", "ChangePassword")</li>
+        </ul>
+		<fieldset>
+        <div class="account_content">
+            <div class="info_user">
+            	<div class="form_res_item">
+                    <p class="form_res_left">
+                        Email <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+					
+                        <input data-val="true" data-val-required="The EmailRegister field is required." id="EmailRegister" name="Email" type="text" value="@Model.TAIKHOAN.Email"/></p>
+                    <br class="clean">
+                </div>
+
+                <div id="EmailRegister-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Họ tên <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+						
+                        <input data-val="true" data-val-required="The Name field is required." id="Name" name="Ten" type="text" value="@Model.Ten"/>
+					</p>
+                    <br class="clean">
+                </div>
+
+                <div id="Name-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Điện thoại di động <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+						 <input data-val="true" data-val-required="The Phone field is required." id="Phone" name="SDT" type="text" value="@Model.TAIKHOAN.SDT">
+					</p>
+                    <br class="clean">
+                </div>
+
+                <div id="Phone-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Giới tính  <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+                       
+						<p style="text-align:left;padding:15px 0 0 0">
+						<input checked="checked" data-val="true" data-val-number="The field Gender must be a number." data-val-required="The Gender field is required." id="RegisterModel_Gender" name="GioiTinh" type="radio" value="0"/> Nam
+                        <input id="RegisterModel_Gender" name="GioiTinh" type="radio" value="1"/> Nữ
+						</p>
+					</p>
+                    
+                    <br class="clean"/>
+                </div>
+
+                <div id="Gender-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p >
+                        Ngày sinh <span class="other_color">(*)</span></p>
+                    <p id="BirthDay" class="form_incard_right">
+                        <select name="Ngay">
+                            <option>Ngày</option>
+                                @for (int i = 1; i <= 31; i++ )
+                                {
+                                    <option value= "@i">@i</option>
+                                }
+                                        
+                        </select>
+                        <select name="Thang">
+                            <option>Tháng</option>
+                                @for (int i = 1; i <= 12; i++)
+                                {
+                                    <option value= @i>@i</option>
+                                }
+                                        
+                        </select>
+                        <select name="Nam">
+                            <option>Năm</option>
+                                @for (int i = 1930; i <= 2012; i++)
+                                {
+                                    <option value= @i>@i</option>
+                                }
+                                        
+                        </select></p>
+                    <br class="clean">
+                </div>
+
+                <div id="BirthDay-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation"></div>
+				
+                <br class="clean">
+				<input id="Submit1" type="submit" value="Lưu lại" />
+            </div>
+            <div class="info_user2">
+                <fieldset>
+                    <legend>Nhận email thông tin khuyến mãi</legend>
+                    <div class="row">
+                        <table class="acc_list" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <th width="40%" scope="col" style="padding-left: 30px;">
+                                        Thành phố
+                                    </th>
+                                    <th width="24%" scope="col">
+                                        Nhân email
+                                    </th>
+                                    <th width="13%" scope="col">
+                                        &nbsp;
+                                    </th>
+                                </tr>
+
+                                <tr class="row1">
+                                    <td width="40%" scope="col" style="padding-left: 30px;">
+                                        TP. Hồ CHÍ MINH
+                                    </td>
+                                    <td width="24%" scope="col" style="padding-left: 30px;">
+                                            <input type="hidden" id="subscriber1" value="1874894">
+                                        <img id="img1" email="nhoc_heo_way@yahoo.com" cityid="1" cityname="TP. HỒ CHÍ MINH" class="imgCheck" style="cursor: pointer" src="../../Content/Images/general/check.png" border="0">
+                                    </td>
+                                    <td width="13%" scope="col">
+                                        <a id="title1" class="ReceiveEmailButton" email="nhoc_heo_way@yahoo.com" cityid="1" cityname="TP. H? CHÍ MINH" href="javascript:void(0)">Ngung nh?n</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="row2">
+                                    <td width="40%" scope="col" style="padding-left: 30px;">
+                                        HÀ NỘI
+                                    </td>
+                                    <td width="24%" scope="col" style="padding-left: 30px;">
+                                            <input type="hidden" id="subscriber2">
+                                        <img id="img2" email="nhoc_heo_way@yahoo.com" cityid="2" cityname="HÀ NỘI" class="imgCheck" style="cursor: pointer" src="../../Content/Images/general/delete.png" border="0">
+                                    </td>
+                                    <td width="13%" scope="col">
+                                        <a id="title2" class="ReceiveEmailButton" email="nhoc_heo_way@yahoo.com" cityid="2" cityname="HÀ NÔI" href="javascript:void(0)">Nh?n mail</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+                <br class="clean">
+
+            </div>    
+        </div>
+        <br class="clean">
+        <br class="clean">
+    </div>
+
+    <div class="bg_account_B">
+    </div>
+</div>
