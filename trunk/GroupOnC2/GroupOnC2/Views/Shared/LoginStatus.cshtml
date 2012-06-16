@@ -29,13 +29,14 @@ else
         <div class="mail_L"></div>
 
         <div class="mail_C">
-            <form action="#formSubscriberMenuTop" id="formSubscriberMenuTop" method="post">                            
+           <form action="/Home/FeedbackSent" id="LoginForm" method="post">                         
                 <span>Nhận thông tin khuyến mãi</span>
-                <input id="tbEmail" value="Email của bạn" class="key_word">
-                <input class="btn_send" type="submit" onclick="return SubmitForm(0)" value="">
-            </form> 
+                <input id="tbEmail" value="Email của bạn" class="key_word" name = "Email"/>
+                @*<input class="btn_send" type="submit" onclick="return SubmitForm(0)" value=""/>*@
+				<input id="Submit1" type="submit" value="Lưu" />
+            </form>
         </div>
-
+	
         <div class="mail_R"></div>
         <div id="erroemail" style="font-size: 12px; padding-left: 33px; padding-top: 4px; text-align: left;color: Red; display: none">
             Email không hợp lệ</div>
