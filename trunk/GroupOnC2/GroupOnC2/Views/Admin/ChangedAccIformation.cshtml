@@ -1,0 +1,100 @@
+﻿@Html.BeginForm("ChangedAccIformation", "Admin", FormMethod.Post)
+@model GroupOnC2.Models.THONGTINADMIN
+@{
+    ViewBag.Title = "AccountInformation";
+	Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="bg_account">
+    <div class="bg_account_T">
+        Thông tin tài khoản
+    </div>
+
+    <div class="bg_account_M">
+        
+		<fieldset>
+        <div class="account_content">
+            <div class="info_user">
+            	<div class="form_res_item">
+                    <p class="form_res_left">
+                        Email <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+					
+                        <input data-val="true" data-val-required="The EmailRegister field is required." id="EmailRegister" name="Email" type="text" value="@Model.TAIKHOAN.Email"/></p>
+                    <br class="clean">
+                </div>
+
+                <div id="EmailRegister-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Họ tên <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+						
+                        <input data-val="true" data-val-required="The Name field is required." id="Name" name="Ten" type="text" value="@Model.Ten"/>
+					</p>
+                    <br class="clean">
+                </div>
+
+                <div id="Name-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p class="form_res_left">
+                        Điện thoại di động <span class="other_color">(*)</span></p>
+                    <p class="form_res_right">
+						 <input data-val="true" data-val-required="The Phone field is required." id="Phone" name="SDT" type="text" value="@Model.TAIKHOAN.SDT">
+					</p>
+                    <br class="clean">
+                </div>
+
+                <div id="Phone-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                
+
+                <div id="Gender-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation">
+                </div>
+                <div class="form_res_item">
+                    <p >
+                        Ngày sinh <span class="other_color">(*)</span></p>
+                    <p id="BirthDay" class="form_incard_right">
+                        <select name="Ngay">
+                            <option>Ngày</option>
+                                @for (int i = 1; i <= 31; i++ )
+                                {
+                                    <option value= "@i">@i</option>
+                                }
+                                        
+                        </select>
+                        <select name="Thang">
+                            <option>Tháng</option>
+                                @for (int i = 1; i <= 12; i++)
+                                {
+                                    <option value= @i>@i</option>
+                                }
+                                        
+                        </select>
+                        <select name="Nam">
+                            <option>Năm</option>
+                                @for (int i = 1930; i <= 2012; i++)
+                                {
+                                    <option value= @i>@i</option>
+                                }
+                                        
+                        </select></p>
+                    <br class="clean">
+                </div>
+
+                <div id="BirthDay-Error" style="display:none;color:#F00; font-size:11px; text-align:left; margin:0px; padding:6px 0 0 175px;" class="Enternet-Field-Validation"></div>
+				
+                <br class="clean">
+				<input id="Submit1" type="submit" value="Lưu lại" />
+            </div>
+          
+        </div>
+        
+    </div>
+
+    <div class="bg_account_B">
+    </div>
+</div>

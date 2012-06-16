@@ -199,5 +199,40 @@ namespace GroupOnC2.Models
 			return tk;
 
 		}
+
+		/* loai tai khoan
+		 * 
+		 * 1 : member
+		 * 
+		 * 2 : doanh nghiep
+		 * 
+		 * 3: admin
+		 * 
+		 * */
+
+		public int KiemTraLoaiTaiKhoan(string maTK)
+		{
+			string ma = maTK.Substring(0, 2);
+			if (ma == "MB")
+				return 1;
+			else if (ma == "BS")
+				return 2;
+			else return 3;
+		}
+
+		public List<DONHANG> LayDSDonHangTheoLoai(string loai)
+		{
+			var ctDonHangs = from ct in CHITIETDONHANGs
+							 where ct.MaSP.Substring(0, 2) == loai
+							 select ct;
+			List<DONHANG> lstDonHangs = new List<DONHANG>();
+			foreach (var item in ctDonHangs)
+			{
+				DONHANG donHang = DONHANGs.SingleOrDefault(p => p.MaDH == item.MaDH);
+				lstDonHangs.Add(donHang);
+			}
+
+			return lstDonHangs;
+		}
 	}
 }

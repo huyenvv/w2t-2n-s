@@ -144,6 +144,7 @@
     <Compile Include="Models\THANHTOANTRUCTIEP.cs">
       <DependentUpon>GroupOn.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ThongKe.cs" />
     <Compile Include="Models\THONGTINADMIN.cs">
       <DependentUpon>GroupOn.tt</DependentUpon>
     </Compile>
@@ -181,6 +182,7 @@
     <Content Include="Content\CSS\info_account.css" />
     <Content Include="Content\CSS\j-select-theme.css" />
     <Content Include="Content\CSS\j-select.css" />
+    <Content Include="Content\CSS\khuyenmai.css" />
     <Content Include="Content\CSS\landing.css" />
     <Content Include="Content\CSS\landing_page.css" />
     <Content Include="Content\CSS\lightbox.css" />
@@ -195,7 +197,10 @@
     <Content Include="Content\CSS\rightmenu.css" />
     <Content Include="Content\CSS\screen.css" />
     <Content Include="Content\CSS\skin.css" />
+    <Content Include="Content\CSS\StyleSheet2.css" />
     <Content Include="Content\CSS\thickbox.css" />
+    <Content Include="Content\Flashs\Banner\banner.swf" />
+    <Content Include="Content\Flashs\Banner\banner1.swf" />
     <Content Include="Content\Images\account\bg_account.png" />
     <Content Include="Content\Images\account\bg_account_M.png" />
     <Content Include="Content\Images\account\bg_tab.png" />
@@ -205,6 +210,9 @@
     <Content Include="Content\Images\account\line3.png" />
     <Content Include="Content\Images\account\line4.png" />
     <Content Include="Content\Images\arrows.png" />
+    <Content Include="Content\Images\bg.png" />
+    <Content Include="Content\Images\bkg-service.png" />
+    <Content Include="Content\Images\bn.png" />
     <Content Include="Content\Images\bullets.png" />
     <Content Include="Content\Images\buy\bg_col_right2.png" />
     <Content Include="Content\Images\buy\bg_col_right3.png" />
@@ -225,6 +233,13 @@
     <Content Include="Content\Images\buy\submit_DM_h.png" />
     <Content Include="Content\Images\buy\submit_TT.png" />
     <Content Include="Content\Images\buy\submit_TT_h.png" />
+    <Content Include="Content\Images\CongTy\cup-vang-thuong-hieu-viet.png" />
+    <Content Include="Content\Images\CongTy\nhan-vien-bo-phan-sales.jpg" />
+    <Content Include="Content\Images\CongTy\nhan-vien-cong-ty-du-lich-viet.jpg" />
+    <Content Include="Content\Images\CongTy\top-ten-2012.jpg" />
+    <Content Include="Content\Images\CongTy\tru-so-cong-ty-du-lich-viet.jpg" />
+    <Content Include="Content\Images\footerbg.png" />
+    <Content Include="Content\Images\footerpins.png" />
     <Content Include="Content\Images\general\banner.png" />
     <Content Include="Content\Images\general\bg-img.png" />
     <Content Include="Content\Images\general\bg1.png" />
@@ -336,6 +351,8 @@
     <Content Include="Content\Images\login\icon_pass.png" />
     <Content Include="Content\Images\login\icon_user.png" />
     <Content Include="Content\Images\login\line_shadow.png" />
+    <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Picture1.png" />
     <Content Include="Content\Images\SanPham\Amthuc\AT01\d_5414.jpg" />
     <Content Include="Content\Images\SanPham\Amthuc\AT01\extendImage_5414_sl3.jpg" />
     <Content Include="Content\Images\SanPham\Amthuc\AT01\gecko_6.jpg" />
@@ -1489,7 +1506,9 @@
     <Content Include="Content\Images\SanPham\ThoiTrang\TT10\Anhbia\ab05.jpg" />
     <Content Include="Content\Images\SanPham\ThoiTrang\TT10\Anhbia\ab06.jpg" />
     <Content Include="Content\Images\SanPham\ThoiTrang\TT10\CTTT10.xml" />
+    <Content Include="Content\Images\search.png" />
     <Content Include="Content\Images\slider.png" />
+    <Content Include="Content\Images\zt-bg-mainmenu.png" />
     <Content Include="Content\Multimedia\AmThuc\CTAT01.xml" />
     <Content Include="Content\Multimedia\AmThuc\CTAT02.xml">
       <SubType>Designer</SubType>
@@ -1605,6 +1624,17 @@
     <Content Include="Content\scripts\PaymentProcedureStep2.js" />
     <Content Include="Content\scripts\scrolltopcontrol.js" />
     <Content Include="Content\scripts\uayEaic31hJ.js" />
+    <Content Include="Content\Silders\images\arrows.png" />
+    <Content Include="Content\Silders\images\bullets.png" />
+    <Content Include="Content\Silders\images\loading.gif" />
+    <Content Include="Content\Silders\images\slider.png" />
+    <Content Include="Content\Silders\nivo-slider.css" />
+    <Content Include="Content\Silders\nivo-style.css" />
+    <Content Include="Content\Silders\photos\nivo1.jpg" />
+    <Content Include="Content\Silders\photos\nivo2.jpg" />
+    <Content Include="Content\Silders\photos\nivo3.jpg" />
+    <Content Include="Content\Silders\photos\nivo4.jpg" />
+    <Content Include="Content\Silders\photos\nivo5.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -1674,6 +1704,10 @@
     <Content Include="Scripts\Lighbox\thickbox.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\MyScripts\hotdeal.js" />
+    <Content Include="Scripts\MyScripts\jquery.nivo.slider.pack.js" />
+    <Content Include="Scripts\MyScripts\khuyenmai.js" />
+    <Content Include="Scripts\MyScripts\nagging-menu.js" />
     <Content Include="Scripts\PagedList\PagedList.Mvc.js" />
     <Content Include="Scripts\PagedList\PagedList.Mvc.Template.html" />
     <Content Include="Web.config" />
@@ -1743,12 +1777,16 @@
     <Content Include="Views\Home\ChangedAccIformation.cshtml" />
     <Content Include="Views\Admin\MemberManager.cshtml" />
     <Content Include="Views\Admin\NewAccount.cshtml" />
-    <Content Include="Views\DoanhNghiep\Browse.cshtml" />
-    <Content Include="Views\DoanhNghiep\Details.cshtml" />
+    <Content Include="Views\Shared\_Layout_doanhnghiep.cshtml" />
+    <Content Include="Views\Shared\_LayoutPageAdmin.cshtml" />
+    <Content Include="Views\Admin\ThongTinTaiKhoan.cshtml" />
+    <Content Include="Views\Admin\ChangedAccIformation.cshtml" />
+    <None Include="Scripts\MyScripts\cc.php" />
     <Content Include="Views\DoanhNghiep\DoanhNghiep.cshtml" />
-    <Content Include="Views\DoanhNghiep\SanPhamDoanhNgiep.cshtml" />
-    <Content Include="Views\DoanhNghiep\SanPhamNews.cshtml" />
-    <Content Include="Views\DoanhNghiep\ThongTinDoanhNghiep.cshtml" />
+    <Content Include="Views\DoanhNghiep\SanPham.cshtml" />
+    <Content Include="Views\DoanhNghiep\DonHang.cshtml" />
+    <Content Include="Views\DoanhNghiep\ThongTinTaiKhoan.cshtml" />
+    <Content Include="Views\DoanhNghiep\ChangedAccIformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Images\SanPham\DuLich\DL19\" />

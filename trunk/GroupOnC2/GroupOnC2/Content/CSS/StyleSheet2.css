@@ -1,0 +1,140 @@
+﻿
+body
+{
+	margin: 0 auto;
+	text-align: center;
+	background-image: url('Images/bg.png');
+	background-repeat: repeat;
+}
+
+#container{
+ width:1200px;
+ margin:0 auto;
+ text-align:left;
+}
+
+#floatingbar, #minibar
+{
+	border: 1px solid #F1F1F1;
+	height: 60px;
+	background-repeat: repeat;
+	font-size: medium;
+	background-image: url('Images/Picture1.png');
+	color: #FFFFFF;
+	font-style: normal;
+}
+
+
+
+#minibar { display:none;}
+
+#hotdeals
+{
+	width: 880px;
+	margin-top: -10px;
+	height:400px;
+	float:left;
+}
+
+ul
+{
+	float: left;
+	list-style: none;
+	margin-top:16px;
+	padding: 0;
+	text-align: center;
+}
+ul li
+{
+	position: relative !important;
+	float: left;
+	background: #BB2203;
+	-moz-border-radius: 10px 10px;
+	margin-top:16px;
+}
+ul li a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+	display: block;
+	padding: 7px 20px 7px 20px;
+	font: bold 12px tahoma, verdana;
+	-webkit-transition-property: color, background;
+	-webkit-transition-duration: 0.5s, 0.5s;
+	-moz-transition-property: color, background;
+	-moz-transition-duration: 0.5s, 0.5s;
+	
+}
+ul li ul
+{
+	float:none;
+	display:none;
+    position:absolute;
+   
+}
+ul li:hover ul
+{
+	display:block;list-style:none;z-index:1000;
+	-moz-border-radius:10px;
+	 width:100px;
+}
+
+ul li a:hover
+{
+	background:#FCFF00;
+	-moz-border-radius:10px 10px;
+	-webkit-transition-property: color, background;
+	-webkit-transition-duration: 0.5s, 0.5s;
+	-moz-transition-property: color, background;
+	-moz-transition-duration: 0.5s, 0.5s;
+}
+
+.floater{
+position:fixed;
+top:0px;
+z-index:999;
+height:60px;
+width:1200px;
+border-top:none;
+background-color: #F1F1F1;
+border:1px solid #000000;
+color:#ccc;
+display:block;
+clear:both;
+margin-left:auto;
+margin-right:auto;
+float:left;
+
+box-shadow: 0 0 7px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 7px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 0 7px rgba(0,0,0,0.4);
+	border-radius: .214em;
+	-webkit-border-radius: .214em;
+	-moz-border-radius: .214em;
+
+}
+#login
+{
+	float:right;
+	background-color: #FFFF99;
+	
+	width: 300px;
+	height: 380px;
+	
+}
+#postcontent
+{
+	float:right;
+	background-color: #FFFFFF;
+	width: 850px;
+	height: 800px;
+	margin-top:10px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 15px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+footer
+{
+	width:1200px;
+	height:300px;
+}

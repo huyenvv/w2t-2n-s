@@ -1,5 +1,5 @@
 ﻿@using GroupOnC2.Models
-@Html.BeginForm("Login", "Account", FormMethod.Post)
+
 <div class="login">
     <p class="login_title">
         Đăng nhập để mua hàng
@@ -7,7 +7,7 @@
     <img alt = "img_dong" src="../../Content/themes/images/close(1).png"  style="float:right; margin-top:-37px; margin-right:5px;cursor:pointer;" onclick="LoginAndRegisterFunction.CloseWindow();"/>
     <div class="login_content">
         <div class="form_login">
-            <form action="#" id="LoginForm" method="post">
+            <form action="/Account/Login" id="LoginForm" method="post">
                 <div class="form_login_item">
                     <p class="form_login_left">
                         Tên đăng nhập <span class="other_color">(*)</span></p>
